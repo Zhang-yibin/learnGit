@@ -1,0 +1,1358 @@
+<!DOCTYPE html>
+<!-- saved from url=(0045)https://www.cnblogs.com/zzzsj/p/14576020.html -->
+<html lang="zh-cn" style="--olcb-folder-code-block-max-height: 80vh; --cnb-code-bg: rgb(245, 245, 245); --cnb-code-font-size: 12px; --cnb-code-color: rgb(68, 68, 68);"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="origin-when-cross-origin">
+    <meta name="description" content="一、遍历图像 我们在实际应用中对图像进行的操作，往往并不是将图像作为一个整体进行操作，而是对图像中的所有点或特殊点进行运算，所以遍历图像就显得很重要，如何高效的遍历图像是一个很值得探讨的问题。 1.1 at&amp;lt;typename&amp;gt;(i,j) Mat类提供了一个at的方法用于取得图像上的点，它">
+    <meta property="og:description" content="一、遍历图像 我们在实际应用中对图像进行的操作，往往并不是将图像作为一个整体进行操作，而是对图像中的所有点或特殊点进行运算，所以遍历图像就显得很重要，如何高效的遍历图像是一个很值得探讨的问题。 1.1 at&amp;lt;typename&amp;gt;(i,j) Mat类提供了一个at的方法用于取得图像上的点，它">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>OpenCV -- 图像遍历的四种方式（at、指针、isCountinuous、迭代器）、在Vector尾部加数据函数push_back() - 手磨咖啡 - 博客园</title>
+        <link rel="canonical" href="https://www.cnblogs.com/zzzsj/p/14576020.html">
+    <link id="favicon" rel="shortcut icon" href="https://common.cnblogs.com/favicon.svg" type="image/svg+xml">
+    
+    <style>#home :not(.cnblogs_code):not(.cnblogs_Highlighter)>pre:not([highlighted]):not([class*="brush:"]) code:not(.hljs), :not(.cnblogs_code):not(.cnblogs_Highlighter)>pre:not([highlighted]):not([class*="brush:"]) code:not(.hljs) {background: rgb(245, 245, 245);
+        padding: 12px;
+        border: 1px solid rgb(204, 204, 204);
+        border-radius: 3px;
+        border-color: transparent;
+        color: rgb(68, 68, 68);
+        font-family: "Courier New", sans-serif;
+        font-size: 12px</style><link rel="stylesheet" href="./OpenCV -- 图像遍历的四种方式（at、指针、isCountinuous、迭代器）、在Vector尾部加数据函数push_back() - 手磨咖啡 - 博客园_files/blog-common.min.css">
+    
+
+    <link id="MainCss" rel="stylesheet" href="./OpenCV -- 图像遍历的四种方式（at、指针、isCountinuous、迭代器）、在Vector尾部加数据函数push_back() - 手磨咖啡 - 博客园_files/bundle-bluesky.min.css">
+        <link id="highlighter-theme-cnblogs" type="text/css" rel="stylesheet" href="./OpenCV -- 图像遍历的四种方式（at、指针、isCountinuous、迭代器）、在Vector尾部加数据函数push_back() - 手磨咖啡 - 博客园_files/cnblogs.css">
+    
+    
+    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="./OpenCV -- 图像遍历的四种方式（at、指针、isCountinuous、迭代器）、在Vector尾部加数据函数push_back() - 手磨咖啡 - 博客园_files/bundle-bluesky-mobile.min.css">
+    
+    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/zzzsj/rss">
+    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/zzzsj/rsd.xml">
+    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/zzzsj/wlwmanifest.xml">
+    <script type="text/javascript" src="./OpenCV -- 图像遍历的四种方式（at、指针、isCountinuous、迭代器）、在Vector尾部加数据函数push_back() - 手磨咖啡 - 博客园_files/encoder.js"></script><script>
+        var currentBlogId = 644193;
+        var currentBlogApp = 'zzzsj';
+        var isLogined = false;
+        var isBlogOwner = false;
+        var skinName = 'BlueSky';
+        var visitorUserId = '';
+        var hasCustomScript = false;
+        window.cb_enable_mathjax = false;
+        window.mathEngine = 0;
+        window.codeHighlightEngine = 1;
+        window.enableCodeLineNumber = false;
+        window.codeHighlightTheme = 'cnblogs';
+        window.darkModeCodeHighlightTheme = 'vs2015';
+        window.isDarkCodeHighlightTheme = false;
+        window.isDarkModeCodeHighlightThemeDark = true;
+        window.isDisableCodeHighlighter = false;
+        window.enableCodeThemeTypeFollowSystem = false;
+        window.enableMacStyleCodeBlock = false;
+    </script>
+        <script>
+            window.currentPostId = 14576020;
+            window.currentPostDateAdded = '2021-03-26 11:00';
+        </script>
+    <script src="./OpenCV -- 图像遍历的四种方式（at、指针、isCountinuous、迭代器）、在Vector尾部加数据函数push_back() - 手磨咖啡 - 博客园_files/jquery-3.3.1.min.js"></script>
+    <script src="./OpenCV -- 图像遍历的四种方式（at、指针、isCountinuous、迭代器）、在Vector尾部加数据函数push_back() - 手磨咖啡 - 博客园_files/blog-common.min.js"></script><style>.medium-zoom-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 300ms;
+  will-change: opacity;
+}
+
+.medium-zoom--opened .medium-zoom-overlay {
+  cursor: pointer;
+  cursor: zoom-out;
+  opacity: 1;
+}
+
+.medium-zoom-image {
+  cursor: pointer;
+  cursor: zoom-in;
+  /*
+    The `transition` is marked as "!important" for the animation to happen
+    even though it's overriden by another inline `transition` style attribute.
+
+    This is problematic with frameworks that generate inline styles on their
+    images (e.g. Gatsby).
+
+    See https://github.com/francoischalifour/medium-zoom/issues/110
+   */
+  transition: transform 300ms cubic-bezier(0.2, 0, 0.2, 1) !important;
+}
+
+.medium-zoom-image--hidden {
+  visibility: hidden;
+}
+
+.medium-zoom-image--opened {
+  position: relative;
+  cursor: pointer;
+  cursor: zoom-out;
+  will-change: transform;
+}
+</style><script id="hljs-script" src="./OpenCV -- 图像遍历的四种方式（at、指针、isCountinuous、迭代器）、在Vector尾部加数据函数push_back() - 手磨咖啡 - 博客园_files/highlight.min.js" type="text/javascript" async=""></script>
+        <script async="" src="./OpenCV -- 图像遍历的四种方式（at、指针、isCountinuous、迭代器）、在Vector尾部加数据函数push_back() - 手磨咖啡 - 博客园_files/f.txt"></script>
+        <script>
+            window.googletag = window.googletag || { cmd: [] };
+            googletag.cmd.push(function () {
+                googletag.defineSlot('/1090369/C1', [300, 250], 'div-gpt-ad-1704599316752-0').addService(googletag.pubads());
+                googletag.pubads().enableSingleRequest();
+                googletag.pubads().collapseEmptyDivs();
+                googletag.enableServices();
+            });
+        </script>
+    
+<meta property="og:image" content="https://img2020.cnblogs.com/blog/2171160/202103/2171160-20210325084738480-1246226575.png"><meta http-equiv="origin-trial" content="AymqwRC7u88Y4JPvfIF2F37QKylC04248hLCdJAsh8xgOfe/dVJPV3XS3wLFca1ZMVOtnBfVjaCMTVudWM//5g4AAAB7eyJvcmlnaW4iOiJodHRwczovL3d3dy5nb29nbGV0YWdtYW5hZ2VyLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjk1MTY3OTk5LCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="As0hBNJ8h++fNYlkq8cTye2qDLyom8NddByiVytXGGD0YVE+2CEuTCpqXMDxdhOMILKoaiaYifwEvCRlJ/9GcQ8AAAB8eyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3MTk1MzI3OTksImlzU3ViZG9tYWluIjp0cnVlfQ=="><meta http-equiv="origin-trial" content="AgRYsXo24ypxC89CJanC+JgEmraCCBebKl8ZmG7Tj5oJNx0cmH0NtNRZs3NB5ubhpbX/bIt7l2zJOSyO64NGmwMAAACCeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3MTk1MzI3OTksImlzU3ViZG9tYWluIjp0cnVlfQ=="><meta http-equiv="origin-trial" content="A/ERL66fN363FkXxgDc6F1+ucRUkAhjEca9W3la6xaLnD2Y1lABsqmdaJmPNaUKPKVBRpyMKEhXYl7rSvrQw+AkAAACNeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiRmxlZGdlQmlkZGluZ0FuZEF1Y3Rpb25TZXJ2ZXIiLCJleHBpcnkiOjE3MTkzNTk5OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A6OdGH3fVf4eKRDbXb4thXA4InNqDJDRhZ8U533U/roYjp4Yau0T3YSuc63vmAs/8ga1cD0E3A7LEq6AXk1uXgsAAACTeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiRmxlZGdlQmlkZGluZ0FuZEF1Y3Rpb25TZXJ2ZXIiLCJleHBpcnkiOjE3MTkzNTk5OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><script src="./OpenCV -- 图像遍历的四种方式（at、指针、isCountinuous、迭代器）、在Vector尾部加数据函数push_back() - 手磨咖啡 - 博客园_files/f(1).txt" async=""></script><script esp-signal="true" src="./OpenCV -- 图像遍历的四种方式（at、指针、isCountinuous、迭代器）、在Vector尾部加数据函数push_back() - 手磨咖啡 - 博客园_files/sync.min.js"></script><script esp-signal="true" src="./OpenCV -- 图像遍历的四种方式（at、指针、isCountinuous、迭代器）、在Vector尾部加数据函数push_back() - 手磨咖啡 - 博客园_files/ob.js"></script><script esp-signal="true" src="./OpenCV -- 图像遍历的四种方式（at、指针、isCountinuous、迭代器）、在Vector尾部加数据函数push_back() - 手磨咖啡 - 博客园_files/publishertag.ids.js"></script><script esp-signal="true" src="./OpenCV -- 图像遍历的四种方式（at、指针、isCountinuous、迭代器）、在Vector尾部加数据函数push_back() - 手磨咖啡 - 博客园_files/esp.js"></script></head>
+<body class="skin-bluesky has-navbar has-bannerbar">
+    <a name="top"></a>
+        <a href="https://www.cnblogs.com/cmt/p/17974346" onclick="countCreativeClicks(&#39;C0-博客园-鼠标垫&#39;)" target="_blank" rel="nofollow">
+            <div class="bannerbar forpc" style="background-size: contain;background-image: url(https://img2024.cnblogs.com/blog/35695/202401/35695-20240115080717588-2053061285.jpg);">
+                <img src="./OpenCV -- 图像遍历的四种方式（at、指针、isCountinuous、迭代器）、在Vector尾部加数据函数push_back() - 手磨咖啡 - 博客园_files/35695-20240115080345165-37334324.jpg" onload="countCreativeImpressions(&#39;C0-博客园-鼠标垫&#39;)">
+                
+                <span id="c0_impression" style="display:none"></span>
+            </div>
+        </a>
+        <div id="bannerbar" class="bannerbar-mobile bannerbar-text-mobile formobile">
+                <a href="https://www.cnblogs.com/cmt/p/17974346" onclick="countCreativeClicks(&#39;M2-博客园-鼠标垫&#39;)" rel="nofollow">
+                    <img src="./OpenCV -- 图像遍历的四种方式（at、指针、isCountinuous、迭代器）、在Vector尾部加数据函数push_back() - 手磨咖啡 - 博客园_files/35695-20240115080910898-1157541931.jpg" alt="" onload="countCreativeImpressionsOnMobile(&#39;M2-博客园-鼠标垫&#39;)">
+                    <span id="m2_impression" style="display:none"></span>
+                </a>
+        </div>
+    <div id="top_nav" class="navbar forpc">
+        <nav id="nav_main" class="navbar-main">
+            <ul id="nav_left" class="navbar-list navbar-left">
+                <li class="navbar-branding">
+                    <a href="https://www.cnblogs.com/" title="开发者的网上家园" role="banner">
+                        <img src="./OpenCV -- 图像遍历的四种方式（at、指针、isCountinuous、迭代器）、在Vector尾部加数据函数push_back() - 手磨咖啡 - 博客园_files/logo.svg" alt="博客园Logo">
+                    </a>
+                </li>
+                <li><a href="https://cnblogs.vip/">会员</a></li>
+                <li><a href="https://www.cnblogs.com/cmt/p/17974346">周边</a></li>
+                <li>
+                    <a href="https://news.cnblogs.com/" onclick="countClicks(&#39;nav&#39;, &#39;skin-navbar-news&#39;)">新闻</a>
+                </li>
+                <li>
+                    <a href="https://q.cnblogs.com/" onclick="countClicks(&#39;nav&#39;, &#39;skin-navbar-q&#39;)">博问</a>
+                </li>
+                <li>
+                    <a href="https://ai.hanghang.com/page/4649915" target="_blank">AI培训</a>
+                </li>
+                <li><a href="https://market.cnblogs.com/" target="_blank">云市场</a></li>
+            </ul>
+            <ul id="nav_right" class="navbar-list navbar-right">
+                <li>
+                    <form id="zzk_search" class="navbar-search dropdown" action="https://zzk.cnblogs.com/s" method="get" role="search">
+                        <input name="w" id="zzk_search_input" placeholder="代码改变世界" type="search" tabindex="3" autocomplete="off">
+                        <button id="zzk_search_button" onclick="window.navbarSearchManager.triggerActiveOption()">
+                            <img id="search_icon" class="focus-hidden" src="./OpenCV -- 图像遍历的四种方式（at、指针、isCountinuous、迭代器）、在Vector尾部加数据函数push_back() - 手磨咖啡 - 博客园_files/search.svg" alt="搜索">
+                            <img class="hidden focus-visible" src="./OpenCV -- 图像遍历的四种方式（at、指针、isCountinuous、迭代器）、在Vector尾部加数据函数push_back() - 手磨咖啡 - 博客园_files/enter.svg" alt="搜索">
+                        </button>
+                        <ul id="navbar_search_options" class="dropdown-menu quick-search-menu">
+                            <li tabindex="0" class="active" onclick="zzkSearch(event, document.getElementById(&#39;zzk_search_input&#39;).value)">
+                                <div class="keyword-wrapper">
+                                    <img src="./OpenCV -- 图像遍历的四种方式（at、指针、isCountinuous、迭代器）、在Vector尾部加数据函数push_back() - 手磨咖啡 - 博客园_files/search.svg" alt="搜索">
+                                    <div class="keyword"></div>
+                                </div>
+                                <span class="search-area">所有博客</span>
+                            </li>
+                                    <li tabindex="1" onclick="zzkBlogSearch(event, &#39;zzzsj&#39;, document.getElementById(&#39;zzk_search_input&#39;).value)">
+                                        <div class="keyword-wrapper">
+                                            <img src="./OpenCV -- 图像遍历的四种方式（at、指针、isCountinuous、迭代器）、在Vector尾部加数据函数push_back() - 手磨咖啡 - 博客园_files/search.svg" alt="搜索">
+                                            <div class="keyword"></div>
+                                        </div>
+                                        <span class="search-area">当前博客</span>
+                                    </li>
+                        </ul>
+                    </form>
+                </li>
+                <li id="navbar_login_status" class="navbar-list">
+                    <a class="navbar-user-info navbar-blog" href="https://i.cnblogs.com/EditPosts.aspx?opt=1" alt="写随笔" title="写随笔" style="display: none;">
+                        <img id="new_post_icon" class="navbar-icon" src="./OpenCV -- 图像遍历的四种方式（at、指针、isCountinuous、迭代器）、在Vector尾部加数据函数push_back() - 手磨咖啡 - 博客园_files/newpost.svg" alt="写随笔">
+                    </a>
+                    <a id="navblog-myblog-icon" class="navbar-user-info navbar-blog" href="https://passport.cnblogs.com/GetBlogApplyStatus.aspx" alt="我的博客" title="我的博客" style="display: none;">
+                        <img id="myblog_icon" class="navbar-icon" src="./OpenCV -- 图像遍历的四种方式（at、指针、isCountinuous、迭代器）、在Vector尾部加数据函数push_back() - 手磨咖啡 - 博客园_files/myblog.svg" alt="我的博客">
+                    </a>
+                    <a class="navbar-user-info navbar-message navbar-icon-wrapper" href="https://msg.cnblogs.com/" alt="短消息" title="短消息" style="display: none;">
+                        <img id="msg_icon" class="navbar-icon" src="./OpenCV -- 图像遍历的四种方式（at、指针、isCountinuous、迭代器）、在Vector尾部加数据函数push_back() - 手磨咖啡 - 博客园_files/message.svg" alt="短消息">
+                        <span id="msg_count" style="display: none"></span>
+                    </a>
+                    <a id="navbar_lite_mode_indicator" data-current-page="blog" style="display: none" href="javascript:void(0)" alt="简洁模式" title="简洁模式启用，您在访问他人博客时会使用简洁款皮肤展示">
+                        <img class="navbar-icon" src="./OpenCV -- 图像遍历的四种方式（at、指针、isCountinuous、迭代器）、在Vector尾部加数据函数push_back() - 手磨咖啡 - 博客园_files/lite-mode-on.svg" alt="简洁模式">
+                    </a>
+                    <div id="user_info" class="navbar-user-info dropdown" style="display: none;">
+                        <a class="dropdown-button" href="https://home.cnblogs.com/">
+                            <img id="user_icon" class="navbar-avatar" src="./OpenCV -- 图像遍历的四种方式（at、指针、isCountinuous、迭代器）、在Vector尾部加数据函数push_back() - 手磨咖啡 - 博客园_files/avatar-default.svg" alt="用户头像">
+                        </a>
+                        <div class="dropdown-menu">
+                            <a id="navblog-myblog-text" href="https://passport.cnblogs.com/GetBlogApplyStatus.aspx">我的博客</a>
+                            <a href="https://home.cnblogs.com/">我的园子</a>
+                            <a href="https://account.cnblogs.com/settings/account">账号设置</a>
+                            <a href="javascript:void(0)" id="navbar_lite_mode_toggle" title="简洁模式会使用简洁款皮肤显示所有博客">
+    简洁模式 <img id="navbar_lite_mode_on" src="./OpenCV -- 图像遍历的四种方式（at、指针、isCountinuous、迭代器）、在Vector尾部加数据函数push_back() - 手磨咖啡 - 博客园_files/lite-mode-check.svg" class="hide" style="display: none;"><span id="navbar_lite_mode_spinner" class="hide">...</span>
+</a>
+                            <a href="javascript:void(0)" onclick="account.logout();">退出登录</a>
+                        </div>
+                    </div>
+                    <a class="navbar-anonymous" href="https://account.cnblogs.com/signup" style="display: inline;">注册</a>
+                    <a class="navbar-anonymous" href="javascript:void(0);" onclick="account.login()" style="display: inline;">登录</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    
+
+    <!--done-->
+<div id="home">
+<div id="header">
+	<div id="blogTitle">
+        <a id="lnkBlogLogo" href="https://www.cnblogs.com/zzzsj/"><img id="blogLogo" src="./OpenCV -- 图像遍历的四种方式（at、指针、isCountinuous、迭代器）、在Vector尾部加数据函数push_back() - 手磨咖啡 - 博客园_files/logo.gif" alt="返回主页"></a>		
+		
+<!--done-->
+<h1><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/zzzsj">手磨咖啡</a>
+</h1>
+<h2></h2>
+
+
+
+
+		
+	</div><!--end: blogTitle 博客的标题和副标题 -->
+	<div id="navigator">
+		
+<ul id="navList">
+<li><a id="blog_nav_sitehome" class="menu" href="https://www.cnblogs.com/">
+博客园</a>
+</li>
+<li>
+<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/zzzsj/">
+首页</a>
+</li>
+<li>
+
+<a id="blog_nav_newpost" class="menu" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">
+新随笔</a>
+</li>
+<li>
+<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/%E6%89%8B%E7%A3%A8%E5%92%96%E5%95%A1">
+联系</a></li>
+<li>
+<a id="blog_nav_rss" class="menu" href="javascript:void(0)" data-rss="https://www.cnblogs.com/zzzsj/rss/">
+订阅</a>
+<!--<partial name="./Shared/_XmlLink.cshtml" model="Model" /></li>--></li>
+<li>
+<a id="blog_nav_admin" class="menu" href="https://i.cnblogs.com/">
+管理</a>
+</li>
+</ul>
+
+
+		<div class="blogStats">
+			<span id="stats_post_count">随笔 - 269&nbsp; </span>
+<span id="stats_article_count">文章 - 0&nbsp; </span>
+<span id="stats-comment_count">评论 - 4&nbsp; </span>
+<span id="stats-total-view-count">阅读 - 
+<span title="总阅读数: 445556">
+44万</span></span>
+
+		</div><!--end: blogStats -->
+	</div><!--end: navigator 博客导航栏 -->
+</div><!--end: header 头部 -->
+<div id="main">
+	<div id="mainContent">
+	<div class="forFlow">
+		<div id="post_detail">
+    <!--done-->
+    <div id="topics">
+        <div class="post">
+            <h1 class="postTitle">
+                
+<a id="cb_post_title_url" class="postTitle2 vertical-middle" href="https://www.cnblogs.com/zzzsj/p/14576020.html">
+    <span role="heading" aria-level="2">OpenCV -- 图像遍历的四种方式（at、指针、isCountinuous、迭代器）、在Vector尾部加数据函数push_back()</span>
+    
+
+</a><button class="cnblogs-toc-button" title="显示目录导航" aria-expanded="false"></button>
+
+            </h1>
+            <div class="clear"></div>
+            <div class="postBody">
+                <div id="cnblogs_post_body" class="blogpost-body blogpost-body-html">
+<h1>一、遍历图像<button class="cnblogs-toc-button" title="显示目录导航" aria-expanded="false"></button></h1>
+<p>&nbsp; &nbsp; 我们在实际应用中对图像进行的操作，往往并不是将图像作为一个整体进行操作，而是对图像中的所有点或特殊点进行运算，所以遍历图像就显得很重要，如何高效的遍历图像是一个很值得探讨的问题。</p>
+<h2><a name="t1" rel="noopener"></a><a name="t1" rel="noopener"></a><a name="t1" rel="noopener"></a>1.1 at&lt;typename&gt;(i,j)<button class="cnblogs-toc-button" title="显示目录导航" aria-expanded="false"></button></h2>
+<p><img src="./OpenCV -- 图像遍历的四种方式（at、指针、isCountinuous、迭代器）、在Vector尾部加数据函数push_back() - 手磨咖啡 - 博客园_files/2171160-20210325084738480-1246226575.png" alt="" loading="lazy" class="medium-zoom-image"></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; Mat类提供了一个at的方法用于取得图像上的点，它是一个模板函数，可以取到任何类型的图像上的点。下面我们通过一个图像处理中的实际来说明它的用法。</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; 在实际应用中，我们很多时候需要对图像降色彩，因为256*256*256实在太多了，在图像颜色聚类或彩色直方图时，我们需要用一些代表性的颜色代替丰富的色彩空间，我们的思路是将每个通道的256种颜色用64种代替，即将原来256种颜色划分64个颜色段，每个颜色段取中间的颜色值作为代表色。</p>
+<p>&nbsp;</p>
+<div class="cnblogs_code"><div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./OpenCV -- 图像遍历的四种方式（at、指针、isCountinuous、迭代器）、在Vector尾部加数据函数push_back() - 手磨咖啡 - 博客园_files/copycode.gif" alt="复制代码"></a></span></div>
+<pre><span style="color: rgba(0, 0, 255, 1)">void</span> colorReduce(Mat&amp; image,<span style="color: rgba(0, 0, 255, 1)">int</span><span style="color: rgba(0, 0, 0, 1)"> div)
+  {
+      </span><span style="color: rgba(0, 0, 255, 1)">for</span>(<span style="color: rgba(0, 0, 255, 1)">int</span> i=<span style="color: rgba(128, 0, 128, 1)">0</span>;i&lt;image.rows;i++)<span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)">遍历所有像素</span>
+<span style="color: rgba(0, 0, 0, 1)">      {
+          </span><span style="color: rgba(0, 0, 255, 1)">for</span>(<span style="color: rgba(0, 0, 255, 1)">int</span> j=<span style="color: rgba(128, 0, 128, 1)">0</span>;j&lt;image.cols;j++<span style="color: rgba(0, 0, 0, 1)">)
+          {
+            </span><span style="color: rgba(0, 0, 255, 1)">if</span>(image.channels() == <span style="color: rgba(128, 0, 128, 1)">1</span>)<span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)">判断是否是单通道</span>
+<span style="color: rgba(0, 0, 0, 1)">             {
+               image.at</span>&lt;uchar&gt;(i,j) = image.at&lt;uchar&gt;(i,j)/div*div+div/<span style="color: rgba(128, 0, 128, 1)">2</span>;<span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)">读出image第i行第j列的像素值</span>
+<span style="color: rgba(0, 0, 0, 1)">             }
+            </span><span style="color: rgba(0, 0, 255, 1)">else</span> <span style="color: rgba(0, 0, 255, 1)">if</span>(image.channels() == <span style="color: rgba(128, 0, 128, 1)">3</span>)<span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)">判断是否是RGB三通道</span>
+<span style="color: rgba(0, 0, 0, 1)">            {
+              image.at</span>&lt;Vec3b&gt;(i,j)[<span style="color: rgba(128, 0, 128, 1)">0</span>]=image.at&lt;Vec3b&gt;(i,j)[<span style="color: rgba(128, 0, 128, 1)">0</span>]/div*div+div/<span style="color: rgba(128, 0, 128, 1)">2</span>;<span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)">三通道</span>
+              image.at&lt;Vec3b&gt;(i,j)[<span style="color: rgba(128, 0, 128, 1)">1</span>]=image.at&lt;Vec3b&gt;(i,j)[<span style="color: rgba(128, 0, 128, 1)">1</span>]/div*div+div/<span style="color: rgba(128, 0, 128, 1)">2</span><span style="color: rgba(0, 0, 0, 1)">;
+              image.at</span>&lt;Vec3b&gt;(i,j)[<span style="color: rgba(128, 0, 128, 1)">2</span>]=image.at&lt;Vec3b&gt;(i,j)[<span style="color: rgba(128, 0, 128, 1)">2</span>]/div*div+div/<span style="color: rgba(128, 0, 128, 1)">2</span><span style="color: rgba(0, 0, 0, 1)">;
+            }
+         }
+     }
+ }</span></pre>
+<div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./OpenCV -- 图像遍历的四种方式（at、指针、isCountinuous、迭代器）、在Vector尾部加数据函数push_back() - 手磨咖啡 - 博客园_files/copycode.gif" alt="复制代码"></a></span></div></div>
+<p><img src="./OpenCV -- 图像遍历的四种方式（at、指针、isCountinuous、迭代器）、在Vector尾部加数据函数push_back() - 手磨咖啡 - 博客园_files/2171160-20210325084824654-2033240252.png" alt="" loading="lazy" class="medium-zoom-image"></p>
+<p>通过上面的例子我们可以看出，at方法取图像中的点的用法：</p>
+<p>image.at&lt;uchar&gt;(i,j)：取出灰度图像中i行j列的点。</p>
+<p>image.at&lt;Vec3b&gt;(i,j)[k]：取出彩色图像中i行j列第k通道的颜色点。其中uchar,Vec3b都是图像像素值的类型，不要对Vec3b这种类型感觉害怕，其实在core里它是通过typedef Vec&lt;T,N&gt;来定义的，N代表元素的个数，T代表类型。</p>
+<p>更简单一些的方法：OpenCV定义了一个Mat的模板子类为Mat_，它重载了operator()让我们可以更方便的取图像上的点。</p>
+<p>Mat_&lt;uchar&gt; im=image;</p>
+<p>im(i,j)=im(i,j)/div*div+div/2;</p>
+<div class="cnblogs_code"><div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./OpenCV -- 图像遍历的四种方式（at、指针、isCountinuous、迭代器）、在Vector尾部加数据函数push_back() - 手磨咖啡 - 博客园_files/copycode.gif" alt="复制代码"></a></span></div>
+<pre>#include&lt;opencv2\opencv.hpp&gt;<span style="color: rgba(0, 0, 0, 1)">
+#include</span>&lt;iostream&gt;
+<span style="color: rgba(0, 0, 255, 1)">using</span> <span style="color: rgba(0, 0, 255, 1)">namespace</span><span style="color: rgba(0, 0, 0, 1)"> cv;
+</span><span style="color: rgba(0, 0, 255, 1)">using</span> <span style="color: rgba(0, 0, 255, 1)">namespace</span><span style="color: rgba(0, 0, 0, 1)"> std;
+ 
+</span><span style="color: rgba(0, 0, 255, 1)">int</span><span style="color: rgba(0, 0, 0, 1)"> main()
+{
+    Mat grayim(</span><span style="color: rgba(128, 0, 128, 1)">600</span>, <span style="color: rgba(128, 0, 128, 1)">800</span><span style="color: rgba(0, 0, 0, 1)">, CV_8UC1);
+    Mat colorim(</span><span style="color: rgba(128, 0, 128, 1)">600</span>, <span style="color: rgba(128, 0, 128, 1)">800</span><span style="color: rgba(0, 0, 0, 1)">, CV_8UC3);
+    </span><span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)">遍历所有像素，并设置像素值</span>
+    <span style="color: rgba(0, 0, 255, 1)">for</span> (<span style="color: rgba(0, 0, 255, 1)">int</span> i = <span style="color: rgba(128, 0, 128, 1)">0</span>; i &lt; colorim.rows; i++<span style="color: rgba(0, 0, 0, 1)">)
+    </span><span style="color: rgba(0, 0, 255, 1)">for</span> (<span style="color: rgba(0, 0, 255, 1)">int</span> j = <span style="color: rgba(128, 0, 128, 1)">0</span>; j &lt; colorim.cols;j++<span style="color: rgba(0, 0, 0, 1)">)
+    {
+        Vec3b pixel;</span><span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)">创建数组pixel</span>
+        pixel[<span style="color: rgba(128, 0, 128, 1)">0</span>] = i % <span style="color: rgba(128, 0, 128, 1)">255</span><span style="color: rgba(0, 0, 0, 1)">;
+        pixel[</span><span style="color: rgba(128, 0, 128, 1)">1</span>] = j % <span style="color: rgba(128, 0, 128, 1)">255</span><span style="color: rgba(0, 0, 0, 1)">;
+        pixel[</span><span style="color: rgba(128, 0, 128, 1)">2</span>] = <span style="color: rgba(128, 0, 128, 1)">0</span><span style="color: rgba(0, 0, 0, 1)">;
+ 
+            </span><span style="color: rgba(0, 128, 0, 1)">/*</span><span style="color: rgba(0, 128, 0, 1)">以下内容读者可忽略
+        image.at&lt;cv::Vec3b&gt;(j, i)[0] = 255;
+        image.at&lt;cv::Vec3b&gt;(j, i)[1] = 255;
+        image.at&lt;cv::Vec3b&gt;(j, i)[2] = 255;椒盐噪点那块</span><span style="color: rgba(0, 128, 0, 1)">*/</span>
+ 
+        <span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)">将第i行j列的像素值设为像素值为pixel的颜色</span>
+        colorim.at&lt;Vec3b&gt;(i, j) =<span style="color: rgba(0, 0, 0, 1)"> pixel;
+        </span><span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)">将i行j列的像素值设为128</span>
+        grayim.at&lt;uchar&gt;(i, j) = (i+j)%<span style="color: rgba(128, 0, 128, 1)">255</span><span style="color: rgba(0, 0, 0, 1)">;
+    }
+    imshow(</span><span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">colcorim</span><span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(0, 0, 0, 1)">, colorim);
+    imshow(</span><span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">grayim</span><span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(0, 0, 0, 1)">, grayim);
+    waitKey(</span><span style="color: rgba(128, 0, 128, 1)">20000</span><span style="color: rgba(0, 0, 0, 1)">);
+    </span><span style="color: rgba(0, 0, 255, 1)">return</span> <span style="color: rgba(128, 0, 128, 1)">0</span><span style="color: rgba(0, 0, 0, 1)">;
+}</span></pre>
+<div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./OpenCV -- 图像遍历的四种方式（at、指针、isCountinuous、迭代器）、在Vector尾部加数据函数push_back() - 手磨咖啡 - 博客园_files/copycode.gif" alt="复制代码"></a></span></div></div>
+<p>生成的图像如图，</p>
+<p><img src="./OpenCV -- 图像遍历的四种方式（at、指针、isCountinuous、迭代器）、在Vector尾部加数据函数push_back() - 手磨咖啡 - 博客园_files/2171160-20210325084948064-86188199.png" alt="" loading="lazy" class="medium-zoom-image"></p>
+<p><img src="./OpenCV -- 图像遍历的四种方式（at、指针、isCountinuous、迭代器）、在Vector尾部加数据函数push_back() - 手磨咖啡 - 博客园_files/2171160-20210325084958353-115830441.png" alt="" loading="lazy" class="medium-zoom-image"></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;需要注意的是，如果遍历图像并不推荐使用 需要注意的是，如果遍历图像<strong>并不推荐使用 at() 函数</strong>。使用at()函数优点是代码可读性高，但<span style="color: rgba(255, 0, 0, 1)"><strong>效率不高</strong></span>。</p>
+<h2>1.2、高效一点：用指针来遍历图像<button class="cnblogs-toc-button" title="显示目录导航" aria-expanded="false"></button></h2>
+<p>上面的例程中可以看到，我们实际喜欢把原图传进函数内，但是在函数内我们对原图像进行了修改，而将原图作为一个结果输出，很多时候我们需要保留原图，这样我们需要一个原图的副本。</p>
+<div class="cnblogs_code"><div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./OpenCV -- 图像遍历的四种方式（at、指针、isCountinuous、迭代器）、在Vector尾部加数据函数push_back() - 手磨咖啡 - 博客园_files/copycode.gif" alt="复制代码"></a></span></div>
+<pre><span style="color: rgba(0, 0, 255, 1)">void</span> colorReduce(<span style="color: rgba(0, 0, 255, 1)">const</span> Mat&amp; image,Mat&amp; outImage,<span style="color: rgba(0, 0, 255, 1)">int</span><span style="color: rgba(0, 0, 0, 1)"> div)
+ {
+     </span><span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)"> 创建与原图像等尺寸的图像</span>
+<span style="color: rgba(0, 0, 0, 1)">     outImage.create(image.size(),image.type());
+     </span><span style="color: rgba(0, 0, 255, 1)">int</span> nr=<span style="color: rgba(0, 0, 0, 1)">image.rows;
+     </span><span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)"> 将3通道转换为1通道</span>
+     <span style="color: rgba(0, 0, 255, 1)">int</span> nl=image.cols*<span style="color: rgba(0, 0, 0, 1)">image.channels();
+    </span><span style="color: rgba(0, 0, 255, 1)">for</span>(<span style="color: rgba(0, 0, 255, 1)">int</span> k=<span style="color: rgba(128, 0, 128, 1)">0</span>;k&lt;nr;k++<span style="color: rgba(0, 0, 0, 1)">)
+     {
+         </span><span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)"> 每一行图像的指针</span>
+         <span style="color: rgba(0, 0, 255, 1)">const</span> uchar* inData=image.ptr&lt;uchar&gt;<span style="color: rgba(0, 0, 0, 1)">(k);
+         uchar</span>* outData=outImage.ptr&lt;uchar&gt;<span style="color: rgba(0, 0, 0, 1)">(k);
+         </span><span style="color: rgba(0, 0, 255, 1)">for</span>(<span style="color: rgba(0, 0, 255, 1)">int</span> i=<span style="color: rgba(128, 0, 128, 1)">0</span>;i&lt;nl;i++<span style="color: rgba(0, 0, 0, 1)">)
+         {
+             outData[i]</span>=inData[i]/div*div+div/<span style="color: rgba(128, 0, 128, 1)">2</span><span style="color: rgba(0, 0, 0, 1)">;
+         }
+     }
+ }</span></pre>
+<div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./OpenCV -- 图像遍历的四种方式（at、指针、isCountinuous、迭代器）、在Vector尾部加数据函数push_back() - 手磨咖啡 - 博客园_files/copycode.gif" alt="复制代码"></a></span></div></div>
+<p>从上面的例子中可以看出，取出图像中第i行数据的指针：<strong><em>image.ptr&lt;uchar&gt;(i)</em>。</strong></p>
+<p>值得说明的是：程序中将三通道的数据转换为1通道，在<strong>建立在每一行数据元素之间在内存里是连续存储的，每个像素三通道像素按顺序存储</strong>。也就是一幅图像数据最开始的三个值，是最左上角的那像素的三个通道的值。</p>
+<p>但是这种用法不能用在<strong>行与行</strong>之间，因为图像在OpenCV里的<strong>存储机制问题，行与行之间可能有空白单元</strong>。这些空白单元对图像来说是没有意思的，只是为了在某些架构上能够更有效率，比如intel MMX可以更有效的处理那种个数是4或8倍数的行。但是我们可以<strong>申明一个连续的空间来存储图像，</strong>这个话题引入下面最为高效的遍历图像的机制。</p>
+<h3>1.3、更高效的方法<button class="cnblogs-toc-button" title="显示目录导航" aria-expanded="false"></button></h3>
+<p>上面已经提到过了，一般来说图像行与行之间往往存储是不连续的，但是有些图像可以是连续的，Mat提供了一个检测图像是否连续的函数isContinuous()。当图像连通时，我们就可以把图像完全展开，看成是一行。</p>
+<div class="cnblogs_code"><div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./OpenCV -- 图像遍历的四种方式（at、指针、isCountinuous、迭代器）、在Vector尾部加数据函数push_back() - 手磨咖啡 - 博客园_files/copycode.gif" alt="复制代码"></a></span></div>
+<pre> <span style="color: rgba(0, 0, 255, 1)">void</span> colorReduce(<span style="color: rgba(0, 0, 255, 1)">const</span> Mat&amp; image,Mat&amp; outImage,<span style="color: rgba(0, 0, 255, 1)">int</span><span style="color: rgba(0, 0, 0, 1)"> div)
+ {
+     </span><span style="color: rgba(0, 0, 255, 1)">int</span> nr=<span style="color: rgba(0, 0, 0, 1)">image.rows;
+     </span><span style="color: rgba(0, 0, 255, 1)">int</span> nc=<span style="color: rgba(0, 0, 0, 1)">image.cols;
+     outImage.create(image.size(),image.type());
+     </span><span style="color: rgba(0, 0, 255, 1)">if</span>(image.isContinuous()&amp;&amp;<span style="color: rgba(0, 0, 0, 1)">outImage.isContinuous())
+     {
+         nr</span>=<span style="color: rgba(128, 0, 128, 1)">1</span><span style="color: rgba(0, 0, 0, 1)">;
+         nc</span>=nc*image.rows*<span style="color: rgba(0, 0, 0, 1)">image.channels();
+     }
+     </span><span style="color: rgba(0, 0, 255, 1)">for</span>(<span style="color: rgba(0, 0, 255, 1)">int</span> i=<span style="color: rgba(128, 0, 128, 1)">0</span>;i&lt;nr;i++<span style="color: rgba(0, 0, 0, 1)">)
+    {
+         </span><span style="color: rgba(0, 0, 255, 1)">const</span> uchar* inData=image.ptr&lt;uchar&gt;<span style="color: rgba(0, 0, 0, 1)">(i);
+         uchar</span>* outData=outImage.ptr&lt;uchar&gt;<span style="color: rgba(0, 0, 0, 1)">(i);
+         </span><span style="color: rgba(0, 0, 255, 1)">for</span>(<span style="color: rgba(0, 0, 255, 1)">int</span> j=<span style="color: rgba(128, 0, 128, 1)">0</span>;j&lt;nc;j++<span style="color: rgba(0, 0, 0, 1)">)
+        {
+             </span>*outData++=*inData++/div*div+div/<span style="color: rgba(128, 0, 128, 1)">2</span><span style="color: rgba(0, 0, 0, 1)">;
+         }
+     }
+ }</span></pre>
+<div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./OpenCV -- 图像遍历的四种方式（at、指针、isCountinuous、迭代器）、在Vector尾部加数据函数push_back() - 手磨咖啡 - 博客园_files/copycode.gif" alt="复制代码"></a></span></div></div>
+<p>用指针除了用上面的方法外，还可以用指针来索引固定位置的像素：</p>
+<p><strong>image.step</strong>返回图像一行像素元素的个数（包括空白元素），<strong>image.elemSize()</strong>返回一个图像像素的大小。</p>
+<p>&amp;image.at&lt;uchar&gt;(i,j)=image.data+i*image.step+j*image.elemSize();</p>
+<h2>1.4、还有吗？用迭代器来遍历。<button class="cnblogs-toc-button" title="显示目录导航" aria-expanded="false"></button></h2>
+<p>下面的方法可以让我们来为图像中的像素声明一个迭代器：</p>
+<p>MatIterator_&lt;Vec3b&gt; it;</p>
+<p>Mat_&lt;Vec3b&gt;::iterator it;</p>
+<p>如果迭代器指向一个const图像，则可以用下面的声明：</p>
+<p>MatConstIterator&lt;Vec3b&gt; it; 或者</p>
+<p>Mat_&lt;Vec3b&gt;::const_iterator it;</p>
+<p>下面我们用迭代器来简化上面的colorReduce程序：</p>
+<div class="cnblogs_code"><div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./OpenCV -- 图像遍历的四种方式（at、指针、isCountinuous、迭代器）、在Vector尾部加数据函数push_back() - 手磨咖啡 - 博客园_files/copycode.gif" alt="复制代码"></a></span></div>
+<pre> <span style="color: rgba(0, 0, 255, 1)">void</span> colorReduce(<span style="color: rgba(0, 0, 255, 1)">const</span> Mat&amp; image,Mat&amp; outImage,<span style="color: rgba(0, 0, 255, 1)">int</span><span style="color: rgba(0, 0, 0, 1)"> div)
+ {
+     outImage.create(image.size(),image.type());
+     MatConstIterator_</span>&lt;Vec3b&gt; it_in=image.begin&lt;Vec3b&gt;<span style="color: rgba(0, 0, 0, 1)">();
+     MatConstIterator_</span>&lt;Vec3b&gt; itend_in=image.end&lt;Vec3b&gt;<span style="color: rgba(0, 0, 0, 1)">();
+     MatIterator_</span>&lt;Vec3b&gt; it_out=outImage.begin&lt;Vec3b&gt;<span style="color: rgba(0, 0, 0, 1)">();
+     MatIterator_</span>&lt;Vec3b&gt; itend_out=outImage.end&lt;Vec3b&gt;<span style="color: rgba(0, 0, 0, 1)">();
+     </span><span style="color: rgba(0, 0, 255, 1)">while</span>(it_in!=<span style="color: rgba(0, 0, 0, 1)">itend_in)
+     {
+         (</span>*it_out)[<span style="color: rgba(128, 0, 128, 1)">0</span>]=(*it_in)[<span style="color: rgba(128, 0, 128, 1)">0</span>]/div*div+div/<span style="color: rgba(128, 0, 128, 1)">2</span><span style="color: rgba(0, 0, 0, 1)">;
+         (</span>*it_out)[<span style="color: rgba(128, 0, 128, 1)">1</span>]=(*it_in)[<span style="color: rgba(128, 0, 128, 1)">1</span>]/div*div+div/<span style="color: rgba(128, 0, 128, 1)">2</span><span style="color: rgba(0, 0, 0, 1)">;
+         (</span>*it_out)[<span style="color: rgba(128, 0, 128, 1)">2</span>]=(*it_in)[<span style="color: rgba(128, 0, 128, 1)">2</span>]/div*div+div/<span style="color: rgba(128, 0, 128, 1)">2</span><span style="color: rgba(0, 0, 0, 1)">;
+         it_in</span>++<span style="color: rgba(0, 0, 0, 1)">;
+         it_out</span>++<span style="color: rgba(0, 0, 0, 1)">;
+     }
+ }</span></pre>
+<div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./OpenCV -- 图像遍历的四种方式（at、指针、isCountinuous、迭代器）、在Vector尾部加数据函数push_back() - 手磨咖啡 - 博客园_files/copycode.gif" alt="复制代码"></a></span></div></div>
+<p>如果你想从第二行开始，则可以从image.begin&lt;Vec3b&gt;()+image.rows开始。</p>
+<p><strong>上面4种方法中，第3种方法的效率最高！</strong></p>
+<h2>1.5、图像的邻域操作<button class="cnblogs-toc-button" title="显示目录导航" aria-expanded="false"></button></h2>
+<p>很多时候，我们对图像处理时，要考虑它的邻域，比如3*3是我们常用的，这在图像滤波、去噪中最为常见，下面我们介绍如果在一次图像遍历过程中进行邻域的运算。</p>
+<p>下面我们进行一个简单的滤波操作，滤波算子为[0 –1 0;-1 5 –1;0 –1 0]。</p>
+<p>它可以让图像变得尖锐，而边缘更加突出。核心公式即：sharp(i.j)=5*image(i,j)-image(i-1,j)-image(i+1, j&nbsp;)-image(i,j-1)-image(i,j+1)。</p>
+<div class="cnblogs_code"><div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./OpenCV -- 图像遍历的四种方式（at、指针、isCountinuous、迭代器）、在Vector尾部加数据函数push_back() - 手磨咖啡 - 博客园_files/copycode.gif" alt="复制代码"></a></span></div>
+<pre> <span style="color: rgba(0, 0, 255, 1)">void</span> ImgFilter2d(<span style="color: rgba(0, 0, 255, 1)">const</span> Mat &amp;image,Mat&amp;<span style="color: rgba(0, 0, 0, 1)"> result)
+ {
+     result.create(image.size(),image.type());
+     </span><span style="color: rgba(0, 0, 255, 1)">int</span> nr=<span style="color: rgba(0, 0, 0, 1)">image.rows;
+     </span><span style="color: rgba(0, 0, 255, 1)">int</span> nc=image.cols*<span style="color: rgba(0, 0, 0, 1)">image.channels();
+     </span><span style="color: rgba(0, 0, 255, 1)">for</span>(<span style="color: rgba(0, 0, 255, 1)">int</span> i=<span style="color: rgba(128, 0, 128, 1)">1</span>;i&lt;nr-<span style="color: rgba(128, 0, 128, 1)">1</span>;i++<span style="color: rgba(0, 0, 0, 1)">)
+     {
+         </span><span style="color: rgba(0, 0, 255, 1)">const</span> uchar* up_line=image.ptr&lt;uchar&gt;(i-<span style="color: rgba(128, 0, 128, 1)">1</span>);<span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)">指向上一行</span>
+        <span style="color: rgba(0, 0, 255, 1)">const</span> uchar* mid_line=image.ptr&lt;uchar&gt;(i);<span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)">当前行</span>
+        <span style="color: rgba(0, 0, 255, 1)">const</span> uchar* down_line=image.ptr&lt;uchar&gt;(i+<span style="color: rgba(128, 0, 128, 1)">1</span>);<span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)">下一行</span>
+         uchar* cur_line=result.ptr&lt;uchar&gt;<span style="color: rgba(0, 0, 0, 1)">(i);
+         </span><span style="color: rgba(0, 0, 255, 1)">for</span>(<span style="color: rgba(0, 0, 255, 1)">int</span> j=<span style="color: rgba(128, 0, 128, 1)">1</span>;j&lt;nc-<span style="color: rgba(128, 0, 128, 1)">1</span>;j++<span style="color: rgba(0, 0, 0, 1)">)
+         {
+             cur_line[j]</span>=saturate_cast&lt;uchar&gt;(<span style="color: rgba(128, 0, 128, 1)">5</span>*mid_line[j]-mid_line[j-<span style="color: rgba(128, 0, 128, 1)">1</span>]-mid_line[j+<span style="color: rgba(128, 0, 128, 1)">1</span>]-<span style="color: rgba(0, 0, 0, 1)">
+                 up_line[j]</span>-<span style="color: rgba(0, 0, 0, 1)">down_line[j]);
+         }
+     }
+     </span><span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)"> 把图像边缘像素设置为0</span>
+     result.row(<span style="color: rgba(128, 0, 128, 1)">0</span>).setTo(Scalar(<span style="color: rgba(128, 0, 128, 1)">0</span><span style="color: rgba(0, 0, 0, 1)">));
+     result.row(result.rows</span>-<span style="color: rgba(128, 0, 128, 1)">1</span>).setTo(Scalar(<span style="color: rgba(128, 0, 128, 1)">0</span><span style="color: rgba(0, 0, 0, 1)">));
+     result.col(</span><span style="color: rgba(128, 0, 128, 1)">0</span>).setTo(Scalar(<span style="color: rgba(128, 0, 128, 1)">0</span><span style="color: rgba(0, 0, 0, 1)">));
+     result.col(result.cols</span>-<span style="color: rgba(128, 0, 128, 1)">1</span>).setTo(Scalar(<span style="color: rgba(128, 0, 128, 1)">0</span><span style="color: rgba(0, 0, 0, 1)">));
+ }</span></pre>
+<div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./OpenCV -- 图像遍历的四种方式（at、指针、isCountinuous、迭代器）、在Vector尾部加数据函数push_back() - 手磨咖啡 - 博客园_files/copycode.gif" alt="复制代码"></a></span></div></div>
+<p><img src="./OpenCV -- 图像遍历的四种方式（at、指针、isCountinuous、迭代器）、在Vector尾部加数据函数push_back() - 手磨咖啡 - 博客园_files/2171160-20210325093051318-1166254594.png" alt="" loading="lazy" class="medium-zoom-image"></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>上面的程序有以下几点需要说明：</p>
+<p>1，staturate_cast&lt;typename&gt;是一个类型转换函数，程序里是为了确保运算结果还在uchar范围内。</p>
+<p>2，row和col方法返回图像中的某些行或列，返回值是一个Mat。</p>
+<p>3，setTo方法将Mat对像中的点设置为一个值，Scalar(n)为一个灰度值，Scalar(a,b,c)为一个彩色值。</p>
+<h2>1.6、图像的算术运算<button class="cnblogs-toc-button" title="显示目录导航" aria-expanded="false"></button></h2>
+<p>Mat类把很多算数操作符都进行了重载，让它们来符合矩阵的一些运算，如果+、-、点乘等。</p>
+<p>下面我们来看看用位操作和基本算术运算来完成本文中的colorReduce程序，它更简单，更高效。</p>
+<p>将256种灰度阶降到64位其实是抛弃了二进制最后面的4位，所以我们可以用位操作来做这一步处理。</p>
+<p>首先我们计算2^8降到2^n中的n：int n=static_cast&lt;int&gt;(log(static_cast&lt;double&gt;(div))/log(2.0));</p>
+<p>然后可以得到mask，mask=0xFF&lt;&lt;n;</p>
+<p>用下面简直的语句就可以得到我们想要的结果：</p>
+<p>result=(image&amp;Scalar(mask,mask,mask))+Scalar(div/2,div/2,div/2);</p>
+<p>很多时候我们需要对图像的一个通信单独进行操作，比如在HSV色彩模式下，我们就经常把3个通道分开考虑。</p>
+<div class="cnblogs_code"><div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./OpenCV -- 图像遍历的四种方式（at、指针、isCountinuous、迭代器）、在Vector尾部加数据函数push_back() - 手磨咖啡 - 博客园_files/copycode.gif" alt="复制代码"></a></span></div>
+<pre>vector&lt;Mat&gt;<span style="color: rgba(0, 0, 0, 1)"> planes;
+</span><span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)"> 将image分为三个通道图像存储在planes中</span>
+<span style="color: rgba(0, 0, 0, 1)">split(image,planes);
+planes[</span><span style="color: rgba(128, 0, 128, 1)">0</span>]+=<span style="color: rgba(0, 0, 0, 1)">image2;
+</span><span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)"> 将planes中三幅图像合为一个三通道图像</span>
+merge(planes,result);</pre>
+<div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./OpenCV -- 图像遍历的四种方式（at、指针、isCountinuous、迭代器）、在Vector尾部加数据函数push_back() - 手磨咖啡 - 博客园_files/copycode.gif" alt="复制代码"></a></span></div></div>
+<h1>二、Vector尾部加数据——Mat::push_back<button class="cnblogs-toc-button" title="显示目录导航" aria-expanded="false"></button></h1>
+<p>Adds elements to the bottom of the matrix.</p>
+<p>C++:&nbsp;template&lt;typename T&gt; void&nbsp;Mat::push_back(const T&amp;&nbsp;elem)</p>
+<p>C++:&nbsp;void&nbsp;Mat::push_back(const Mat&amp;&nbsp;m)</p>
+<p><img src="./OpenCV -- 图像遍历的四种方式（at、指针、isCountinuous、迭代器）、在Vector尾部加数据函数push_back() - 手磨咖啡 - 博客园_files/2171160-20210325093619227-653327542.png" alt="" loading="lazy" class="medium-zoom-image"></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; The methods add one or more elements to the bottom of the matrix. They emulate the corresponding method of the STL vector class. When&nbsp;elem&nbsp;is&nbsp;Mat&nbsp;, its type and the number of columns must be the same as in the container matrix.</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; 在为mat增加一行的时候，用到push_back。首先用vector存要加的数据，用push_back加入，编译没有问题，运行时抛出sigsegv错误。</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; 我理解按照上述push_back的定义，他是可以接受vector的参数，并且由于编译没有问题，也更加使我相信这一点。可惜！</p>
+<h3><a name="t9" rel="noopener"></a><a name="t9" rel="noopener"></a>使用方法：<button class="cnblogs-toc-button" title="显示目录导航" aria-expanded="false"></button></h3>
+<p>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;先创建一个Mat(1, 16, CV_64F), 利用at()函数为其赋值。最后使用push_back加入。</p>
+<div class="cnblogs_code"><div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./OpenCV -- 图像遍历的四种方式（at、指针、isCountinuous、迭代器）、在Vector尾部加数据函数push_back() - 手磨咖啡 - 博客园_files/copycode.gif" alt="复制代码"></a></span></div>
+<pre> Mat temp(<span style="color: rgba(128, 0, 128, 1)">1</span>, <span style="color: rgba(128, 0, 128, 1)">16</span><span style="color: rgba(0, 0, 0, 1)">, CV_64F);;
+ </span><span style="color: rgba(0, 0, 255, 1)">for</span> (<span style="color: rgba(0, 0, 255, 1)">int</span> j = <span style="color: rgba(128, 0, 128, 1)">0</span>; j &lt; <span style="color: rgba(128, 0, 128, 1)">10</span>; j++<span style="color: rgba(0, 0, 0, 1)">)
+ {
+     temp.at</span>&lt;<span style="color: rgba(0, 0, 255, 1)">double</span>&gt;(<span style="color: rgba(128, 0, 128, 1)">0</span>, j-<span style="color: rgba(128, 0, 128, 1)">1</span>) =<span style="color: rgba(0, 0, 0, 1)"> j;
+ }
+ origin.push_back(temp);</span></pre>
+<div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./OpenCV -- 图像遍历的四种方式（at、指针、isCountinuous、迭代器）、在Vector尾部加数据函数push_back() - 手磨咖啡 - 博客园_files/copycode.gif" alt="复制代码"></a></span></div></div>
+<p>&nbsp;</p>
+</div>
+<div class="clear"></div>
+<div id="blog_post_info_block" role="contentinfo">
+
+
+
+
+    <div id="blog_post_info">
+<div id="green_channel">
+        <a href="javascript:void(0);" id="green_channel_digg" onclick="DiggIt(14576020,cb_blogId,1);green_channel_success(this,&#39;谢谢推荐！&#39;);">好文要顶</a>
+        <a id="green_channel_follow" onclick="follow(&#39;7f4a5d3a-e7d1-4de4-e22e-08d861ce4c5c&#39;);" href="javascript:void(0);">关注我</a>
+    <a id="green_channel_favorite" onclick="AddToWz(cb_entryId);return false;" href="javascript:void(0);">收藏该文</a>
+    <a id="green_channel_wechat" href="javascript:void(0);" title="分享至微信" onclick="shareManager.wechatShare()"><img src="./OpenCV -- 图像遍历的四种方式（at、指针、isCountinuous、迭代器）、在Vector尾部加数据函数push_back() - 手磨咖啡 - 博客园_files/wechat.png" alt=""></a>
+</div>
+<div id="author_profile">
+    <div id="author_profile_info" class="author_profile_info">
+            <a href="https://home.cnblogs.com/u/zzzsj/" target="_blank"><img src="./OpenCV -- 图像遍历的四种方式（at、指针、isCountinuous、迭代器）、在Vector尾部加数据函数push_back() - 手磨咖啡 - 博客园_files/20201104115901.png" class="author_avatar" alt=""></a>
+        <div id="author_profile_detail" class="author_profile_info">
+            <a href="https://home.cnblogs.com/u/zzzsj/">手磨咖啡</a>
+            <br>
+            <a href="https://home.cnblogs.com/u/zzzsj/followers/">粉丝 - <span class="follower-count">17</span></a>
+            <a href="https://home.cnblogs.com/u/zzzsj/followees/">关注 - <span class="following-count">1</span></a><br>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <div id="author_profile_honor"></div>
+    <div id="author_profile_follow" class="follow-tip">
+                <a href="javascript:void(0);" onclick="follow(&#39;7f4a5d3a-e7d1-4de4-e22e-08d861ce4c5c&#39;);return false;">+加关注</a>
+    </div>
+</div>
+<div id="div_digg">
+    <div class="diggit" onclick="votePost(14576020,&#39;Digg&#39;)">
+        <span class="diggnum" id="digg_count">0</span>
+    </div>
+    <div class="buryit" onclick="votePost(14576020,&#39;Bury&#39;)">
+        <span class="burynum" id="bury_count">0</span>
+    </div>
+    <div class="clear"></div>
+    <div class="diggword" id="digg_tips">
+    </div>
+        <div id="vip_tip"><a class="tip" href="https://cnblogs.vip/" target="_blank">升级成为会员</a></div>
+</div>
+
+<script type="text/javascript">
+    currentDiggType = 0;
+</script>
+</div>
+    <div class="clear"></div>
+    <div id="post_next_prev">
+
+    <a href="https://www.cnblogs.com/zzzsj/p/14576107.html" class="p_n_p_prefix">« </a> 上一篇：    <a href="https://www.cnblogs.com/zzzsj/p/14576107.html" data-featured-image="" title="发布于 2021-03-26 10:37">OpenCV -- CV_8UC1,CV_32FC3等参数的含义</a>
+    <br>
+    <a href="https://www.cnblogs.com/zzzsj/p/14574192.html" class="p_n_p_prefix">» </a> 下一篇：    <a href="https://www.cnblogs.com/zzzsj/p/14574192.html" data-featured-image="" title="发布于 2021-03-26 11:24">OpenCV -- .at&lt;uchar&gt;(j, i) 和.at&lt;uchar&gt;(Point(j, i)) 的区别</a>
+
+</div>
+</div>
+            </div>
+            <div class="postDesc">posted @ 
+<span id="post-date" data-last-update-days="1037.1650759607846" data-date-created="BlogServer.Application.Dto.BlogPost.BlogPostDto" data-date-updated="2021-03-26 11:00" aria-expanded="false">2021-03-26 11:00</span>&nbsp;
+<a href="https://www.cnblogs.com/zzzsj">手磨咖啡</a>&nbsp;
+阅读(<span id="post_view_count">2106</span>)&nbsp;
+评论(<span id="post_comment_count">0</span>)&nbsp;
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=14576020" rel="nofollow">编辑</a>&nbsp;
+<a href="javascript:void(0)" onclick="AddToWz(14576020);return false;">收藏</a>&nbsp;
+<a href="javascript:void(0)" onclick="reportManager.report({ currentUserId: &#39;&#39;, targetType: &#39;blogPost&#39;, targetId: &#39;14576020&#39;, targetLink: &#39;https://www.cnblogs.com/zzzsj/p/14576020.html&#39;, title: &#39;OpenCV -- 图像遍历的四种方式（at、指针、isCountinuous、迭代器）、在Vector尾部加数据函数push_back()&#39; })">举报</a>
+</div>
+        </div>
+	    
+	    
+    </div><!--end: topics 文章、评论容器-->
+</div>
+<script>
+    var cb_entryId = 14576020, cb_entryCreatedDate = '2021-03-26 11:00', cb_postType = 1, cb_postTitle = 'OpenCV -- 图像遍历的四种方式（at、指针、isCountinuous、迭代器）、在Vector尾部加数据函数push_back()';
+    var allowComments = true, cb_blogId = 644193, cb_blogApp = 'zzzsj', cb_blogUserGuid = '7f4a5d3a-e7d1-4de4-e22e-08d861ce4c5c';
+    mermaidRender.render()
+    markdown_highlight()
+    zoomManager.apply("#cnblogs_post_body img:not(.code_img_closed):not(.code_img_opened)");    
+</script>
+<a id="!comments"></a>
+<div id="blog-comments-placeholder"></div>
+<div id="comment_form" class="commentform">
+    <a name="commentform"></a>
+    <div id="divCommentShow"></div>
+    <div id="comment_nav">
+            <a class="comment-nav-left forpc" href="https://cnblogs.vip/" target="_blank">会员力量，点亮园子希望</a>
+        <div class="comment-nav-right">
+            <span id="span_refresh_tips"></span><a href="https://www.cnblogs.com/zzzsj/p/14576020.html#" onclick="return RefreshPage();">刷新页面</a><a href="https://www.cnblogs.com/zzzsj/p/14576020.html#top">返回顶部</a>
+        </div>
+    </div>
+    <div id="comment_form_container"><div class="login_tips">
+    登录后才能查看或发表评论，立即 <a rel="nofollow" href="javascript:void(0);" class="underline" onclick="return account.login(&#39;!comments&#39;);">登录</a> 或者
+    <a href="https://www.cnblogs.com/">逛逛</a> 博客园首页
+</div>
+</div>
+    <div class="ad_text_commentbox" id="ad_text_under_commentbox"></div>
+        <div id="cnblogs_ch"></div>
+    <div id="opt_under_post"></div>
+        <div id="cnblogs_c1" class="under-post-card" style="width: auto; height: auto;">
+            <div id="div-gpt-ad-1704599316752-0" style="min-width: 300px; min-height: 250px;">
+                <script>
+                    googletag.cmd.push(function () { googletag.display('div-gpt-ad-1704599316752-0'); });
+                </script>
+            <div id="google_ads_iframe_/1090369/C1_0__container__" style="border: 0pt none; width: 300px; height: 0px;"></div></div>
+        </div>
+    <div id="under_post_card1"><div class="under-post-card">
+<b>编辑推荐：</b>
+<br>
+
+· <a href="https://www.cnblogs.com/pengze0902/p/17951360" target="_blank">深度解析 C# 数组对象池 ArrayPool&lt; T &gt; 底层原理</a>
+    <br>
+· <a href="https://www.cnblogs.com/huangxincheng/p/17987389" target="_blank">C# AsyncLocal 是如何实现 Thread 间传值</a>
+    <br>
+· <a href="https://www.cnblogs.com/s0611163/p/17979998" target="_blank">一个例子形象地理解同步与异步</a>
+    <br>
+· <a href="https://www.cnblogs.com/huangxincheng/p/17982804" target="_blank">C# 线程本地存储 为什么线程间值不一样</a>
+    <br>
+· <a href="https://www.cnblogs.com/coco1s/p/17979602" target="_blank">［动画进阶］神奇的 3D 卡片反光闪烁动效</a>
+    <br>
+</div></div>
+    <div id="under_post_card2"><div class="itnews under-post-card">
+    <b>阅读排行：</b>
+    <br>
+ ·          <a href="https://www.cnblogs.com/edisonfish/p/17988572" target="_blank">全球 IPv4 耗尽，下个月开始收费！</a>
+        <br>
+ ·          <a href="https://www.cnblogs.com/huangxincheng/p/17987389" target="_blank">C# AsyncLocal 是如何实现 Thread 间传值</a>
+        <br>
+ ·          <a href="https://www.cnblogs.com/hejiale010426/p/17988975" target="_blank">Nginx被它打败了？</a>
+        <br>
+ ·          <a href="https://www.cnblogs.com/xueweihan/p/17988558" target="_blank">《HelloGitHub》第 94 期</a>
+        <br>
+ ·          <a href="https://www.cnblogs.com/wuhuacong/p/17987022" target="_blank">在WPF应用中，结合阿里矢量图标库使用Geometry图标</a>
+        <br>
+</div></div>
+    <div id="HistoryToday" class="under-post-card"></div>
+    <script type="text/javascript">
+        var commentManager = new blogCommentManager();
+        commentManager.renderComments(0);
+        fixPostBody();
+        window.footnoteTipManager.generateFootnoteTips();
+
+            window.tocManager.displayDisableTocTips = false;
+            window.tocManager.generateToc();
+            
+                setTimeout(function() { countViews(cb_blogId, cb_entryId); }, 50);
+            
+            deliverT2();
+            deliverC1C2();
+            loadNewsAndKb();
+            
+                LoadPostCategoriesTags(cb_blogId, cb_entryId);
+            
+            LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+            GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate, cb_postType);
+            loadOptUnderPost();
+            GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);
+                </script>
+</div>
+
+	</div><!--end: forFlow -->
+	</div><!--end: mainContent 主体内容容器-->
+	<div id="sideBar">
+		<div id="sideBarMain">
+			<div id="sidebar_news" class="newsItem">
+    <h3 class="catListTitle">公告</h3>
+<div id="blog-news">    
+    <div id="sidebar_news_content">
+<div id="profile_block">
+    昵称：
+    <a href="https://home.cnblogs.com/u/zzzsj/">
+        手磨咖啡
+    </a>
+    <br>
+    园龄：
+    <a href="https://home.cnblogs.com/u/zzzsj/" title="入园时间：2020-09-30">
+        3年3个月
+    </a>
+    <br>
+    粉丝：
+    <a class="follower-count" href="https://home.cnblogs.com/u/zzzsj/followers/">
+        17
+    </a>
+    <br>
+    关注：
+    <a class="folowing-count" href="https://home.cnblogs.com/u/zzzsj/followees/">
+        1
+    </a>
+    <div id="p_b_follow" class="follow-tip">
+<a href="javascript:void(0)" onclick="follow(&#39;7f4a5d3a-e7d1-4de4-e22e-08d861ce4c5c&#39;)">+加关注</a></div>
+    <script>getFollowStatus('7f4a5d3a-e7d1-4de4-e22e-08d861ce4c5c');</script>
+</div>
+</div>
+</div>
+<script>loadBlogNews();</script>
+
+ 
+</div>
+<div id="sidebar_c3"></div>
+			<div id="blog-calendar" style="">
+
+<table id="blogCalendar" class="Cal" cellspacing="0" cellpadding="0" title="Calendar" border="0">
+    <tbody>
+        <tr>
+            <td colspan="7">
+                <table class="CalTitle" cellspacing="0" border="0">
+                    <tbody>
+                        <tr>
+                            <td class="CalNextPrev">
+                                <a href="javascript:void(0);" onclick="loadBlogCalendar(&#39;2023/12/27&#39;); return false;">&lt;</a>
+                            </td>
+                            <td align="center">2024年1月</td>
+                            <td align="right" class="CalNextPrev">
+                                <a href="javascript:void(0);" onclick="loadBlogCalendar(&#39;2024/02/27&#39;); return false;">&gt;</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    <tr>
+        <th class="CalDayHeader" align="center" abbr="日" scope="col">日</th>
+        <th class="CalDayHeader" align="center" abbr="一" scope="col">一</th>
+        <th class="CalDayHeader" align="center" abbr="二" scope="col">二</th>
+        <th class="CalDayHeader" align="center" abbr="三" scope="col">三</th>
+        <th class="CalDayHeader" align="center" abbr="四" scope="col">四</th>
+        <th class="CalDayHeader" align="center" abbr="五" scope="col">五</th>
+        <th class="CalDayHeader" align="center" abbr="六" scope="col">六</th>
+    </tr>
+            <tr>
+                            <td class="CalOtherMonthDay" align="center">31</td>
+                        <td class="" align="center">
+                            1
+                        </td>
+                        <td class="" align="center">
+                            2
+                        </td>
+                        <td class="" align="center">
+                            3
+                        </td>
+                        <td class="" align="center">
+                            4
+                        </td>
+                        <td class="" align="center">
+                            <a href="https://www.cnblogs.com/zzzsj/p/archive/2024/01/05"><u>5</u></a>
+                        </td>
+                    <td class="CalWeekendDay" align="center">
+                        6
+                    </td>
+            </tr>
+                <tr>
+                        <td class="CalWeekendDay" align="center">
+                            7
+                        </td>
+                            <td class="" align="center">
+                                8
+                            </td>
+                            <td class="" align="center">
+                                9
+                            </td>
+                            <td class="" align="center">
+                                <a href="https://www.cnblogs.com/zzzsj/p/archive/2024/01/10"><u>10</u></a>
+                            </td>
+                            <td class="" align="center">
+                                11
+                            </td>
+                            <td class="" align="center">
+                                12
+                            </td>
+                        <td class="CalWeekendDay" align="center">
+                            13
+                        </td>
+                </tr>
+                <tr>
+                        <td class="CalWeekendDay" align="center">
+                            14
+                        </td>
+                            <td class="" align="center">
+                                15
+                            </td>
+                            <td class="" align="center">
+                                16
+                            </td>
+                            <td class="" align="center">
+                                17
+                            </td>
+                            <td class="" align="center">
+                                <a href="https://www.cnblogs.com/zzzsj/p/archive/2024/01/18"><u>18</u></a>
+                            </td>
+                            <td class="" align="center">
+                                19
+                            </td>
+                        <td class="CalWeekendDay" align="center">
+                            20
+                        </td>
+                </tr>
+                <tr>
+                        <td class="CalWeekendDay" align="center">
+                            21
+                        </td>
+                            <td class="" align="center">
+                                22
+                            </td>
+                            <td class="" align="center">
+                                23
+                            </td>
+                            <td class="" align="center">
+                                24
+                            </td>
+                            <td class="" align="center">
+                                25
+                            </td>
+                            <td class="" align="center">
+                                26
+                            </td>
+                        <td class="CalTodayDay" align="center">
+                            27
+                        </td>
+                </tr>
+                <tr>
+                        <td class="CalWeekendDay" align="center">
+                            28
+                        </td>
+                            <td class="" align="center">
+                                29
+                            </td>
+                            <td class="" align="center">
+                                30
+                            </td>
+                            <td class="" align="center">
+                                31
+                            </td>
+                            <td class="CalOtherMonthDay" align="center">
+                                1
+                            </td>
+                            <td class="CalOtherMonthDay" align="center">
+                                2
+                            </td>
+                        <td class="CalOtherMonthDay" align="center">
+                            3
+                        </td>
+                </tr>
+                <tr>
+                        <td class="CalOtherMonthDay" align="center">
+                            4
+                        </td>
+                            <td class="CalOtherMonthDay" align="center">
+                                5
+                            </td>
+                            <td class="CalOtherMonthDay" align="center">
+                                6
+                            </td>
+                            <td class="CalOtherMonthDay" align="center">
+                                7
+                            </td>
+                            <td class="CalOtherMonthDay" align="center">
+                                8
+                            </td>
+                            <td class="CalOtherMonthDay" align="center">
+                                9
+                            </td>
+                        <td class="CalOtherMonthDay" align="center">
+                            10
+                        </td>
+                </tr>
+    </tbody>
+</table></div><script>loadBlogDefaultCalendar();</script>			
+			<div id="leftcontentcontainer">
+				<div id="blog-sidecolumn"><!-- 搜索 -->
+<div id="sidebar_search" class="sidebar-block">
+    <div class="mySearch my-search">
+        <h3 class="catListTitle">搜索</h3>
+        <div id="sidebar_search_box">
+            <div id="widget_my_zzk" class="div_my_zzk">
+                <input type="text" id="q" onkeydown="return zzk_go_enter(event);" class="input_my_zzk">&nbsp;<input onclick="zzk_go()" type="button" value="找找看" id="btnZzk" class="btn_my_zzk">
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+<!-- 常用链接 -->
+<div id="sidebar_shortcut" class="sidebar-block"><div class="catListLink">
+<h3 class="catListTitle">
+常用链接
+</h3>
+<ul>
+    <li><a href="https://www.cnblogs.com/zzzsj/p/" title="我的博客的随笔列表">我的随笔</a></li>
+<li><a href="https://www.cnblogs.com/zzzsj/MyComments.html" title="我的发表过的评论列表">我的评论</a></li>
+<li><a href="https://www.cnblogs.com/zzzsj/OtherPosts.html" title="我评论过的随笔列表">我的参与</a></li>
+<li><a href="https://www.cnblogs.com/zzzsj/comments" title="我的博客的评论列表">最新评论</a></li>
+<li><a href="https://www.cnblogs.com/zzzsj/tag/" title="我的博客的标签列表">我的标签</a></li>
+
+</ul>
+</div>
+
+</div>
+
+<!-- 最新随笔 -->
+
+
+<!-- 我的标签 -->
+<div id="sidebar_toptags" class="sidebar-block"></div>
+
+<!-- 积分与排名 -->
+
+
+<!-- 随笔分类、随笔档案、文章分类、新闻分类、相册、链接 -->
+<div id="sidebar_categories">
+
+    <div id="sidebar_postcategory" class="catListPostCategory sidebar-block">
+        <h3 class="catListTitle">
+            
+    <a class="sidebar-card-title-a" href="https://www.cnblogs.com/zzzsj/post-categories">随笔分类</a>
+
+
+
+        </h3>
+
+        <ul>
+
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/zzzsj/category/2016948.html" style="--cnb-category-item-link-indent-size: calc(0 * 1em)" class="category-item-link" rel="" target="">C(9)</a>
+ 
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/zzzsj/category/1954094.html" style="--cnb-category-item-link-indent-size: calc(0 * 1em)" class="category-item-link" rel="" target="">C++(32)</a>
+ 
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/zzzsj/category/1978864.html" style="--cnb-category-item-link-indent-size: calc(0 * 1em)" class="category-item-link" rel="" target="">CUDA(16)</a>
+ 
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/zzzsj/category/1956140.html" style="--cnb-category-item-link-indent-size: calc(0 * 1em)" class="category-item-link" rel="" target="">Matlab(19)</a>
+ 
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/zzzsj/category/1954095.html" style="--cnb-category-item-link-indent-size: calc(0 * 1em)" class="category-item-link" rel="" target="">OpenCV(16)</a>
+ 
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/zzzsj/category/1954119.html" style="--cnb-category-item-link-indent-size: calc(0 * 1em)" class="category-item-link" rel="" target="">QSS(5)</a>
+ 
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/zzzsj/category/1954093.html" style="--cnb-category-item-link-indent-size: calc(0 * 1em)" class="category-item-link" rel="" target="">QT(92)</a>
+ 
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/zzzsj/category/1954102.html" style="--cnb-category-item-link-indent-size: calc(0 * 1em)" class="category-item-link" rel="" target="">VS(23)</a>
+ 
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/zzzsj/category/1956044.html" style="--cnb-category-item-link-indent-size: calc(0 * 1em)" class="category-item-link" rel="" target="">工业相机(1)</a>
+ 
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/zzzsj/category/1960185.html" style="--cnb-category-item-link-indent-size: calc(0 * 1em)" class="category-item-link" rel="" target="">图像处理(5)</a>
+ 
+                </li>                
+            
+        </ul>
+
+
+    </div>    
+    <div id="sidebar_postarchive" class="catListPostArchive sidebar-block">
+        <h3 class="catListTitle">
+            
+随笔档案
+
+
+        </h3>
+
+        <ul>
+
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/zzzsj/p/archive/2024/01" style="--cnb-category-item-link-indent-size: calc(0 * 1em)" class="category-item-link" rel="" target="">2024年1月(5)</a>
+ 
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/zzzsj/p/archive/2023/11" style="--cnb-category-item-link-indent-size: calc(0 * 1em)" class="category-item-link" rel="" target="">2023年11月(4)</a>
+ 
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/zzzsj/p/archive/2023/10" style="--cnb-category-item-link-indent-size: calc(0 * 1em)" class="category-item-link" rel="" target="">2023年10月(5)</a>
+ 
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/zzzsj/p/archive/2023/07" style="--cnb-category-item-link-indent-size: calc(0 * 1em)" class="category-item-link" rel="" target="">2023年7月(2)</a>
+ 
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/zzzsj/p/archive/2023/06" style="--cnb-category-item-link-indent-size: calc(0 * 1em)" class="category-item-link" rel="" target="">2023年6月(4)</a>
+ 
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/zzzsj/p/archive/2023/03" style="--cnb-category-item-link-indent-size: calc(0 * 1em)" class="category-item-link" rel="" target="">2023年3月(1)</a>
+ 
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/zzzsj/p/archive/2023/02" style="--cnb-category-item-link-indent-size: calc(0 * 1em)" class="category-item-link" rel="" target="">2023年2月(2)</a>
+ 
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/zzzsj/p/archive/2022/11" style="--cnb-category-item-link-indent-size: calc(0 * 1em)" class="category-item-link" rel="" target="">2022年11月(3)</a>
+ 
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/zzzsj/p/archive/2022/10" style="--cnb-category-item-link-indent-size: calc(0 * 1em)" class="category-item-link" rel="" target="">2022年10月(2)</a>
+ 
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/zzzsj/p/archive/2022/09" style="--cnb-category-item-link-indent-size: calc(0 * 1em)" class="category-item-link" rel="" target="">2022年9月(3)</a>
+ 
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/zzzsj/p/archive/2022/08" style="--cnb-category-item-link-indent-size: calc(0 * 1em)" class="category-item-link" rel="" target="">2022年8月(1)</a>
+ 
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/zzzsj/p/archive/2022/07" style="--cnb-category-item-link-indent-size: calc(0 * 1em)" class="category-item-link" rel="" target="">2022年7月(6)</a>
+ 
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/zzzsj/p/archive/2022/06" style="--cnb-category-item-link-indent-size: calc(0 * 1em)" class="category-item-link" rel="" target="">2022年6月(2)</a>
+ 
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/zzzsj/p/archive/2022/05" style="--cnb-category-item-link-indent-size: calc(0 * 1em)" class="category-item-link" rel="" target="">2022年5月(5)</a>
+ 
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/zzzsj/p/archive/2022/04" style="--cnb-category-item-link-indent-size: calc(0 * 1em)" class="category-item-link" rel="" target="">2022年4月(4)</a>
+ 
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/zzzsj/p/archive/2022/03" style="--cnb-category-item-link-indent-size: calc(0 * 1em)" class="category-item-link" rel="" target="">2022年3月(4)</a>
+ 
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/zzzsj/p/archive/2022/02" style="--cnb-category-item-link-indent-size: calc(0 * 1em)" class="category-item-link" rel="" target="">2022年2月(14)</a>
+ 
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/zzzsj/p/archive/2022/01" style="--cnb-category-item-link-indent-size: calc(0 * 1em)" class="category-item-link" rel="" target="">2022年1月(4)</a>
+ 
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/zzzsj/p/archive/2021/12" style="--cnb-category-item-link-indent-size: calc(0 * 1em)" class="category-item-link" rel="" target="">2021年12月(15)</a>
+ 
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/zzzsj/p/archive/2021/11" style="--cnb-category-item-link-indent-size: calc(0 * 1em)" class="category-item-link" rel="" target="">2021年11月(3)</a>
+ 
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/zzzsj/p/archive/2021/10" style="--cnb-category-item-link-indent-size: calc(0 * 1em)" class="category-item-link" rel="" target="">2021年10月(4)</a>
+ 
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/zzzsj/p/archive/2021/09" style="--cnb-category-item-link-indent-size: calc(0 * 1em)" class="category-item-link" rel="" target="">2021年9月(3)</a>
+ 
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/zzzsj/p/archive/2021/08" style="--cnb-category-item-link-indent-size: calc(0 * 1em)" class="category-item-link" rel="" target="">2021年8月(10)</a>
+ 
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/zzzsj/p/archive/2021/07" style="--cnb-category-item-link-indent-size: calc(0 * 1em)" class="category-item-link" rel="" target="">2021年7月(11)</a>
+ 
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/zzzsj/p/archive/2021/06" style="--cnb-category-item-link-indent-size: calc(0 * 1em)" class="category-item-link" rel="" target="">2021年6月(2)</a>
+ 
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/zzzsj/p/archive/2021/05" style="--cnb-category-item-link-indent-size: calc(0 * 1em)" class="category-item-link" rel="" target="">2021年5月(20)</a>
+ 
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/zzzsj/p/archive/2021/04" style="--cnb-category-item-link-indent-size: calc(0 * 1em)" class="category-item-link" rel="" target="">2021年4月(28)</a>
+ 
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/zzzsj/p/archive/2021/03" style="--cnb-category-item-link-indent-size: calc(0 * 1em)" class="category-item-link" rel="" target="">2021年3月(53)</a>
+ 
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/zzzsj/p/archive/2021/02" style="--cnb-category-item-link-indent-size: calc(0 * 1em)" class="category-item-link" rel="" target="">2021年2月(19)</a>
+ 
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/zzzsj/p/archive/2021/01" style="--cnb-category-item-link-indent-size: calc(0 * 1em)" class="category-item-link" rel="" target="">2021年1月(19)</a>
+ 
+                </li>                
+                <li data-category-list-item-visible="false" style="display: none">
+                    
+<a href="https://www.cnblogs.com/zzzsj/p/archive/2020/12" style="--cnb-category-item-link-indent-size: calc(0 * 1em)" class="category-item-link" rel="" target="">2020年12月(3)</a>
+ 
+                </li>                
+                <li data-category-list-item-visible="false" style="display: none">
+                    
+<a href="https://www.cnblogs.com/zzzsj/p/archive/2020/11" style="--cnb-category-item-link-indent-size: calc(0 * 1em)" class="category-item-link" rel="" target="">2020年11月(8)</a>
+ 
+                </li>                
+            <li>
+                <a href="javascript:void(0)" onclick="sideColumnManager.loadMore(this)">更多</a>
+            </li>
+        </ul>
+
+
+    </div>    
+</div>
+
+<!-- 最新评论 -->
+<!-- 阅读排行榜 -->
+<div id="sidebar_topviewedposts" class="sidebar-block"><div class="catListView">
+    <h3 class="catListTitle">
+        <a href="https://www.cnblogs.com/zzzsj/most-viewed" class="sidebar-card-title-a">
+    阅读排行榜
+</a>
+
+    </h3>
+    <div id="TopViewPostsBlock">
+        <ul style="word-break:break-all">
+                    <li>
+                        <a href="https://www.cnblogs.com/zzzsj/p/15166790.html">
+                            1. 求解逆矩阵的常用三种方法(42236)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/zzzsj/p/14498809.html">
+                            2. 控制系统中AI、AO、DI、DO是什么含义(16874)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/zzzsj/p/14985746.html">
+                            3. VS报错：0xC0000005: 读取位置 0xFFFFFFFFFFFFFFFF 时发生访问冲突/无可用源(12738)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/zzzsj/p/14651976.html">
+                            4. Matlab -- floor函数的用法(11106)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/zzzsj/p/14582954.html">
+                            5. Qt -- 界面设计之使用 sizePolicy 属性(7755)
+                        </a>
+                    </li>
+        </ul>
+    </div>
+</div></div>
+
+<!-- 评论排行榜 -->
+<div id="sidebar_topcommentedposts" class="sidebar-block"><div class="catListFeedback">
+    <h3 class="catListTitle">
+        <a href="https://www.cnblogs.com/zzzsj/most-commented" class="sidebar-card-title-a">评论排行榜</a>
+
+    </h3>
+    <div id="TopFeedbackPostsBlock">
+        <ul style="word-break:break-all">
+                    <li>
+                        <a href="https://www.cnblogs.com/zzzsj/p/15303105.html">
+                            1. Qt --  获取文件夹中的文件/文件夹名字(1)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/zzzsj/p/14943355.html">
+                            2. QT -- float转ushort，用QImage 显示32float格式图像（CV_32FC1） (1)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/zzzsj/p/14790455.html">
+                            3. QImage与cv::Mat互相转换-包括32F图像转换(1)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/zzzsj/p/14760234.html">
+                            4. QT -- QChart的显示(1)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/zzzsj/p/13925159.html">
+                            5. QT 发布release版本(1)
+                        </a>
+                    </li>
+        </ul>
+    </div>
+</div></div>
+
+<!-- 推荐排行榜 -->
+<div id="sidebar_topdiggedposts" class="sidebar-block">
+<div id="topdigg_posts_wrap">
+    <div class="catListView">
+        <h3 class="catListTitle">
+            <a href="https://www.cnblogs.com/zzzsj/most-liked" class="sidebar-card-title-a">推荐排行榜</a>
+
+        </h3>
+        <div id="TopDiggPostsBlock">
+            <ul style="word-break: break-all">
+                        <li>
+                            <a href="https://www.cnblogs.com/zzzsj/p/15303105.html">
+                                1. Qt --  获取文件夹中的文件/文件夹名字(2)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.cnblogs.com/zzzsj/p/14760234.html">
+                                2. QT -- QChart的显示(2)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.cnblogs.com/zzzsj/p/14428393.html">
+                                3. C++ -- memset()函数(2)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.cnblogs.com/zzzsj/p/14281393.html">
+                                4. OpenCV -- 将16位图像映射到8位(2)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.cnblogs.com/zzzsj/p/15102162.html">
+                                5. QT -- 获取文件夹位置，并创建新的文件夹(1)
+                            </a>
+                        </li>
+            </ul>
+        </div>
+    </div>
+</div></div><div id="sidebar_recentcomments" class="sidebar-block"><div class="catListComment">
+<h3 class="catListTitle"><a href="https://www.cnblogs.com/zzzsj/comments" class="sidebar-card-title-a">最新评论</a></h3>
+    <div class="RecentCommentBlock">
+        <ul>
+                <li class="recent_comment_title"><a href="https://www.cnblogs.com/zzzsj/p/15303105.html">1. Re:Qt --  获取文件夹中的文件/文件夹名字</a></li>
+                <li class="recent_comment_body">注：QDir::Dirs 为获取所有文件夹名称，获取文件名称需要修改 QStringList names = dir.entryList(QDir::Dirs); 博主，这个想要获取文件名称需要怎么改...</li>
+                <li class="recent_comment_author">--旺旺棒棒糖</li>
+                <li class="recent_comment_title"><a href="https://www.cnblogs.com/zzzsj/p/14790455.html">2. Re:QImage与cv::Mat互相转换-包括32F图像转换</a></li>
+                <li class="recent_comment_body"><p>normalize(mat, normalize_mat, 0, 255, NORM_MINMAX, -1);请问，这个是什么</p>
+</li>
+                <li class="recent_comment_author">--林_lin</li>
+                <li class="recent_comment_title"><a href="https://www.cnblogs.com/zzzsj/p/14943355.html">3. Re:QT -- float转ushort，用QImage 显示32float格式图像（CV_32FC1） </a></li>
+                <li class="recent_comment_body"><p>Img_show_final，请问这个是什么</p>
+</li>
+                <li class="recent_comment_author">--林_lin</li>
+                <li class="recent_comment_title"><a href="https://www.cnblogs.com/zzzsj/p/14760234.html">4. Re:QT -- QChart的显示</a></li>
+                <li class="recent_comment_body"><p>您好！大佬！可以提供下源代码吗？853487892@qq.com</p>
+</li>
+                <li class="recent_comment_author">--大白不会敲代码</li>
+                <li class="recent_comment_title"><a href="https://www.cnblogs.com/zzzsj/p/13925159.html">5. Re:QT 发布release版本</a></li>
+                <li class="recent_comment_body"><p>谢谢博主，有用</p>
+</li>
+                <li class="recent_comment_author">--菜鸟kkf</li>
+        </ul>
+    </div>
+</div>
+
+</div>
+
+
+</div>
+                    <script>loadBlogSideColumn();</script>
+			</div>			
+		</div><!--end: sideBarMain -->
+	</div><!--end: sideBar 侧边栏容器 -->
+	<div class="clear"></div>
+	</div><!--end: main -->
+	<div class="clear"></div>
+	<div id="footer">
+		<!--done-->
+Copyright © 2024 手磨咖啡
+<br><span id="poweredby">Powered by .NET 8.0 on Kubernetes</span>
+
+
+
+	</div><!--end: footer -->
+</div><!--end: home 自定义的最大容器 -->
+
+
+
+    
+
+    <input type="hidden" id="antiforgery_token" value="CfDJ8DZoAyJmInJHoSwqM1IbzdS7-eCWHlF-pPYpg4Dh30N2D_5AO2iq-OUEyUnXdQxM34ntqV-JdZyzm5hZbZNMapDJdQlJLqbn-wQ3Pl6th8LbTZrdeM4-nzB-ecdyZXpFuUaF0nw-qJFwbvIHUcnbKhs">
+    <script async="" src="./OpenCV -- 图像遍历的四种方式（at、指针、isCountinuous、迭代器）、在Vector尾部加数据函数push_back() - 手磨咖啡 - 博客园_files/js"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-M95P3TTWJZ');
+</script>
+<script defer="" src="./OpenCV -- 图像遍历的四种方式（at、指针、isCountinuous、迭代器）、在Vector尾部加数据函数push_back() - 手磨咖啡 - 博客园_files/hm.js"></script><iframe src="./OpenCV -- 图像遍历的四种方式（at、指针、isCountinuous、迭代器）、在Vector尾部加数据函数push_back() - 手磨咖啡 - 博客园_files/container.html" style="visibility: hidden; display: none;"></iframe>
+
+
+<div style="z-index: 998; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.6); display: none; flex-direction: column; align-items: center; justify-content: center">
+<div style="background: #fff;padding: 30px; margin: 30px; border-radius: 16px;">
+  <div style="width: 200px; height: 200px; background: rgba(255, 255, 255, 0.8); position: absolute; top: -100px; right: -100px; border-radius: 100px"></div>
+  <div style="text-align: center; font-size: 18px; margin-bottom: 10px;">点击右上角即可分享</div>
+  <img src="./OpenCV -- 图像遍历的四种方式（at、指针、isCountinuous、迭代器）、在Vector尾部加数据函数push_back() - 手磨咖啡 - 博客园_files/35695-20230906145857937-1471873834.gif" alt="微信分享提示">
+</div>   
+    </div><iframe src="./OpenCV -- 图像遍历的四种方式（at、指针、isCountinuous、迭代器）、在Vector尾部加数据函数push_back() - 手磨咖啡 - 博客园_files/syncframe.html" width="0" height="0" frameborder="0" title="Criteo GUM iframe" style="border-width: 0px; margin: 0px; display: none;"></iframe></body></html>
