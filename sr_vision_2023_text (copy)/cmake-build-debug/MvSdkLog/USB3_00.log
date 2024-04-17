@@ -1,0 +1,70 @@
+Info    2023-12-27 23:58:45  DevID:MV-CA003-21UC(00D10039619)  Source-Line:libMvUsb3vTL.so(Manager.cpp-L0096)     Description:Current dynamic library path[/usr/local/lib/libMvUsb3vTL.so]     Solution:
+Error   2023-12-27 23:58:45  DevID:MV-CA003-21UC(00D10039619)  Source-Line:libMvUsb3vTL.so(DriverLayer.cpp-L0393)     Description:device speed: [4]     Solution:
+Info    2023-12-27 23:58:45  DevID:MV-CA003-21UC(00D10039619)  Source-Line:libMvUsb3vTL.so(StreamProcess.cpp-L0958)     Description:U3V RecvThread Start     Solution:
+Info    2023-12-27 23:58:45  DevID:MV-CA003-21UC(00D10039619)  Source-Line:libMvUsb3vTL.so(DeviceControl.cpp-L1242)     Description:AcquisitionStart Execute Success     Solution:
+Warning 2023-12-27 23:58:45  DevID:MV-CA003-21UC(00D10039619)  Source-Line:libMvUsb3vTL.so(StreamProcess.cpp-L1311)     Description:Delete one DataNode     Solution:Please confirm that there is a blocking operation when you grab frame
+Warning 2023-12-27 23:58:45  DevID:MV-CA003-21UC(00D10039619)  Source-Line:libMvUsb3vTL.so(StreamProcess.cpp-L1311)     Description:Delete one DataNode     Solution:Please confirm that there is a blocking operation when you grab frame
+Warning 2023-12-27 23:58:45  DevID:MV-CA003-21UC(00D10039619)  Source-Line:libMvUsb3vTL.so(StreamProcess.cpp-L0691)     Description:[GetOneNodeData] PreFrameNum[0], CurFrameNum[2]     Solution:
+Warning 2023-12-27 23:59:04  DevID:MV-CA003-21UC(00D10039619)  Source-Line:libMvUsb3vTL.so(StreamProcess.cpp-L1311)     Description:Delete one DataNode     Solution:Please confirm that there is a blocking operation when you grab frame
+Warning 2023-12-27 23:59:04  DevID:MV-CA003-21UC(00D10039619)  Source-Line:libMvUsb3vTL.so(StreamProcess.cpp-L1311)     Description:Delete one DataNode     Solution:Please confirm that there is a blocking operation when you grab frame
+Warning 2023-12-27 23:59:04  DevID:MV-CA003-21UC(00D10039619)  Source-Line:libMvUsb3vTL.so(StreamProcess.cpp-L1311)     Description:Delete one DataNode     Solution:Please confirm that there is a blocking operation when you grab frame
+Warning 2023-12-27 23:59:04  DevID:MV-CA003-21UC(00D10039619)  Source-Line:libMvUsb3vTL.so(StreamProcess.cpp-L0691)     Description:[GetOneNodeData] PreFrameNum[7498], CurFrameNum[7502]     Solution:
+Warning 2023-12-27 23:59:04  DevID:MV-CA003-21UC(00D10039619)  Source-Line:libMvUsb3vTL.so(StreamProcess.cpp-L1311)     Description:Delete one DataNode     Solution:Please confirm that there is a blocking operation when you grab frame
+Warning 2023-12-27 23:59:04  DevID:MV-CA003-21UC(00D10039619)  Source-Line:libMvUsb3vTL.so(StreamProcess.cpp-L0691)     Description:[GetOneNodeData] PreFrameNum[7513], CurFrameNum[7515]     Solution:
+Info    2023-12-28 00:03:32  DevID:MV-CA003-21UC(00D10039619)  Source-Line:libMvUsb3vTL.so(Manager.cpp-L0096)     Description:Current dynamic library path[/usr/local/lib/libMvUsb3vTL.so]     Solution:
+Error   2023-12-28 00:03:32  DevID:MV-CA003-21UC(00D10039619)  Source-Line:libMvUsb3vTL.so(DriverLayer.cpp-L0393)     Description:device speed: [4]     Solution:
+Info    2023-12-28 00:03:33  DevID:MV-CA003-21UC(00D10039619)  Source-Line:libMvUsb3vTL.so(StreamProcess.cpp-L0958)     Description:U3V RecvThread Start     Solution:
+Info    2023-12-28 00:03:33  DevID:MV-CA003-21UC(00D10039619)  Source-Line:libMvUsb3vTL.so(DeviceControl.cpp-L1242)     Description:AcquisitionStart Execute Success     Solution:
+Info    2023-12-28 00:05:14  DevID:MV-CA003-21UC(00D10039619)  Source-Line:libMvUsb3vTL.so(Manager.cpp-L0096)     Description:Current dynamic library path[/usr/local/lib/libMvUsb3vTL.so]     Solution:
+Error   2023-12-28 00:05:14  DevID:MV-CA003-21UC(00D10039619)  Source-Line:libMvUsb3vTL.so(DriverLayer.cpp-L0393)     Description:device speed: [4]     Solution:
+Info    2023-12-28 00:05:15  DevID:MV-CA003-21UC(00D10039619)  Source-Line:libMvUsb3vTL.so(StreamProcess.cpp-L0958)     Description:U3V RecvThread Start     Solution:
+Info    2023-12-28 00:05:15  DevID:MV-CA003-21UC(00D10039619)  Source-Line:libMvUsb3vTL.so(DeviceControl.cpp-L1242)     Description:AcquisitionStart Execute Success     Solution:
+Warning 2023-12-28 00:05:24  DevID:MV-CA003-21UC(00D10039619)  Source-Line:libMvUsb3vTL.so(StreamProcess.cpp-L1311)     Description:Delete one DataNode     Solution:Please confirm that there is a blocking operation when you grab frame
+Warning 2023-12-28 00:05:24  DevID:MV-CA003-21UC(00D10039619)  Source-Line:libMvUsb3vTL.so(StreamProcess.cpp-L0691)     Description:[GetOneNodeData] PreFrameNum[3552], CurFrameNum[3554]     Solution:
+Warning 2023-12-28 00:05:24  DevID:MV-CA003-21UC(00D10039619)  Source-Line:libMvUsb3vTL.so(StreamProcess.cpp-L1311)     Description:Delete one DataNode     Solution:Please confirm that there is a blocking operation when you grab frame
+Warning 2023-12-28 00:05:24  DevID:MV-CA003-21UC(00D10039619)  Source-Line:libMvUsb3vTL.so(StreamProcess.cpp-L0691)     Description:[GetOneNodeData] PreFrameNum[3555], CurFrameNum[3557]     Solution:
+Warning 2023-12-28 00:05:24  DevID:MV-CA003-21UC(00D10039619)  Source-Line:libMvUsb3vTL.so(StreamProcess.cpp-L1311)     Description:Delete one DataNode     Solution:Please confirm that there is a blocking operation when you grab frame
+Warning 2023-12-28 00:05:24  DevID:MV-CA003-21UC(00D10039619)  Source-Line:libMvUsb3vTL.so(StreamProcess.cpp-L0691)     Description:[GetOneNodeData] PreFrameNum[3561], CurFrameNum[3563]     Solution:
+Warning 2023-12-28 00:05:24  DevID:MV-CA003-21UC(00D10039619)  Source-Line:libMvUsb3vTL.so(StreamProcess.cpp-L1311)     Description:Delete one DataNode     Solution:Please confirm that there is a blocking operation when you grab frame
+Warning 2023-12-28 00:05:24  DevID:MV-CA003-21UC(00D10039619)  Source-Line:libMvUsb3vTL.so(StreamProcess.cpp-L0691)     Description:[GetOneNodeData] PreFrameNum[3573], CurFrameNum[3575]     Solution:
+Info    2023-12-28 00:06:12  DevID:MV-CA003-21UC(00D10039619)  Source-Line:libMvUsb3vTL.so(Manager.cpp-L0096)     Description:Current dynamic library path[/usr/local/lib/libMvUsb3vTL.so]     Solution:
+Error   2023-12-28 00:06:12  DevID:MV-CA003-21UC(00D10039619)  Source-Line:libMvUsb3vTL.so(DriverLayer.cpp-L0393)     Description:device speed: [4]     Solution:
+Info    2023-12-28 00:06:13  DevID:MV-CA003-21UC(00D10039619)  Source-Line:libMvUsb3vTL.so(StreamProcess.cpp-L0958)     Description:U3V RecvThread Start     Solution:
+Info    2023-12-28 00:06:13  DevID:MV-CA003-21UC(00D10039619)  Source-Line:libMvUsb3vTL.so(DeviceControl.cpp-L1242)     Description:AcquisitionStart Execute Success     Solution:
+Warning 2023-12-28 00:06:24  DevID:MV-CA003-21UC(00D10039619)  Source-Line:libMvUsb3vTL.so(StreamProcess.cpp-L1311)     Description:Delete one DataNode     Solution:Please confirm that there is a blocking operation when you grab frame
+Warning 2023-12-28 00:06:24  DevID:MV-CA003-21UC(00D10039619)  Source-Line:libMvUsb3vTL.so(StreamProcess.cpp-L0691)     Description:[GetOneNodeData] PreFrameNum[4317], CurFrameNum[4319]     Solution:
+Info    2023-12-28 00:08:57  DevID:MV-CA003-21UC(00D10039619)  Source-Line:libMvUsb3vTL.so(Manager.cpp-L0096)     Description:Current dynamic library path[/usr/local/lib/libMvUsb3vTL.so]     Solution:
+Error   2023-12-28 00:08:57  DevID:MV-CA003-21UC(00D10039619)  Source-Line:libMvUsb3vTL.so(DriverLayer.cpp-L0393)     Description:device speed: [4]     Solution:
+Info    2023-12-28 00:08:58  DevID:MV-CA003-21UC(00D10039619)  Source-Line:libMvUsb3vTL.so(StreamProcess.cpp-L0958)     Description:U3V RecvThread Start     Solution:
+Info    2023-12-28 00:08:58  DevID:MV-CA003-21UC(00D10039619)  Source-Line:libMvUsb3vTL.so(DeviceControl.cpp-L1242)     Description:AcquisitionStart Execute Success     Solution:
+Info    2023-12-28 00:11:33  DevID:MV-CA003-21UC(00D10039619)  Source-Line:libMvUsb3vTL.so(Manager.cpp-L0096)     Description:Current dynamic library path[/usr/local/lib/libMvUsb3vTL.so]     Solution:
+Error   2023-12-28 00:11:33  DevID:MV-CA003-21UC(00D10039619)  Source-Line:libMvUsb3vTL.so(DriverLayer.cpp-L0393)     Description:device speed: [4]     Solution:
+Info    2023-12-28 00:11:34  DevID:MV-CA003-21UC(00D10039619)  Source-Line:libMvUsb3vTL.so(StreamProcess.cpp-L0958)     Description:U3V RecvThread Start     Solution:
+Info    2023-12-28 00:11:34  DevID:MV-CA003-21UC(00D10039619)  Source-Line:libMvUsb3vTL.so(DeviceControl.cpp-L1242)     Description:AcquisitionStart Execute Success     Solution:
+Warning 2023-12-28 00:11:35  DevID:MV-CA003-21UC(00D10039619)  Source-Line:libMvUsb3vTL.so(StreamProcess.cpp-L1311)     Description:Delete one DataNode     Solution:Please confirm that there is a blocking operation when you grab frame
+Warning 2023-12-28 00:11:35  DevID:MV-CA003-21UC(00D10039619)  Source-Line:libMvUsb3vTL.so(StreamProcess.cpp-L1311)     Description:Delete one DataNode     Solution:Please confirm that there is a blocking operation when you grab frame
+Warning 2023-12-28 00:11:35  DevID:MV-CA003-21UC(00D10039619)  Source-Line:libMvUsb3vTL.so(StreamProcess.cpp-L0691)     Description:[GetOneNodeData] PreFrameNum[240], CurFrameNum[243]     Solution:
+Warning 2023-12-28 00:11:35  DevID:MV-CA003-21UC(00D10039619)  Source-Line:libMvUsb3vTL.so(StreamProcess.cpp-L1311)     Description:Delete one DataNode     Solution:Please confirm that there is a blocking operation when you grab frame
+Warning 2023-12-28 00:11:35  DevID:MV-CA003-21UC(00D10039619)  Source-Line:libMvUsb3vTL.so(StreamProcess.cpp-L0691)     Description:[GetOneNodeData] PreFrameNum[243], CurFrameNum[245]     Solution:
+Warning 2023-12-28 00:12:19  DevID:MV-CA003-21UC(00D10039619)  Source-Line:libMvUsb3vTL.so(StreamProcess.cpp-L1311)     Description:Delete one DataNode     Solution:Please confirm that there is a blocking operation when you grab frame
+Warning 2023-12-28 00:12:19  DevID:MV-CA003-21UC(00D10039619)  Source-Line:libMvUsb3vTL.so(StreamProcess.cpp-L0691)     Description:[GetOneNodeData] PreFrameNum[17310], CurFrameNum[17312]     Solution:
+Warning 2023-12-28 00:13:23  DevID:MV-CA003-21UC(00D10039619)  Source-Line:libMvUsb3vTL.so(StreamProcess.cpp-L1311)     Description:Delete one DataNode     Solution:Please confirm that there is a blocking operation when you grab frame
+Warning 2023-12-28 00:13:23  DevID:MV-CA003-21UC(00D10039619)  Source-Line:libMvUsb3vTL.so(StreamProcess.cpp-L0691)     Description:[GetOneNodeData] PreFrameNum[42355], CurFrameNum[42357]     Solution:
+Info    2023-12-28 22:49:45  DevID:MV-CA003-21UC(00D10039619)  Source-Line:libMvUsb3vTL.so(Manager.cpp-L0096)     Description:Current dynamic library path[/usr/local/lib/libMvUsb3vTL.so]     Solution:
+Error   2023-12-28 22:49:45  DevID:MV-CA003-21UC(00D10039619)  Source-Line:libMvUsb3vTL.so(DriverLayer.cpp-L0393)     Description:device speed: [4]     Solution:
+Info    2023-12-28 22:49:45  DevID:MV-CA003-21UC(00D10039619)  Source-Line:libMvUsb3vTL.so(StreamProcess.cpp-L0958)     Description:U3V RecvThread Start     Solution:
+Info    2023-12-28 22:49:45  DevID:MV-CA003-21UC(00D10039619)  Source-Line:libMvUsb3vTL.so(DeviceControl.cpp-L1242)     Description:AcquisitionStart Execute Success     Solution:
+Warning 2023-12-28 22:49:45  DevID:MV-CA003-21UC(00D10039619)  Source-Line:libMvUsb3vTL.so(StreamProcess.cpp-L1311)     Description:Delete one DataNode     Solution:Please confirm that there is a blocking operation when you grab frame
+Warning 2023-12-28 22:49:45  DevID:MV-CA003-21UC(00D10039619)  Source-Line:libMvUsb3vTL.so(StreamProcess.cpp-L1311)     Description:Delete one DataNode     Solution:Please confirm that there is a blocking operation when you grab frame
+Warning 2023-12-28 22:49:45  DevID:MV-CA003-21UC(00D10039619)  Source-Line:libMvUsb3vTL.so(StreamProcess.cpp-L0691)     Description:[GetOneNodeData] PreFrameNum[0], CurFrameNum[2]     Solution:
+Warning 2023-12-28 22:49:45  DevID:MV-CA003-21UC(00D10039619)  Source-Line:libMvUsb3vTL.so(StreamProcess.cpp-L1311)     Description:Delete one DataNode     Solution:Please confirm that there is a blocking operation when you grab frame
+Warning 2023-12-28 22:49:45  DevID:MV-CA003-21UC(00D10039619)  Source-Line:libMvUsb3vTL.so(StreamProcess.cpp-L0691)     Description:[GetOneNodeData] PreFrameNum[198], CurFrameNum[200]     Solution:
+Warning 2023-12-28 22:49:47  DevID:MV-CA003-21UC(00D10039619)  Source-Line:libMvUsb3vTL.so(StreamProcess.cpp-L1311)     Description:Delete one DataNode     Solution:Please confirm that there is a blocking operation when you grab frame
+Warning 2023-12-28 22:49:47  DevID:MV-CA003-21UC(00D10039619)  Source-Line:libMvUsb3vTL.so(StreamProcess.cpp-L0691)     Description:[GetOneNodeData] PreFrameNum[632], CurFrameNum[634]     Solution:
+Info    2024-01-14 19:40:29  DevID:MV-CA003-21UC(00D10039619)  Source-Line:libMvUsb3vTL.so(Manager.cpp-L0096)     Description:Current dynamic library path[/usr/local/lib/libMvUsb3vTL.so]     Solution:
+Error   2024-01-14 19:40:29  DevID:MV-CA003-21UC(00D10039619)  Source-Line:libMvUsb3vTL.so(DriverLayer.cpp-L0393)     Description:device speed: [4]     Solution:
+Info    2024-01-14 19:40:29  DevID:MV-CA003-21UC(00D10039619)  Source-Line:libMvUsb3vTL.so(StreamProcess.cpp-L0958)     Description:U3V RecvThread Start     Solution:
+Info    2024-01-14 19:40:29  DevID:MV-CA003-21UC(00D10039619)  Source-Line:libMvUsb3vTL.so(DeviceControl.cpp-L1242)     Description:AcquisitionStart Execute Success     Solution:
+Warning 2024-01-14 19:40:29  DevID:MV-CA003-21UC(00D10039619)  Source-Line:libMvUsb3vTL.so(StreamProcess.cpp-L1311)     Description:Delete one DataNode     Solution:Please confirm that there is a blocking operation when you grab frame
+Warning 2024-01-14 19:40:29  DevID:MV-CA003-21UC(00D10039619)  Source-Line:libMvUsb3vTL.so(StreamProcess.cpp-L1311)     Description:Delete one DataNode     Solution:Please confirm that there is a blocking operation when you grab frame
+Warning 2024-01-14 19:40:29  DevID:MV-CA003-21UC(00D10039619)  Source-Line:libMvUsb3vTL.so(StreamProcess.cpp-L0691)     Description:[GetOneNodeData] PreFrameNum[0], CurFrameNum[2]     Solution:

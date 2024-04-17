@@ -1,0 +1,3 @@
+/home/yukki/Downloads/sr_vision_2023_06/cmake-build-debug/CMakeFiles/SR_SDUST.dir
+/home/yukki/Downloads/sr_vision_2023_06/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/yukki/Downloads/sr_vision_2023_06/cmake-build-debug/CMakeFiles/rebuild_cache.dir
