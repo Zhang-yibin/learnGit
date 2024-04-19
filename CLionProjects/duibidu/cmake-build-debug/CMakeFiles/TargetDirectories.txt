@@ -1,0 +1,3 @@
+/home/yuuki/CLionProjects/duibidu/cmake-build-debug/CMakeFiles/duibidu.dir
+/home/yuuki/CLionProjects/duibidu/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/yuuki/CLionProjects/duibidu/cmake-build-debug/CMakeFiles/rebuild_cache.dir

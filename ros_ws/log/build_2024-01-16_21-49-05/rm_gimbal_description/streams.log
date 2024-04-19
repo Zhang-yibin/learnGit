@@ -1,0 +1,45 @@
+[0.056s] Invoking command in '/home/yukki/Downloads/ros_ws/build/rm_gimbal_description': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/yukki/Downloads/ros_ws/src/rm_gimbal_description -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/yukki/Downloads/ros_ws/install/rm_gimbal_description
+[0.124s] -- The C compiler identification is GNU 11.4.0
+[0.183s] -- The CXX compiler identification is GNU 11.4.0
+[0.192s] -- Detecting C compiler ABI info
+[0.260s] -- Detecting C compiler ABI info - done
+[0.270s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.270s] -- Detecting C compile features
+[0.270s] -- Detecting C compile features - done
+[0.274s] -- Detecting CXX compiler ABI info
+[0.349s] -- Detecting CXX compiler ABI info - done
+[0.355s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.355s] -- Detecting CXX compile features
+[0.356s] -- Detecting CXX compile features - done
+[0.362s] -- Found ament_cmake: 1.3.6 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.677s] -- Found Python3: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter 
+[0.743s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.773s] -- Found ament_lint_auto: 0.12.9 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[0.849s] -- Added test 'lint_cmake' to check CMake code style
+[0.851s] -- Added test 'xmllint' to check XML markup files
+[0.852s] -- Configuring done
+[0.855s] -- Generating done
+[0.856s] -- Build files have been written to: /home/yukki/Downloads/ros_ws/build/rm_gimbal_description
+[0.860s] Invoked command in '/home/yukki/Downloads/ros_ws/build/rm_gimbal_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/yukki/Downloads/ros_ws/src/rm_gimbal_description -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/yukki/Downloads/ros_ws/install/rm_gimbal_description
+[0.862s] Invoking command in '/home/yukki/Downloads/ros_ws/build/rm_gimbal_description': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/yukki/Downloads/ros_ws/build/rm_gimbal_description -- -j16 -l16
+[0.904s] Invoked command in '/home/yukki/Downloads/ros_ws/build/rm_gimbal_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/yukki/Downloads/ros_ws/build/rm_gimbal_description -- -j16 -l16
+[0.938s] Invoking command in '/home/yukki/Downloads/ros_ws/build/rm_gimbal_description': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/yukki/Downloads/ros_ws/build/rm_gimbal_description
+[0.945s] -- Install configuration: ""
+[0.945s] -- Execute custom install script
+[0.946s] -- Symlinking: /home/yukki/Downloads/ros_ws/install/rm_gimbal_description/share/rm_gimbal_description/urdf/rm_gimbal.urdf.xacro
+[0.956s] -- Symlinking: /home/yukki/Downloads/ros_ws/install/rm_gimbal_description/share/ament_index/resource_index/package_run_dependencies/rm_gimbal_description
+[0.966s] -- Symlinking: /home/yukki/Downloads/ros_ws/install/rm_gimbal_description/share/ament_index/resource_index/parent_prefix_path/rm_gimbal_description
+[0.976s] -- Symlinking: /home/yukki/Downloads/ros_ws/install/rm_gimbal_description/share/rm_gimbal_description/environment/ament_prefix_path.sh
+[0.986s] -- Symlinking: /home/yukki/Downloads/ros_ws/install/rm_gimbal_description/share/rm_gimbal_description/environment/ament_prefix_path.dsv
+[0.996s] -- Symlinking: /home/yukki/Downloads/ros_ws/install/rm_gimbal_description/share/rm_gimbal_description/environment/path.sh
+[1.006s] -- Symlinking: /home/yukki/Downloads/ros_ws/install/rm_gimbal_description/share/rm_gimbal_description/environment/path.dsv
+[1.016s] -- Symlinking: /home/yukki/Downloads/ros_ws/install/rm_gimbal_description/share/rm_gimbal_description/local_setup.bash
+[1.026s] -- Symlinking: /home/yukki/Downloads/ros_ws/install/rm_gimbal_description/share/rm_gimbal_description/local_setup.sh
+[1.036s] -- Symlinking: /home/yukki/Downloads/ros_ws/install/rm_gimbal_description/share/rm_gimbal_description/local_setup.zsh
+[1.046s] -- Symlinking: /home/yukki/Downloads/ros_ws/install/rm_gimbal_description/share/rm_gimbal_description/local_setup.dsv
+[1.055s] -- Symlinking: /home/yukki/Downloads/ros_ws/install/rm_gimbal_description/share/rm_gimbal_description/package.dsv
+[1.065s] -- Symlinking: /home/yukki/Downloads/ros_ws/install/rm_gimbal_description/share/ament_index/resource_index/packages/rm_gimbal_description
+[1.075s] -- Symlinking: /home/yukki/Downloads/ros_ws/install/rm_gimbal_description/share/rm_gimbal_description/cmake/rm_gimbal_descriptionConfig.cmake
+[1.085s] -- Symlinking: /home/yukki/Downloads/ros_ws/install/rm_gimbal_description/share/rm_gimbal_description/cmake/rm_gimbal_descriptionConfig-version.cmake
+[1.095s] -- Symlinking: /home/yukki/Downloads/ros_ws/install/rm_gimbal_description/share/rm_gimbal_description/package.xml
+[1.107s] Invoked command in '/home/yukki/Downloads/ros_ws/build/rm_gimbal_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/yukki/Downloads/ros_ws/build/rm_gimbal_description

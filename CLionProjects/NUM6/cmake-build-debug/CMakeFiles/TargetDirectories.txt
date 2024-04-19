@@ -1,0 +1,3 @@
+/home/yukki/CLionProjects/NUM6/cmake-build-debug/CMakeFiles/NUM6.dir
+/home/yukki/CLionProjects/NUM6/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/yukki/CLionProjects/NUM6/cmake-build-debug/CMakeFiles/rebuild_cache.dir

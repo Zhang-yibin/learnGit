@@ -1,0 +1,1 @@
+/home/yukki/Downloads/ros_ws/build/auto_aim_interfaces/rosidl_generator_c/auto_aim_interfaces/msg/detail/debug_send_armors__type_support.h

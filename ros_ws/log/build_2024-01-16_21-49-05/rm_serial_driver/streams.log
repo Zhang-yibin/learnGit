@@ -1,0 +1,90 @@
+[0.046s] Invoking command in '/home/yukki/Downloads/ros_ws/build/rm_serial_driver': AMENT_PREFIX_PATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32 PYTHONPATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/yukki/Downloads/ros_ws/src/rm_serial_driver -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/yukki/Downloads/ros_ws/install/rm_serial_driver
+[0.091s] -- The C compiler identification is GNU 11.4.0
+[0.140s] -- The CXX compiler identification is GNU 11.4.0
+[0.146s] -- Detecting C compiler ABI info
+[0.209s] -- Detecting C compiler ABI info - done
+[0.215s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.215s] -- Detecting C compile features
+[0.215s] -- Detecting C compile features - done
+[0.218s] -- Detecting CXX compiler ABI info
+[0.290s] -- Detecting CXX compiler ABI info - done
+[0.296s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.296s] -- Detecting CXX compile features
+[0.296s] -- Detecting CXX compile features - done
+[0.298s] -- Found ament_cmake_auto: 1.3.6 (/opt/ros/humble/share/ament_cmake_auto/cmake)
+[0.602s] -- Found Python3: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter 
+[0.654s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.776s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.782s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.792s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.805s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.820s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.875s] -- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.877s] -- Found rmw_fastrtps_cpp: 6.2.5 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.973s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[1.001s] -- Found FastRTPS: /opt/ros/humble/include  
+[1.048s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.056s] -- Looking for pthread.h
+[1.125s] -- Looking for pthread.h - found
+[1.125s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[1.193s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[1.194s] -- Found Threads: TRUE  
+[1.762s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)
+[1.763s] -- Found Eigen3: TRUE (found version "3.4.0") 
+[1.763s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[2.045s] -- Found ament_lint_auto: 0.12.9 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[2.070s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[2.070s] -- Configured cppcheck include dirs: /home/yukki/Downloads/ros_ws/src/rm_serial_driver/include
+[2.070s] -- Configured cppcheck exclude dirs and/or files: 
+[2.071s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[2.071s] -- Configured cpplint exclude dirs and/or files: 
+[2.072s] -- Added test 'flake8' to check Python code syntax and style conventions
+[2.072s] -- Added test 'lint_cmake' to check CMake code style
+[2.073s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[2.073s] -- Added test 'xmllint' to check XML markup files
+[2.075s] -- Added test 'clang_format' to check C / C++ code style
+[2.078s] -- Configuring done
+[2.111s] -- Generating done
+[2.112s] -- Build files have been written to: /home/yukki/Downloads/ros_ws/build/rm_serial_driver
+[2.126s] Invoked command in '/home/yukki/Downloads/ros_ws/build/rm_serial_driver' returned '0': AMENT_PREFIX_PATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32 PYTHONPATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/yukki/Downloads/ros_ws/src/rm_serial_driver -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/yukki/Downloads/ros_ws/install/rm_serial_driver
+[2.128s] Invoking command in '/home/yukki/Downloads/ros_ws/build/rm_serial_driver': AMENT_PREFIX_PATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32 PYTHONPATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/yukki/Downloads/ros_ws/build/rm_serial_driver -- -j16 -l16
+[2.186s] [ 20%] [32mBuilding CXX object CMakeFiles/rm_serial_driver.dir/src/rm_serial_driver.cpp.o[0m
+[2.187s] [ 40%] [32mBuilding CXX object CMakeFiles/rm_serial_driver.dir/src/crc.cpp.o[0m
+[2.189s] [ 60%] [32mBuilding CXX object CMakeFiles/rm_serial_driver_node.dir/rclcpp_components/node_main_rm_serial_driver_node.cpp.o[0m
+[6.348s] [ 80%] [32m[1mLinking CXX executable rm_serial_driver_node[0m
+[6.532s] [ 80%] Built target rm_serial_driver_node
+[18.123s] [100%] [32m[1mLinking CXX shared library librm_serial_driver.so[0m
+[18.905s] [100%] Built target rm_serial_driver
+[18.918s] Invoked command in '/home/yukki/Downloads/ros_ws/build/rm_serial_driver' returned '0': AMENT_PREFIX_PATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32 PYTHONPATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/yukki/Downloads/ros_ws/build/rm_serial_driver -- -j16 -l16
+[18.953s] Invoking command in '/home/yukki/Downloads/ros_ws/build/rm_serial_driver': AMENT_PREFIX_PATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32 PYTHONPATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/yukki/Downloads/ros_ws/build/rm_serial_driver
+[18.960s] -- Install configuration: ""
+[18.961s] -- Execute custom install script
+[18.961s] -- Symlinking: /home/yukki/Downloads/ros_ws/install/rm_serial_driver/lib/rm_serial_driver/rm_serial_driver_node
+[18.971s] -- Symlinking: /home/yukki/Downloads/ros_ws/install/rm_serial_driver/include/rm_serial_driver/crc.hpp
+[18.980s] -- Symlinking: /home/yukki/Downloads/ros_ws/install/rm_serial_driver/include/rm_serial_driver/packet.hpp
+[18.990s] -- Symlinking: /home/yukki/Downloads/ros_ws/install/rm_serial_driver/include/rm_serial_driver/rm_serial_driver.hpp
+[18.999s] -- Symlinking: /home/yukki/Downloads/ros_ws/install/rm_serial_driver/share/rm_serial_driver/environment/library_path.sh
+[19.008s] -- Symlinking: /home/yukki/Downloads/ros_ws/install/rm_serial_driver/share/rm_serial_driver/environment/library_path.dsv
+[19.018s] -- Symlinking: /home/yukki/Downloads/ros_ws/install/rm_serial_driver/lib/librm_serial_driver.so
+[19.028s] -- Symlinking: /home/yukki/Downloads/ros_ws/install/rm_serial_driver/share/rm_serial_driver/config/serial_driver.yaml
+[19.038s] -- Symlinking: /home/yukki/Downloads/ros_ws/install/rm_serial_driver/share/rm_serial_driver/launch/serial_driver.launch.py
+[19.048s] -- Symlinking: /home/yukki/Downloads/ros_ws/install/rm_serial_driver/share/ament_index/resource_index/package_run_dependencies/rm_serial_driver
+[19.057s] -- Symlinking: /home/yukki/Downloads/ros_ws/install/rm_serial_driver/share/ament_index/resource_index/parent_prefix_path/rm_serial_driver
+[19.068s] -- Symlinking: /home/yukki/Downloads/ros_ws/install/rm_serial_driver/share/rm_serial_driver/environment/ament_prefix_path.sh
+[19.078s] -- Symlinking: /home/yukki/Downloads/ros_ws/install/rm_serial_driver/share/rm_serial_driver/environment/ament_prefix_path.dsv
+[19.087s] -- Symlinking: /home/yukki/Downloads/ros_ws/install/rm_serial_driver/share/rm_serial_driver/environment/path.sh
+[19.096s] -- Symlinking: /home/yukki/Downloads/ros_ws/install/rm_serial_driver/share/rm_serial_driver/environment/path.dsv
+[19.106s] -- Symlinking: /home/yukki/Downloads/ros_ws/install/rm_serial_driver/share/rm_serial_driver/local_setup.bash
+[19.116s] -- Symlinking: /home/yukki/Downloads/ros_ws/install/rm_serial_driver/share/rm_serial_driver/local_setup.sh
+[19.126s] -- Symlinking: /home/yukki/Downloads/ros_ws/install/rm_serial_driver/share/rm_serial_driver/local_setup.zsh
+[19.135s] -- Symlinking: /home/yukki/Downloads/ros_ws/install/rm_serial_driver/share/rm_serial_driver/local_setup.dsv
+[19.145s] -- Symlinking: /home/yukki/Downloads/ros_ws/install/rm_serial_driver/share/rm_serial_driver/package.dsv
+[19.155s] -- Symlinking: /home/yukki/Downloads/ros_ws/install/rm_serial_driver/share/ament_index/resource_index/packages/rm_serial_driver
+[19.164s] -- Symlinking: /home/yukki/Downloads/ros_ws/install/rm_serial_driver/share/ament_index/resource_index/rclcpp_components/rm_serial_driver
+[19.175s] -- Symlinking: /home/yukki/Downloads/ros_ws/install/rm_serial_driver/share/rm_serial_driver/cmake/ament_cmake_export_dependencies-extras.cmake
+[19.186s] -- Symlinking: /home/yukki/Downloads/ros_ws/install/rm_serial_driver/share/rm_serial_driver/cmake/ament_cmake_export_include_directories-extras.cmake
+[19.196s] -- Symlinking: /home/yukki/Downloads/ros_ws/install/rm_serial_driver/share/rm_serial_driver/cmake/ament_cmake_export_libraries-extras.cmake
+[19.206s] -- Symlinking: /home/yukki/Downloads/ros_ws/install/rm_serial_driver/share/rm_serial_driver/cmake/rm_serial_driverConfig.cmake
+[19.217s] -- Symlinking: /home/yukki/Downloads/ros_ws/install/rm_serial_driver/share/rm_serial_driver/cmake/rm_serial_driverConfig-version.cmake
+[19.227s] -- Symlinking: /home/yukki/Downloads/ros_ws/install/rm_serial_driver/share/rm_serial_driver/package.xml
+[19.239s] Invoked command in '/home/yukki/Downloads/ros_ws/build/rm_serial_driver' returned '0': AMENT_PREFIX_PATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32 PYTHONPATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/yukki/Downloads/ros_ws/build/rm_serial_driver

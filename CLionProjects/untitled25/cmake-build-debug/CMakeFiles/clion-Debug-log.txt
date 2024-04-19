@@ -1,0 +1,5 @@
+/snap/clion/250/bin/cmake/linux/x64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/snap/clion/250/bin/ninja/linux/x64/ninja -G Ninja -S /home/yuuki/CLionProjects/untitled25 -B /home/yuuki/CLionProjects/untitled25/cmake-build-debug
+-- Found OpenCV: /usr/local (found version "4.8.0") 
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/yuuki/CLionProjects/untitled25/cmake-build-debug

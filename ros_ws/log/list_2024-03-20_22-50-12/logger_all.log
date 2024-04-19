@@ -1,0 +1,192 @@
+[1.195s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'list', '-p', '--base-paths', '/home/yukki/Downloads/ros_ws']
+[1.195s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='list', build_base='build', ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['/home/yukki/Downloads/ros_ws'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], topological_order=False, names_only=False, paths_only=True, topological_graph=False, topological_graph_dot=False, topological_graph_density=False, topological_graph_legend=False, topological_graph_dot_cluster=False, topological_graph_dot_include_skipped=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7b32e188d7e0>, verb_extension=<colcon_package_information.verb.list.ListVerb object at 0x7b32e1cd7ee0>, main=<bound method ListVerb.main of <colcon_package_information.verb.list.ListVerb object at 0x7b32e1cd7ee0>>)
+[1.276s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[1.277s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[1.277s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[1.277s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[1.277s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[1.277s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/yukki/Downloads/ros_ws'
+[1.277s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws) by extensions ['ignore', 'ignore_ament_install']
+[1.277s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws) by extension 'ignore'
+[1.277s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws) by extension 'ignore_ament_install'
+[1.277s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws) by extensions ['colcon_pkg']
+[1.277s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws) by extension 'colcon_pkg'
+[1.277s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws) by extensions ['colcon_meta']
+[1.277s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws) by extension 'colcon_meta'
+[1.277s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws) by extensions ['ros']
+[1.277s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws) by extension 'ros'
+[1.304s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws) by extensions ['cmake', 'python']
+[1.304s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws) by extension 'cmake'
+[1.304s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws) by extension 'python'
+[1.304s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws) by extensions ['python_setup_py']
+[1.304s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws) by extension 'python_setup_py'
+[1.304s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/build) by extensions ['ignore', 'ignore_ament_install']
+[1.305s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/build) by extension 'ignore'
+[1.305s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/build) ignored
+[1.305s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/install) by extensions ['ignore', 'ignore_ament_install']
+[1.305s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/install) by extension 'ignore'
+[1.305s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/install) ignored
+[1.305s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/log) by extensions ['ignore', 'ignore_ament_install']
+[1.305s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/log) by extension 'ignore'
+[1.306s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/log) ignored
+[1.306s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src) by extensions ['ignore', 'ignore_ament_install']
+[1.306s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src) by extension 'ignore'
+[1.306s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src) by extension 'ignore_ament_install'
+[1.306s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src) by extensions ['colcon_pkg']
+[1.306s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src) by extension 'colcon_pkg'
+[1.306s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src) by extensions ['colcon_meta']
+[1.306s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src) by extension 'colcon_meta'
+[1.306s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src) by extensions ['ros']
+[1.306s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src) by extension 'ros'
+[1.306s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src) by extensions ['cmake', 'python']
+[1.306s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src) by extension 'cmake'
+[1.307s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src) by extension 'python'
+[1.307s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src) by extensions ['python_setup_py']
+[1.307s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src) by extension 'python_setup_py'
+[1.307s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/rm_auto_aim) by extensions ['ignore', 'ignore_ament_install']
+[1.307s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/rm_auto_aim) by extension 'ignore'
+[1.307s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/rm_auto_aim) by extension 'ignore_ament_install'
+[1.307s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/rm_auto_aim) by extensions ['colcon_pkg']
+[1.307s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/rm_auto_aim) by extension 'colcon_pkg'
+[1.307s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/rm_auto_aim) by extensions ['colcon_meta']
+[1.307s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/rm_auto_aim) by extension 'colcon_meta'
+[1.307s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/rm_auto_aim) by extensions ['ros']
+[1.307s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/rm_auto_aim) by extension 'ros'
+[1.308s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/rm_auto_aim) by extensions ['cmake', 'python']
+[1.308s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/rm_auto_aim) by extension 'cmake'
+[1.308s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/rm_auto_aim) by extension 'python'
+[1.308s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/rm_auto_aim) by extensions ['python_setup_py']
+[1.308s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/rm_auto_aim) by extension 'python_setup_py'
+[1.308s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/rm_auto_aim/armor_detector) by extensions ['ignore', 'ignore_ament_install']
+[1.308s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/rm_auto_aim/armor_detector) by extension 'ignore'
+[1.308s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/rm_auto_aim/armor_detector) by extension 'ignore_ament_install'
+[1.308s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/rm_auto_aim/armor_detector) by extensions ['colcon_pkg']
+[1.308s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/rm_auto_aim/armor_detector) by extension 'colcon_pkg'
+[1.308s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/rm_auto_aim/armor_detector) by extensions ['colcon_meta']
+[1.309s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/rm_auto_aim/armor_detector) by extension 'colcon_meta'
+[1.309s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/rm_auto_aim/armor_detector) by extensions ['ros']
+[1.309s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/rm_auto_aim/armor_detector) by extension 'ros'
+[1.315s] DEBUG:colcon.colcon_core.package_identification:Package '/home/yukki/Downloads/ros_ws/src/rm_auto_aim/armor_detector' with type 'ros.ament_cmake' and name 'armor_detector'
+[1.315s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/rm_auto_aim/armor_tracker) by extensions ['ignore', 'ignore_ament_install']
+[1.316s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/rm_auto_aim/armor_tracker) by extension 'ignore'
+[1.316s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/rm_auto_aim/armor_tracker) by extension 'ignore_ament_install'
+[1.316s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/rm_auto_aim/armor_tracker) by extensions ['colcon_pkg']
+[1.316s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/rm_auto_aim/armor_tracker) by extension 'colcon_pkg'
+[1.316s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/rm_auto_aim/armor_tracker) by extensions ['colcon_meta']
+[1.316s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/rm_auto_aim/armor_tracker) by extension 'colcon_meta'
+[1.316s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/rm_auto_aim/armor_tracker) by extensions ['ros']
+[1.316s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/rm_auto_aim/armor_tracker) by extension 'ros'
+[1.319s] DEBUG:colcon.colcon_core.package_identification:Package '/home/yukki/Downloads/ros_ws/src/rm_auto_aim/armor_tracker' with type 'ros.ament_cmake' and name 'armor_tracker'
+[1.319s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/rm_auto_aim/auto_aim_interfaces) by extensions ['ignore', 'ignore_ament_install']
+[1.319s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/rm_auto_aim/auto_aim_interfaces) by extension 'ignore'
+[1.319s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/rm_auto_aim/auto_aim_interfaces) by extension 'ignore_ament_install'
+[1.319s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/rm_auto_aim/auto_aim_interfaces) by extensions ['colcon_pkg']
+[1.319s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/rm_auto_aim/auto_aim_interfaces) by extension 'colcon_pkg'
+[1.319s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/rm_auto_aim/auto_aim_interfaces) by extensions ['colcon_meta']
+[1.319s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/rm_auto_aim/auto_aim_interfaces) by extension 'colcon_meta'
+[1.320s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/rm_auto_aim/auto_aim_interfaces) by extensions ['ros']
+[1.320s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/rm_auto_aim/auto_aim_interfaces) by extension 'ros'
+[1.320s] DEBUG:colcon.colcon_core.package_identification:Package '/home/yukki/Downloads/ros_ws/src/rm_auto_aim/auto_aim_interfaces' with type 'ros.ament_cmake' and name 'auto_aim_interfaces'
+[1.321s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/rm_auto_aim/docs) by extensions ['ignore', 'ignore_ament_install']
+[1.321s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/rm_auto_aim/docs) by extension 'ignore'
+[1.321s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/rm_auto_aim/docs) by extension 'ignore_ament_install'
+[1.321s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/rm_auto_aim/docs) by extensions ['colcon_pkg']
+[1.321s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/rm_auto_aim/docs) by extension 'colcon_pkg'
+[1.321s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/rm_auto_aim/docs) by extensions ['colcon_meta']
+[1.321s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/rm_auto_aim/docs) by extension 'colcon_meta'
+[1.321s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/rm_auto_aim/docs) by extensions ['ros']
+[1.321s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/rm_auto_aim/docs) by extension 'ros'
+[1.321s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/rm_auto_aim/docs) by extensions ['cmake', 'python']
+[1.321s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/rm_auto_aim/docs) by extension 'cmake'
+[1.321s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/rm_auto_aim/docs) by extension 'python'
+[1.322s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/rm_auto_aim/docs) by extensions ['python_setup_py']
+[1.322s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/rm_auto_aim/docs) by extension 'python_setup_py'
+[1.322s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/rm_auto_aim/rm_auto_aim) by extensions ['ignore', 'ignore_ament_install']
+[1.322s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/rm_auto_aim/rm_auto_aim) by extension 'ignore'
+[1.322s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/rm_auto_aim/rm_auto_aim) by extension 'ignore_ament_install'
+[1.322s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/rm_auto_aim/rm_auto_aim) by extensions ['colcon_pkg']
+[1.323s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/rm_auto_aim/rm_auto_aim) by extension 'colcon_pkg'
+[1.323s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/rm_auto_aim/rm_auto_aim) by extensions ['colcon_meta']
+[1.323s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/rm_auto_aim/rm_auto_aim) by extension 'colcon_meta'
+[1.323s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/rm_auto_aim/rm_auto_aim) by extensions ['ros']
+[1.323s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/rm_auto_aim/rm_auto_aim) by extension 'ros'
+[1.324s] DEBUG:colcon.colcon_core.package_identification:Package '/home/yukki/Downloads/ros_ws/src/rm_auto_aim/rm_auto_aim' with type 'ros.ament_cmake' and name 'rm_auto_aim'
+[1.324s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/rm_gimbal_description) by extensions ['ignore', 'ignore_ament_install']
+[1.324s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/rm_gimbal_description) by extension 'ignore'
+[1.324s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/rm_gimbal_description) by extension 'ignore_ament_install'
+[1.324s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/rm_gimbal_description) by extensions ['colcon_pkg']
+[1.324s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/rm_gimbal_description) by extension 'colcon_pkg'
+[1.324s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/rm_gimbal_description) by extensions ['colcon_meta']
+[1.325s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/rm_gimbal_description) by extension 'colcon_meta'
+[1.325s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/rm_gimbal_description) by extensions ['ros']
+[1.325s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/rm_gimbal_description) by extension 'ros'
+[1.325s] DEBUG:colcon.colcon_core.package_identification:Package '/home/yukki/Downloads/ros_ws/src/rm_gimbal_description' with type 'ros.ament_cmake' and name 'rm_gimbal_description'
+[1.326s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/rm_serial_driver) by extensions ['ignore', 'ignore_ament_install']
+[1.326s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/rm_serial_driver) by extension 'ignore'
+[1.326s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/rm_serial_driver) by extension 'ignore_ament_install'
+[1.326s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/rm_serial_driver) by extensions ['colcon_pkg']
+[1.326s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/rm_serial_driver) by extension 'colcon_pkg'
+[1.326s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/rm_serial_driver) by extensions ['colcon_meta']
+[1.326s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/rm_serial_driver) by extension 'colcon_meta'
+[1.326s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/rm_serial_driver) by extensions ['ros']
+[1.326s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/rm_serial_driver) by extension 'ros'
+[1.328s] DEBUG:colcon.colcon_core.package_identification:Package '/home/yukki/Downloads/ros_ws/src/rm_serial_driver' with type 'ros.ament_cmake' and name 'rm_serial_driver'
+[1.328s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/rm_vision) by extensions ['ignore', 'ignore_ament_install']
+[1.328s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/rm_vision) by extension 'ignore'
+[1.328s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/rm_vision) by extension 'ignore_ament_install'
+[1.328s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/rm_vision) by extensions ['colcon_pkg']
+[1.329s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/rm_vision) by extension 'colcon_pkg'
+[1.329s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/rm_vision) by extensions ['colcon_meta']
+[1.329s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/rm_vision) by extension 'colcon_meta'
+[1.329s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/rm_vision) by extensions ['ros']
+[1.329s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/rm_vision) by extension 'ros'
+[1.329s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/rm_vision) by extensions ['cmake', 'python']
+[1.329s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/rm_vision) by extension 'cmake'
+[1.329s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/rm_vision) by extension 'python'
+[1.329s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/rm_vision) by extensions ['python_setup_py']
+[1.329s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/rm_vision) by extension 'python_setup_py'
+[1.330s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/rm_vision/docs) by extensions ['ignore', 'ignore_ament_install']
+[1.330s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/rm_vision/docs) by extension 'ignore'
+[1.330s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/rm_vision/docs) by extension 'ignore_ament_install'
+[1.330s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/rm_vision/docs) by extensions ['colcon_pkg']
+[1.330s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/rm_vision/docs) by extension 'colcon_pkg'
+[1.330s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/rm_vision/docs) by extensions ['colcon_meta']
+[1.330s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/rm_vision/docs) by extension 'colcon_meta'
+[1.330s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/rm_vision/docs) by extensions ['ros']
+[1.330s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/rm_vision/docs) by extension 'ros'
+[1.330s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/rm_vision/docs) by extensions ['cmake', 'python']
+[1.330s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/rm_vision/docs) by extension 'cmake'
+[1.330s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/rm_vision/docs) by extension 'python'
+[1.330s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/rm_vision/docs) by extensions ['python_setup_py']
+[1.330s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/rm_vision/docs) by extension 'python_setup_py'
+[1.331s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/rm_vision/rm_vision_bringup) by extensions ['ignore', 'ignore_ament_install']
+[1.331s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/rm_vision/rm_vision_bringup) by extension 'ignore'
+[1.331s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/rm_vision/rm_vision_bringup) by extension 'ignore_ament_install'
+[1.331s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/rm_vision/rm_vision_bringup) by extensions ['colcon_pkg']
+[1.331s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/rm_vision/rm_vision_bringup) by extension 'colcon_pkg'
+[1.331s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/rm_vision/rm_vision_bringup) by extensions ['colcon_meta']
+[1.331s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/rm_vision/rm_vision_bringup) by extension 'colcon_meta'
+[1.331s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/rm_vision/rm_vision_bringup) by extensions ['ros']
+[1.331s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/rm_vision/rm_vision_bringup) by extension 'ros'
+[1.332s] DEBUG:colcon.colcon_core.package_identification:Package '/home/yukki/Downloads/ros_ws/src/rm_vision/rm_vision_bringup' with type 'ros.ament_cmake' and name 'rm_vision_bringup'
+[1.332s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/ros2_hik_camera) by extensions ['ignore', 'ignore_ament_install']
+[1.332s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/ros2_hik_camera) by extension 'ignore'
+[1.332s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/ros2_hik_camera) by extension 'ignore_ament_install'
+[1.332s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/ros2_hik_camera) by extensions ['colcon_pkg']
+[1.332s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/ros2_hik_camera) by extension 'colcon_pkg'
+[1.332s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/ros2_hik_camera) by extensions ['colcon_meta']
+[1.332s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/ros2_hik_camera) by extension 'colcon_meta'
+[1.333s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/ros2_hik_camera) by extensions ['ros']
+[1.333s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/ros2_hik_camera) by extension 'ros'
+[1.334s] DEBUG:colcon.colcon_core.package_identification:Package '/home/yukki/Downloads/ros_ws/src/ros2_hik_camera' with type 'ros.ament_cmake' and name 'hik_camera'
+[1.334s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/ros2_mindvision_camera) by extensions ['ignore', 'ignore_ament_install']
+[1.334s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/ros2_mindvision_camera) by extension 'ignore'
+[1.334s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/ros2_mindvision_camera) by extension 'ignore_ament_install'
+[1.335s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/ros2_mindvision_camera) by extensions ['colcon_pkg']
+[1.335s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/ros2_mindvision_camera) by extension 'colcon_pkg'
+[1.335s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/ros2_mindvision_camera) by extensions ['colcon_meta']
+[1.335s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/ros2_mindvision_camera) by extension 'colcon_meta'
+[1.335s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/ros2_mindvision_camera) by extensions ['ros']
+[1.335s] Level 1:colcon.colcon_core.package_identification:_identify(/home/yukki/Downloads/ros_ws/src/ros2_mindvision_camera) by extension 'ros'
+[1.337s] DEBUG:colcon.colcon_core.package_identification:Package '/home/yukki/Downloads/ros_ws/src/ros2_mindvision_camera' with type 'ros.ament_cmake' and name 'mindvision_camera'
+[1.337s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults

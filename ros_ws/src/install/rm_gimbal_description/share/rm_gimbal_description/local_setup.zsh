@@ -1,0 +1,1 @@
+/home/yukki/Downloads/ros_ws/src/build/rm_gimbal_description/ament_cmake_environment_hooks/local_setup.zsh

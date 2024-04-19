@@ -1,0 +1,85 @@
+[0.126s] Invoking command in '/home/yukki/Downloads/ros_ws/build/hik_camera': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/yukki/Downloads/ros_ws/src/ros2_hik_camera -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/yukki/Downloads/ros_ws/install/hik_camera
+[0.199s] -- The C compiler identification is GNU 11.4.0
+[0.258s] -- The CXX compiler identification is GNU 11.4.0
+[0.267s] -- Detecting C compiler ABI info
+[0.335s] -- Detecting C compiler ABI info - done
+[0.341s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.341s] -- Detecting C compile features
+[0.342s] -- Detecting C compile features - done
+[0.345s] -- Detecting CXX compiler ABI info
+[0.421s] -- Detecting CXX compiler ABI info - done
+[0.430s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.431s] -- Detecting CXX compile features
+[0.431s] -- Detecting CXX compile features - done
+[0.433s] -- Found ament_cmake_auto: 1.3.6 (/opt/ros/humble/share/ament_cmake_auto/cmake)
+[0.752s] -- Found Python3: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter 
+[0.818s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.945s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.949s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.955s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.966s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.981s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.043s] -- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[1.046s] -- Found rmw_fastrtps_cpp: 6.2.5 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[1.150s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[1.179s] -- Found FastRTPS: /opt/ros/humble/include  
+[1.226s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.236s] -- Looking for pthread.h
+[1.307s] -- Looking for pthread.h - found
+[1.307s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[1.377s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[1.378s] -- Found Threads: TRUE  
+[1.754s] -- Found ament_lint_auto: 0.12.9 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[1.774s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[1.774s] -- Configured cppcheck include dirs: /home/yukki/Downloads/ros_ws/src/ros2_hik_camera/hikSDK/include
+[1.774s] -- Configured cppcheck exclude dirs and/or files: 
+[1.775s] -- Added test 'flake8' to check Python code syntax and style conventions
+[1.776s] -- Added test 'lint_cmake' to check CMake code style
+[1.776s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[1.776s] -- Added test 'xmllint' to check XML markup files
+[1.780s] -- Configuring done
+[1.793s] -- Generating done
+[1.795s] -- Build files have been written to: /home/yukki/Downloads/ros_ws/build/hik_camera
+[1.807s] Invoked command in '/home/yukki/Downloads/ros_ws/build/hik_camera' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/yukki/Downloads/ros_ws/src/ros2_hik_camera -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/yukki/Downloads/ros_ws/install/hik_camera
+[1.808s] Invoking command in '/home/yukki/Downloads/ros_ws/build/hik_camera': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/yukki/Downloads/ros_ws/build/hik_camera -- -j16 -l16
+[1.859s] [ 50%] [32mBuilding CXX object CMakeFiles/hik_camera.dir/src/hik_camera_node.cpp.o[0m
+[1.860s] [ 50%] [32mBuilding CXX object CMakeFiles/hik_camera_node.dir/rclcpp_components/node_main_hik_camera_node.cpp.o[0m
+[6.415s] [ 75%] [32m[1mLinking CXX executable hik_camera_node[0m
+[6.558s] [ 75%] Built target hik_camera_node
+[7.034s] [100%] [32m[1mLinking CXX shared library libhik_camera.so[0m
+[7.157s] [100%] Built target hik_camera
+[7.168s] Invoked command in '/home/yukki/Downloads/ros_ws/build/hik_camera' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/yukki/Downloads/ros_ws/build/hik_camera -- -j16 -l16
+[7.199s] Invoking command in '/home/yukki/Downloads/ros_ws/build/hik_camera': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/yukki/Downloads/ros_ws/build/hik_camera
+[7.206s] -- Install configuration: ""
+[7.206s] -- Execute custom install script
+[7.207s] -- Symlinking: /home/yukki/Downloads/ros_ws/install/hik_camera/lib/libFormatConversion.so
+[7.216s] -- Symlinking: /home/yukki/Downloads/ros_ws/install/hik_camera/lib/libMVRender.so
+[7.226s] -- Symlinking: /home/yukki/Downloads/ros_ws/install/hik_camera/lib/libMediaProcess.so
+[7.235s] -- Symlinking: /home/yukki/Downloads/ros_ws/install/hik_camera/lib/libMvCameraControl.so
+[7.245s] -- Symlinking: /home/yukki/Downloads/ros_ws/install/hik_camera/lib/libMvUsb3vTL.so
+[7.255s] -- Symlinking: /home/yukki/Downloads/ros_ws/install/hik_camera/lib/hik_camera/hik_camera_node
+[7.265s] -- Symlinking: /home/yukki/Downloads/ros_ws/install/hik_camera/share/hik_camera/environment/library_path.sh
+[7.274s] -- Symlinking: /home/yukki/Downloads/ros_ws/install/hik_camera/share/hik_camera/environment/library_path.dsv
+[7.284s] -- Symlinking: /home/yukki/Downloads/ros_ws/install/hik_camera/lib/libhik_camera.so
+[7.294s] -- Symlinking: /home/yukki/Downloads/ros_ws/install/hik_camera/share/hik_camera/config/camera_info.yaml
+[7.304s] -- Symlinking: /home/yukki/Downloads/ros_ws/install/hik_camera/share/hik_camera/config/camera_params.yaml
+[7.314s] -- Symlinking: /home/yukki/Downloads/ros_ws/install/hik_camera/share/hik_camera/launch/hik_camera.launch.py
+[7.324s] -- Symlinking: /home/yukki/Downloads/ros_ws/install/hik_camera/share/ament_index/resource_index/package_run_dependencies/hik_camera
+[7.334s] -- Symlinking: /home/yukki/Downloads/ros_ws/install/hik_camera/share/ament_index/resource_index/parent_prefix_path/hik_camera
+[7.345s] -- Symlinking: /home/yukki/Downloads/ros_ws/install/hik_camera/share/hik_camera/environment/ament_prefix_path.sh
+[7.354s] -- Symlinking: /home/yukki/Downloads/ros_ws/install/hik_camera/share/hik_camera/environment/ament_prefix_path.dsv
+[7.364s] -- Symlinking: /home/yukki/Downloads/ros_ws/install/hik_camera/share/hik_camera/environment/path.sh
+[7.375s] -- Symlinking: /home/yukki/Downloads/ros_ws/install/hik_camera/share/hik_camera/environment/path.dsv
+[7.383s] -- Symlinking: /home/yukki/Downloads/ros_ws/install/hik_camera/share/hik_camera/local_setup.bash
+[7.393s] -- Symlinking: /home/yukki/Downloads/ros_ws/install/hik_camera/share/hik_camera/local_setup.sh
+[7.403s] -- Symlinking: /home/yukki/Downloads/ros_ws/install/hik_camera/share/hik_camera/local_setup.zsh
+[7.413s] -- Symlinking: /home/yukki/Downloads/ros_ws/install/hik_camera/share/hik_camera/local_setup.dsv
+[7.423s] -- Symlinking: /home/yukki/Downloads/ros_ws/install/hik_camera/share/hik_camera/package.dsv
+[7.433s] -- Symlinking: /home/yukki/Downloads/ros_ws/install/hik_camera/share/ament_index/resource_index/packages/hik_camera
+[7.443s] -- Symlinking: /home/yukki/Downloads/ros_ws/install/hik_camera/share/ament_index/resource_index/rclcpp_components/hik_camera
+[7.453s] -- Symlinking: /home/yukki/Downloads/ros_ws/install/hik_camera/share/hik_camera/cmake/ament_cmake_export_dependencies-extras.cmake
+[7.463s] -- Symlinking: /home/yukki/Downloads/ros_ws/install/hik_camera/share/hik_camera/cmake/ament_cmake_export_libraries-extras.cmake
+[7.473s] -- Symlinking: /home/yukki/Downloads/ros_ws/install/hik_camera/share/hik_camera/cmake/hik_cameraConfig.cmake
+[7.484s] -- Symlinking: /home/yukki/Downloads/ros_ws/install/hik_camera/share/hik_camera/cmake/hik_cameraConfig-version.cmake
+[7.494s] -- Symlinking: /home/yukki/Downloads/ros_ws/install/hik_camera/share/hik_camera/package.xml
+[7.507s] Invoked command in '/home/yukki/Downloads/ros_ws/build/hik_camera' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/yukki/Downloads/ros_ws/build/hik_camera

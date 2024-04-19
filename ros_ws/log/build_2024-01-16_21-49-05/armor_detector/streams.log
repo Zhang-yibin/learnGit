@@ -1,0 +1,107 @@
+[0.124s] Invoking command in '/home/yukki/Downloads/ros_ws/build/armor_detector': AMENT_PREFIX_PATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32 PYTHONPATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/yukki/Downloads/ros_ws/src/rm_auto_aim/armor_detector -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/yukki/Downloads/ros_ws/install/armor_detector
+[0.171s] -- The C compiler identification is GNU 11.4.0
+[0.221s] -- The CXX compiler identification is GNU 11.4.0
+[0.227s] -- Detecting C compiler ABI info
+[0.290s] -- Detecting C compiler ABI info - done
+[0.296s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.296s] -- Detecting C compile features
+[0.296s] -- Detecting C compile features - done
+[0.298s] -- Detecting CXX compiler ABI info
+[0.371s] -- Detecting CXX compiler ABI info - done
+[0.378s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.378s] -- Detecting CXX compile features
+[0.378s] -- Detecting CXX compile features - done
+[0.380s] -- Found ament_cmake_auto: 1.3.6 (/opt/ros/humble/share/ament_cmake_auto/cmake)
+[0.692s] -- Found Python3: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter 
+[0.745s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.783s] -- Found OpenCV: /usr/local (found suitable version "4.8.0", minimum required is "4") 
+[0.886s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.889s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.896s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.907s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.922s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.977s] -- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.979s] -- Found rmw_fastrtps_cpp: 6.2.5 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[1.074s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[1.102s] -- Found FastRTPS: /opt/ros/humble/include  
+[1.148s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.156s] -- Looking for pthread.h
+[1.225s] -- Looking for pthread.h - found
+[1.225s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[1.295s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[1.296s] -- Found Threads: TRUE  
+[1.773s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)
+[1.774s] -- Found Eigen3: TRUE (found version "3.4.0") 
+[1.774s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[1.997s] -- Found ament_lint_auto: 0.12.9 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[2.021s] -- Found ament_cmake_gtest: 1.3.6 (/opt/ros/humble/share/ament_cmake_gtest/cmake)
+[2.023s] -- Found gtest sources under '/opt/ros/humble/src/gtest_vendor': C++ tests using 'Google Test' will be built
+[2.035s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[2.035s] -- Configured cppcheck include dirs: /home/yukki/Downloads/ros_ws/src/rm_auto_aim/armor_detector/include
+[2.035s] -- Configured cppcheck exclude dirs and/or files: 
+[2.036s] -- Added test 'lint_cmake' to check CMake code style
+[2.037s] -- Added test 'xmllint' to check XML markup files
+[2.039s] -- Added test 'clang_format' to check C / C++ code style
+[2.042s] -- Configuring done
+[2.072s] -- Generating done
+[2.074s] -- Build files have been written to: /home/yukki/Downloads/ros_ws/build/armor_detector
+[2.086s] Invoked command in '/home/yukki/Downloads/ros_ws/build/armor_detector' returned '0': AMENT_PREFIX_PATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32 PYTHONPATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/yukki/Downloads/ros_ws/src/rm_auto_aim/armor_detector -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/yukki/Downloads/ros_ws/install/armor_detector
+[2.087s] Invoking command in '/home/yukki/Downloads/ros_ws/build/armor_detector': AMENT_PREFIX_PATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32 PYTHONPATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/yukki/Downloads/ros_ws/build/armor_detector -- -j16 -l16
+[2.140s] [ 31%] [32mBuilding CXX object CMakeFiles/armor_detector.dir/src/rune_detector.cpp.o[0m
+[2.140s] [ 31%] [32mBuilding CXX object gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.o[0m
+[2.140s] [ 31%] [32mBuilding CXX object CMakeFiles/armor_detector.dir/src/detector_node.cpp.o[0m
+[2.140s] [ 31%] [32mBuilding CXX object CMakeFiles/armor_detector.dir/src/number_classifier.cpp.o[0m
+[2.140s] [ 31%] [32mBuilding CXX object CMakeFiles/armor_detector.dir/src/detector.cpp.o[0m
+[2.141s] [ 43%] [32mBuilding CXX object CMakeFiles/armor_detector_node.dir/rclcpp_components/node_main_armor_detector_node.cpp.o[0m
+[2.141s] [ 43%] [32mBuilding CXX object gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o[0m
+[2.141s] [ 50%] [32mBuilding CXX object CMakeFiles/armor_detector.dir/src/pnp_solver.cpp.o[0m
+[2.817s] [ 56%] [32m[1mLinking CXX static library libgtest_main.a[0m
+[2.861s] [ 56%] Built target gtest_main
+[5.776s] [ 62%] [32m[1mLinking CXX static library libgtest.a[0m
+[5.888s] [ 62%] Built target gtest
+[6.812s] [ 68%] [32m[1mLinking CXX executable armor_detector_node[0m
+[7.014s] [ 68%] Built target armor_detector_node
+[20.487s] [ 75%] [32m[1mLinking CXX shared library libarmor_detector.so[0m
+[21.386s] [ 75%] Built target armor_detector
+[21.408s] [ 87%] [32mBuilding CXX object CMakeFiles/test_node_startup.dir/test/test_node_startup.cpp.o[0m
+[21.408s] [ 87%] [32mBuilding CXX object CMakeFiles/test_number_cls.dir/test/test_number_cls.cpp.o[0m
+[23.447s] [ 93%] [32m[1mLinking CXX executable test_number_cls[0m
+[23.810s] /usr/bin/ld: warning: libopencv_core.so.4.5d, needed by /opt/ros/humble/lib/libcv_bridge.so, may conflict with libopencv_core.so.408
+[24.230s] [ 93%] Built target test_number_cls
+[26.015s] [100%] [32m[1mLinking CXX executable test_node_startup[0m
+[26.686s] [100%] Built target test_node_startup
+[26.697s] Invoked command in '/home/yukki/Downloads/ros_ws/build/armor_detector' returned '0': AMENT_PREFIX_PATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32 PYTHONPATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/yukki/Downloads/ros_ws/build/armor_detector -- -j16 -l16
+[26.745s] Invoking command in '/home/yukki/Downloads/ros_ws/build/armor_detector': AMENT_PREFIX_PATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32 PYTHONPATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/yukki/Downloads/ros_ws/build/armor_detector
+[26.752s] -- Install configuration: ""
+[26.752s] -- Execute custom install script
+[26.752s] -- Symlinking: /home/yukki/Downloads/ros_ws/install/armor_detector/lib/armor_detector/armor_detector_node
+[26.762s] -- Symlinking: /home/yukki/Downloads/ros_ws/install/armor_detector/include/armor_detector/armor.hpp
+[26.770s] -- Symlinking: /home/yukki/Downloads/ros_ws/install/armor_detector/include/armor_detector/detector.hpp
+[26.779s] -- Symlinking: /home/yukki/Downloads/ros_ws/install/armor_detector/include/armor_detector/detector_node.hpp
+[26.788s] -- Symlinking: /home/yukki/Downloads/ros_ws/install/armor_detector/include/armor_detector/number_classifier.hpp
+[26.797s] -- Symlinking: /home/yukki/Downloads/ros_ws/install/armor_detector/include/armor_detector/pnp_solver.hpp
+[26.806s] -- Symlinking: /home/yukki/Downloads/ros_ws/install/armor_detector/share/armor_detector/environment/library_path.sh
+[26.814s] -- Symlinking: /home/yukki/Downloads/ros_ws/install/armor_detector/share/armor_detector/environment/library_path.dsv
+[26.823s] -- Symlinking: /home/yukki/Downloads/ros_ws/install/armor_detector/lib/libarmor_detector.so
+[26.833s] -- Symlinking: /home/yukki/Downloads/ros_ws/install/armor_detector/share/armor_detector/model/label.txt
+[26.842s] -- Symlinking: /home/yukki/Downloads/ros_ws/install/armor_detector/share/armor_detector/model/mlp.onnx
+[26.850s] -- Symlinking: /home/yukki/Downloads/ros_ws/install/armor_detector/share/ament_index/resource_index/package_run_dependencies/armor_detector
+[26.859s] -- Symlinking: /home/yukki/Downloads/ros_ws/install/armor_detector/share/ament_index/resource_index/parent_prefix_path/armor_detector
+[26.868s] -- Symlinking: /home/yukki/Downloads/ros_ws/install/armor_detector/share/armor_detector/environment/ament_prefix_path.sh
+[26.877s] -- Symlinking: /home/yukki/Downloads/ros_ws/install/armor_detector/share/armor_detector/environment/ament_prefix_path.dsv
+[26.885s] -- Symlinking: /home/yukki/Downloads/ros_ws/install/armor_detector/share/armor_detector/environment/path.sh
+[26.893s] -- Symlinking: /home/yukki/Downloads/ros_ws/install/armor_detector/share/armor_detector/environment/path.dsv
+[26.902s] -- Symlinking: /home/yukki/Downloads/ros_ws/install/armor_detector/share/armor_detector/local_setup.bash
+[26.911s] -- Symlinking: /home/yukki/Downloads/ros_ws/install/armor_detector/share/armor_detector/local_setup.sh
+[26.920s] -- Symlinking: /home/yukki/Downloads/ros_ws/install/armor_detector/share/armor_detector/local_setup.zsh
+[26.928s] -- Symlinking: /home/yukki/Downloads/ros_ws/install/armor_detector/share/armor_detector/local_setup.dsv
+[26.937s] -- Symlinking: /home/yukki/Downloads/ros_ws/install/armor_detector/share/armor_detector/package.dsv
+[26.946s] -- Symlinking: /home/yukki/Downloads/ros_ws/install/armor_detector/share/ament_index/resource_index/packages/armor_detector
+[26.955s] -- Symlinking: /home/yukki/Downloads/ros_ws/install/armor_detector/share/ament_index/resource_index/rclcpp_components/armor_detector
+[26.964s] -- Symlinking: /home/yukki/Downloads/ros_ws/install/armor_detector/share/armor_detector/cmake/ament_cmake_export_dependencies-extras.cmake
+[26.972s] -- Symlinking: /home/yukki/Downloads/ros_ws/install/armor_detector/share/armor_detector/cmake/ament_cmake_export_include_directories-extras.cmake
+[26.981s] -- Symlinking: /home/yukki/Downloads/ros_ws/install/armor_detector/share/armor_detector/cmake/ament_cmake_export_libraries-extras.cmake
+[26.990s] -- Symlinking: /home/yukki/Downloads/ros_ws/install/armor_detector/share/armor_detector/cmake/armor_detectorConfig.cmake
+[26.999s] -- Symlinking: /home/yukki/Downloads/ros_ws/install/armor_detector/share/armor_detector/cmake/armor_detectorConfig-version.cmake
+[27.008s] -- Symlinking: /home/yukki/Downloads/ros_ws/install/armor_detector/share/armor_detector/package.xml
+[27.018s] Invoked command in '/home/yukki/Downloads/ros_ws/build/armor_detector' returned '0': AMENT_PREFIX_PATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32 PYTHONPATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/yukki/Downloads/ros_ws/build/armor_detector

@@ -1,0 +1,3 @@
+/home/yuuki/CLionProjects/spilit/cmake-build-debug/CMakeFiles/spilit.dir
+/home/yuuki/CLionProjects/spilit/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/yuuki/CLionProjects/spilit/cmake-build-debug/CMakeFiles/rebuild_cache.dir

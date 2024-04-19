@@ -1,0 +1,4 @@
+std_msgs/Header header
+float32 spin_speed
+float64 filter_speed
+float64 c_function

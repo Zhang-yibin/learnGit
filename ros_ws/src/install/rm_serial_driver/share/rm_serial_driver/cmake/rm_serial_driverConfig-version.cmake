@@ -1,0 +1,1 @@
+/home/yukki/Downloads/ros_ws/src/build/rm_serial_driver/ament_cmake_core/rm_serial_driverConfig-version.cmake

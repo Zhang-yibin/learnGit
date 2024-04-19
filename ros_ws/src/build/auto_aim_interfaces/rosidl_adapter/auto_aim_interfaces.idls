@@ -1,0 +1,13 @@
+/home/yukki/Downloads/ros_ws/src/build/auto_aim_interfaces/rosidl_adapter/auto_aim_interfaces:msg/Armor.idl
+/home/yukki/Downloads/ros_ws/src/build/auto_aim_interfaces/rosidl_adapter/auto_aim_interfaces:msg/Armors.idl
+/home/yukki/Downloads/ros_ws/src/build/auto_aim_interfaces/rosidl_adapter/auto_aim_interfaces:msg/Rune.idl
+/home/yukki/Downloads/ros_ws/src/build/auto_aim_interfaces/rosidl_adapter/auto_aim_interfaces:msg/Target.idl
+/home/yukki/Downloads/ros_ws/src/build/auto_aim_interfaces/rosidl_adapter/auto_aim_interfaces:msg/TargetRune.idl
+/home/yukki/Downloads/ros_ws/src/build/auto_aim_interfaces/rosidl_adapter/auto_aim_interfaces:msg/DebugLight.idl
+/home/yukki/Downloads/ros_ws/src/build/auto_aim_interfaces/rosidl_adapter/auto_aim_interfaces:msg/DebugLights.idl
+/home/yukki/Downloads/ros_ws/src/build/auto_aim_interfaces/rosidl_adapter/auto_aim_interfaces:msg/DebugArmor.idl
+/home/yukki/Downloads/ros_ws/src/build/auto_aim_interfaces/rosidl_adapter/auto_aim_interfaces:msg/DebugArmors.idl
+/home/yukki/Downloads/ros_ws/src/build/auto_aim_interfaces/rosidl_adapter/auto_aim_interfaces:msg/DebugRune.idl
+/home/yukki/Downloads/ros_ws/src/build/auto_aim_interfaces/rosidl_adapter/auto_aim_interfaces:msg/DebugSend.idl
+/home/yukki/Downloads/ros_ws/src/build/auto_aim_interfaces/rosidl_adapter/auto_aim_interfaces:msg/DebugSendArmors.idl
+/home/yukki/Downloads/ros_ws/src/build/auto_aim_interfaces/rosidl_adapter/auto_aim_interfaces:msg/TrackerInfo.idl

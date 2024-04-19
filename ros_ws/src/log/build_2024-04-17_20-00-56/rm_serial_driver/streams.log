@@ -1,0 +1,90 @@
+[0.080s] Invoking command in '/home/yukki/Downloads/ros_ws/src/build/rm_serial_driver': AMENT_PREFIX_PATH=/home/yukki/Downloads/ros_ws/src/install/auto_aim_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/yukki/Downloads/ros_ws/src/install/auto_aim_interfaces:/home/yukki/Downloads/ros2_ws/install/rm_vision_bringup:/home/yukki/Downloads/ros2_ws/install/rm_serial_driver:/home/yukki/Downloads/ros2_ws/install/rm_gimbal_description:/home/yukki/Downloads/ros2_ws/install/rm_auto_aim:/home/yukki/Downloads/ros2_ws/install/pkg_hello_cpp:/home/yukki/Downloads/ros2_ws/install/mindvision_camera:/home/yukki/Downloads/ros2_ws/install/hik_camera:/home/yukki/Downloads/ros2_ws/install/armor_tracker:/home/yukki/Downloads/ros2_ws/install/armor_detector:/home/yukki/Downloads/ros2_ws/install/auto_aim_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/yukki/Downloads/ros_ws/src/install/auto_aim_interfaces/lib:/home/yukki/Downloads/ros2_ws/install/rm_serial_driver/lib:/home/yukki/Downloads/ros2_ws/install/mindvision_camera/lib:/home/yukki/Downloads/ros2_ws/install/hik_camera/lib:/home/yukki/Downloads/ros2_ws/install/armor_tracker/lib:/home/yukki/Downloads/ros2_ws/install/armor_detector/lib:/home/yukki/Downloads/ros2_ws/install/auto_aim_interfaces/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32 PYTHONPATH=/home/yukki/Downloads/ros_ws/src/install/auto_aim_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/yukki/Downloads/ros_ws/src/rm_serial_driver -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/yukki/Downloads/ros_ws/src/install/rm_serial_driver
+[0.140s] -- The C compiler identification is GNU 11.4.0
+[0.196s] -- The CXX compiler identification is GNU 11.4.0
+[0.205s] -- Detecting C compiler ABI info
+[0.279s] -- Detecting C compiler ABI info - done
+[0.285s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.285s] -- Detecting C compile features
+[0.285s] -- Detecting C compile features - done
+[0.288s] -- Detecting CXX compiler ABI info
+[0.373s] -- Detecting CXX compiler ABI info - done
+[0.380s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.380s] -- Detecting CXX compile features
+[0.381s] -- Detecting CXX compile features - done
+[0.386s] -- Found ament_cmake_auto: 1.3.6 (/opt/ros/humble/share/ament_cmake_auto/cmake)
+[0.793s] -- Found Python3: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter 
+[0.852s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[1.046s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[1.056s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[1.070s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[1.090s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.115s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.201s] -- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[1.206s] -- Found rmw_fastrtps_cpp: 6.2.5 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[1.346s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[1.384s] -- Found FastRTPS: /opt/ros/humble/include  
+[1.444s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.460s] -- Looking for pthread.h
+[1.539s] -- Looking for pthread.h - found
+[1.540s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[1.621s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[1.622s] -- Found Threads: TRUE  
+[2.311s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)
+[2.313s] -- Found Eigen3: TRUE (found version "3.4.0") 
+[2.313s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[2.641s] -- Found ament_lint_auto: 0.12.9 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[2.686s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[2.686s] -- Configured cppcheck include dirs: /home/yukki/Downloads/ros_ws/src/rm_serial_driver/include
+[2.686s] -- Configured cppcheck exclude dirs and/or files: 
+[2.688s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[2.688s] -- Configured cpplint exclude dirs and/or files: 
+[2.689s] -- Added test 'flake8' to check Python code syntax and style conventions
+[2.690s] -- Added test 'lint_cmake' to check CMake code style
+[2.691s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[2.691s] -- Added test 'xmllint' to check XML markup files
+[2.694s] -- Added test 'clang_format' to check C / C++ code style
+[2.698s] -- Configuring done
+[2.740s] -- Generating done
+[2.744s] -- Build files have been written to: /home/yukki/Downloads/ros_ws/src/build/rm_serial_driver
+[2.769s] Invoked command in '/home/yukki/Downloads/ros_ws/src/build/rm_serial_driver' returned '0': AMENT_PREFIX_PATH=/home/yukki/Downloads/ros_ws/src/install/auto_aim_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/yukki/Downloads/ros_ws/src/install/auto_aim_interfaces:/home/yukki/Downloads/ros2_ws/install/rm_vision_bringup:/home/yukki/Downloads/ros2_ws/install/rm_serial_driver:/home/yukki/Downloads/ros2_ws/install/rm_gimbal_description:/home/yukki/Downloads/ros2_ws/install/rm_auto_aim:/home/yukki/Downloads/ros2_ws/install/pkg_hello_cpp:/home/yukki/Downloads/ros2_ws/install/mindvision_camera:/home/yukki/Downloads/ros2_ws/install/hik_camera:/home/yukki/Downloads/ros2_ws/install/armor_tracker:/home/yukki/Downloads/ros2_ws/install/armor_detector:/home/yukki/Downloads/ros2_ws/install/auto_aim_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/yukki/Downloads/ros_ws/src/install/auto_aim_interfaces/lib:/home/yukki/Downloads/ros2_ws/install/rm_serial_driver/lib:/home/yukki/Downloads/ros2_ws/install/mindvision_camera/lib:/home/yukki/Downloads/ros2_ws/install/hik_camera/lib:/home/yukki/Downloads/ros2_ws/install/armor_tracker/lib:/home/yukki/Downloads/ros2_ws/install/armor_detector/lib:/home/yukki/Downloads/ros2_ws/install/auto_aim_interfaces/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32 PYTHONPATH=/home/yukki/Downloads/ros_ws/src/install/auto_aim_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/yukki/Downloads/ros_ws/src/rm_serial_driver -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/yukki/Downloads/ros_ws/src/install/rm_serial_driver
+[2.771s] Invoking command in '/home/yukki/Downloads/ros_ws/src/build/rm_serial_driver': AMENT_PREFIX_PATH=/home/yukki/Downloads/ros_ws/src/install/auto_aim_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/yukki/Downloads/ros_ws/src/install/auto_aim_interfaces:/home/yukki/Downloads/ros2_ws/install/rm_vision_bringup:/home/yukki/Downloads/ros2_ws/install/rm_serial_driver:/home/yukki/Downloads/ros2_ws/install/rm_gimbal_description:/home/yukki/Downloads/ros2_ws/install/rm_auto_aim:/home/yukki/Downloads/ros2_ws/install/pkg_hello_cpp:/home/yukki/Downloads/ros2_ws/install/mindvision_camera:/home/yukki/Downloads/ros2_ws/install/hik_camera:/home/yukki/Downloads/ros2_ws/install/armor_tracker:/home/yukki/Downloads/ros2_ws/install/armor_detector:/home/yukki/Downloads/ros2_ws/install/auto_aim_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/yukki/Downloads/ros_ws/src/install/auto_aim_interfaces/lib:/home/yukki/Downloads/ros2_ws/install/rm_serial_driver/lib:/home/yukki/Downloads/ros2_ws/install/mindvision_camera/lib:/home/yukki/Downloads/ros2_ws/install/hik_camera/lib:/home/yukki/Downloads/ros2_ws/install/armor_tracker/lib:/home/yukki/Downloads/ros2_ws/install/armor_detector/lib:/home/yukki/Downloads/ros2_ws/install/auto_aim_interfaces/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32 PYTHONPATH=/home/yukki/Downloads/ros_ws/src/install/auto_aim_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/yukki/Downloads/ros_ws/src/build/rm_serial_driver -- -j16 -l16
+[2.853s] [ 20%] [32mBuilding CXX object CMakeFiles/rm_serial_driver.dir/src/rm_serial_driver.cpp.o[0m
+[2.860s] [ 40%] [32mBuilding CXX object CMakeFiles/rm_serial_driver.dir/src/crc.cpp.o[0m
+[2.866s] [ 60%] [32mBuilding CXX object CMakeFiles/rm_serial_driver_node.dir/rclcpp_components/node_main_rm_serial_driver_node.cpp.o[0m
+[76.248s] [ 80%] [32m[1mLinking CXX executable rm_serial_driver_node[0m
+[76.668s] [ 80%] Built target rm_serial_driver_node
+[90.966s] [100%] [32m[1mLinking CXX shared library librm_serial_driver.so[0m
+[91.895s] [100%] Built target rm_serial_driver
+[91.911s] Invoked command in '/home/yukki/Downloads/ros_ws/src/build/rm_serial_driver' returned '0': AMENT_PREFIX_PATH=/home/yukki/Downloads/ros_ws/src/install/auto_aim_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/yukki/Downloads/ros_ws/src/install/auto_aim_interfaces:/home/yukki/Downloads/ros2_ws/install/rm_vision_bringup:/home/yukki/Downloads/ros2_ws/install/rm_serial_driver:/home/yukki/Downloads/ros2_ws/install/rm_gimbal_description:/home/yukki/Downloads/ros2_ws/install/rm_auto_aim:/home/yukki/Downloads/ros2_ws/install/pkg_hello_cpp:/home/yukki/Downloads/ros2_ws/install/mindvision_camera:/home/yukki/Downloads/ros2_ws/install/hik_camera:/home/yukki/Downloads/ros2_ws/install/armor_tracker:/home/yukki/Downloads/ros2_ws/install/armor_detector:/home/yukki/Downloads/ros2_ws/install/auto_aim_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/yukki/Downloads/ros_ws/src/install/auto_aim_interfaces/lib:/home/yukki/Downloads/ros2_ws/install/rm_serial_driver/lib:/home/yukki/Downloads/ros2_ws/install/mindvision_camera/lib:/home/yukki/Downloads/ros2_ws/install/hik_camera/lib:/home/yukki/Downloads/ros2_ws/install/armor_tracker/lib:/home/yukki/Downloads/ros2_ws/install/armor_detector/lib:/home/yukki/Downloads/ros2_ws/install/auto_aim_interfaces/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32 PYTHONPATH=/home/yukki/Downloads/ros_ws/src/install/auto_aim_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/yukki/Downloads/ros_ws/src/build/rm_serial_driver -- -j16 -l16
+[91.963s] Invoking command in '/home/yukki/Downloads/ros_ws/src/build/rm_serial_driver': AMENT_PREFIX_PATH=/home/yukki/Downloads/ros_ws/src/install/auto_aim_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/yukki/Downloads/ros_ws/src/install/auto_aim_interfaces:/home/yukki/Downloads/ros2_ws/install/rm_vision_bringup:/home/yukki/Downloads/ros2_ws/install/rm_serial_driver:/home/yukki/Downloads/ros2_ws/install/rm_gimbal_description:/home/yukki/Downloads/ros2_ws/install/rm_auto_aim:/home/yukki/Downloads/ros2_ws/install/pkg_hello_cpp:/home/yukki/Downloads/ros2_ws/install/mindvision_camera:/home/yukki/Downloads/ros2_ws/install/hik_camera:/home/yukki/Downloads/ros2_ws/install/armor_tracker:/home/yukki/Downloads/ros2_ws/install/armor_detector:/home/yukki/Downloads/ros2_ws/install/auto_aim_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/yukki/Downloads/ros_ws/src/install/auto_aim_interfaces/lib:/home/yukki/Downloads/ros2_ws/install/rm_serial_driver/lib:/home/yukki/Downloads/ros2_ws/install/mindvision_camera/lib:/home/yukki/Downloads/ros2_ws/install/hik_camera/lib:/home/yukki/Downloads/ros2_ws/install/armor_tracker/lib:/home/yukki/Downloads/ros2_ws/install/armor_detector/lib:/home/yukki/Downloads/ros2_ws/install/auto_aim_interfaces/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32 PYTHONPATH=/home/yukki/Downloads/ros_ws/src/install/auto_aim_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/yukki/Downloads/ros_ws/src/build/rm_serial_driver
+[91.972s] -- Install configuration: ""
+[91.973s] -- Execute custom install script
+[91.973s] -- Symlinking: /home/yukki/Downloads/ros_ws/src/install/rm_serial_driver/lib/rm_serial_driver/rm_serial_driver_node
+[91.986s] -- Symlinking: /home/yukki/Downloads/ros_ws/src/install/rm_serial_driver/include/rm_serial_driver/crc.hpp
+[91.999s] -- Symlinking: /home/yukki/Downloads/ros_ws/src/install/rm_serial_driver/include/rm_serial_driver/packet.hpp
+[92.010s] -- Symlinking: /home/yukki/Downloads/ros_ws/src/install/rm_serial_driver/include/rm_serial_driver/rm_serial_driver.hpp
+[92.022s] -- Symlinking: /home/yukki/Downloads/ros_ws/src/install/rm_serial_driver/share/rm_serial_driver/environment/library_path.sh
+[92.034s] -- Symlinking: /home/yukki/Downloads/ros_ws/src/install/rm_serial_driver/share/rm_serial_driver/environment/library_path.dsv
+[92.046s] -- Symlinking: /home/yukki/Downloads/ros_ws/src/install/rm_serial_driver/lib/librm_serial_driver.so
+[92.058s] -- Symlinking: /home/yukki/Downloads/ros_ws/src/install/rm_serial_driver/share/rm_serial_driver/config/serial_driver.yaml
+[92.069s] -- Symlinking: /home/yukki/Downloads/ros_ws/src/install/rm_serial_driver/share/rm_serial_driver/launch/serial_driver.launch.py
+[92.082s] -- Symlinking: /home/yukki/Downloads/ros_ws/src/install/rm_serial_driver/share/ament_index/resource_index/package_run_dependencies/rm_serial_driver
+[92.095s] -- Symlinking: /home/yukki/Downloads/ros_ws/src/install/rm_serial_driver/share/ament_index/resource_index/parent_prefix_path/rm_serial_driver
+[92.109s] -- Symlinking: /home/yukki/Downloads/ros_ws/src/install/rm_serial_driver/share/rm_serial_driver/environment/ament_prefix_path.sh
+[92.120s] -- Symlinking: /home/yukki/Downloads/ros_ws/src/install/rm_serial_driver/share/rm_serial_driver/environment/ament_prefix_path.dsv
+[92.133s] -- Symlinking: /home/yukki/Downloads/ros_ws/src/install/rm_serial_driver/share/rm_serial_driver/environment/path.sh
+[92.145s] -- Symlinking: /home/yukki/Downloads/ros_ws/src/install/rm_serial_driver/share/rm_serial_driver/environment/path.dsv
+[92.157s] -- Symlinking: /home/yukki/Downloads/ros_ws/src/install/rm_serial_driver/share/rm_serial_driver/local_setup.bash
+[92.169s] -- Symlinking: /home/yukki/Downloads/ros_ws/src/install/rm_serial_driver/share/rm_serial_driver/local_setup.sh
+[92.181s] -- Symlinking: /home/yukki/Downloads/ros_ws/src/install/rm_serial_driver/share/rm_serial_driver/local_setup.zsh
+[92.193s] -- Symlinking: /home/yukki/Downloads/ros_ws/src/install/rm_serial_driver/share/rm_serial_driver/local_setup.dsv
+[92.206s] -- Symlinking: /home/yukki/Downloads/ros_ws/src/install/rm_serial_driver/share/rm_serial_driver/package.dsv
+[92.219s] -- Symlinking: /home/yukki/Downloads/ros_ws/src/install/rm_serial_driver/share/ament_index/resource_index/packages/rm_serial_driver
+[92.231s] -- Symlinking: /home/yukki/Downloads/ros_ws/src/install/rm_serial_driver/share/ament_index/resource_index/rclcpp_components/rm_serial_driver
+[92.243s] -- Symlinking: /home/yukki/Downloads/ros_ws/src/install/rm_serial_driver/share/rm_serial_driver/cmake/ament_cmake_export_dependencies-extras.cmake
+[92.256s] -- Symlinking: /home/yukki/Downloads/ros_ws/src/install/rm_serial_driver/share/rm_serial_driver/cmake/ament_cmake_export_include_directories-extras.cmake
+[92.269s] -- Symlinking: /home/yukki/Downloads/ros_ws/src/install/rm_serial_driver/share/rm_serial_driver/cmake/ament_cmake_export_libraries-extras.cmake
+[92.282s] -- Symlinking: /home/yukki/Downloads/ros_ws/src/install/rm_serial_driver/share/rm_serial_driver/cmake/rm_serial_driverConfig.cmake
+[92.294s] -- Symlinking: /home/yukki/Downloads/ros_ws/src/install/rm_serial_driver/share/rm_serial_driver/cmake/rm_serial_driverConfig-version.cmake
+[92.306s] -- Symlinking: /home/yukki/Downloads/ros_ws/src/install/rm_serial_driver/share/rm_serial_driver/package.xml
+[92.323s] Invoked command in '/home/yukki/Downloads/ros_ws/src/build/rm_serial_driver' returned '0': AMENT_PREFIX_PATH=/home/yukki/Downloads/ros_ws/src/install/auto_aim_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/yukki/Downloads/ros_ws/src/install/auto_aim_interfaces:/home/yukki/Downloads/ros2_ws/install/rm_vision_bringup:/home/yukki/Downloads/ros2_ws/install/rm_serial_driver:/home/yukki/Downloads/ros2_ws/install/rm_gimbal_description:/home/yukki/Downloads/ros2_ws/install/rm_auto_aim:/home/yukki/Downloads/ros2_ws/install/pkg_hello_cpp:/home/yukki/Downloads/ros2_ws/install/mindvision_camera:/home/yukki/Downloads/ros2_ws/install/hik_camera:/home/yukki/Downloads/ros2_ws/install/armor_tracker:/home/yukki/Downloads/ros2_ws/install/armor_detector:/home/yukki/Downloads/ros2_ws/install/auto_aim_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/yukki/Downloads/ros_ws/src/install/auto_aim_interfaces/lib:/home/yukki/Downloads/ros2_ws/install/rm_serial_driver/lib:/home/yukki/Downloads/ros2_ws/install/mindvision_camera/lib:/home/yukki/Downloads/ros2_ws/install/hik_camera/lib:/home/yukki/Downloads/ros2_ws/install/armor_tracker/lib:/home/yukki/Downloads/ros2_ws/install/armor_detector/lib:/home/yukki/Downloads/ros2_ws/install/auto_aim_interfaces/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32 PYTHONPATH=/home/yukki/Downloads/ros_ws/src/install/auto_aim_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/yukki/Downloads/ros_ws/src/build/rm_serial_driver

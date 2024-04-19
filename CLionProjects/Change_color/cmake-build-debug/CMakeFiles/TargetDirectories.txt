@@ -1,0 +1,3 @@
+/home/yuuki/CLionProjects/Change_color/cmake-build-debug/CMakeFiles/Change_color.dir
+/home/yuuki/CLionProjects/Change_color/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/yuuki/CLionProjects/Change_color/cmake-build-debug/CMakeFiles/rebuild_cache.dir

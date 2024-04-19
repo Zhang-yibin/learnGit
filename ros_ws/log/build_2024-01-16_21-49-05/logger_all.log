@@ -1,0 +1,768 @@
+[0.950s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--symlink-install']
+[0.950s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=True, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=16, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7fae59b2eec0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7fae59b2ea40>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7fae59b2ea40>>)
+[1.016s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[1.016s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[1.016s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[1.016s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[1.016s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[1.016s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[1.016s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/yukki/Downloads/ros_ws'
+[1.017s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[1.017s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[1.017s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[1.017s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[1.017s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[1.017s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[1.017s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[1.017s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[1.017s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[1.029s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[1.029s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[1.029s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[1.029s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[1.029s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[1.029s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[1.029s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[1.029s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[1.029s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[1.029s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[1.029s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[1.030s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[1.030s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[1.030s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[1.030s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[1.030s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[1.030s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[1.030s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[1.030s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[1.030s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[1.030s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[1.030s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[1.030s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[1.030s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[1.030s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[1.030s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[1.030s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[1.030s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[1.030s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim) by extensions ['ignore', 'ignore_ament_install']
+[1.030s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim) by extension 'ignore'
+[1.030s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim) by extension 'ignore_ament_install'
+[1.030s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim) by extensions ['colcon_pkg']
+[1.030s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim) by extension 'colcon_pkg'
+[1.030s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim) by extensions ['colcon_meta']
+[1.031s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim) by extension 'colcon_meta'
+[1.031s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim) by extensions ['ros']
+[1.031s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim) by extension 'ros'
+[1.031s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim) by extensions ['cmake', 'python']
+[1.031s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim) by extension 'cmake'
+[1.031s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim) by extension 'python'
+[1.031s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim) by extensions ['python_setup_py']
+[1.031s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim) by extension 'python_setup_py'
+[1.031s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/armor_detector) by extensions ['ignore', 'ignore_ament_install']
+[1.031s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/armor_detector) by extension 'ignore'
+[1.031s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/armor_detector) by extension 'ignore_ament_install'
+[1.031s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/armor_detector) by extensions ['colcon_pkg']
+[1.031s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/armor_detector) by extension 'colcon_pkg'
+[1.031s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/armor_detector) by extensions ['colcon_meta']
+[1.031s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/armor_detector) by extension 'colcon_meta'
+[1.031s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/armor_detector) by extensions ['ros']
+[1.031s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/armor_detector) by extension 'ros'
+[1.034s] DEBUG:colcon.colcon_core.package_identification:Package 'src/rm_auto_aim/armor_detector' with type 'ros.ament_cmake' and name 'armor_detector'
+[1.034s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/armor_tracker) by extensions ['ignore', 'ignore_ament_install']
+[1.034s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/armor_tracker) by extension 'ignore'
+[1.034s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/armor_tracker) by extension 'ignore_ament_install'
+[1.034s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/armor_tracker) by extensions ['colcon_pkg']
+[1.034s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/armor_tracker) by extension 'colcon_pkg'
+[1.034s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/armor_tracker) by extensions ['colcon_meta']
+[1.034s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/armor_tracker) by extension 'colcon_meta'
+[1.035s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/armor_tracker) by extensions ['ros']
+[1.035s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/armor_tracker) by extension 'ros'
+[1.035s] DEBUG:colcon.colcon_core.package_identification:Package 'src/rm_auto_aim/armor_tracker' with type 'ros.ament_cmake' and name 'armor_tracker'
+[1.036s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/auto_aim_interfaces) by extensions ['ignore', 'ignore_ament_install']
+[1.036s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/auto_aim_interfaces) by extension 'ignore'
+[1.036s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/auto_aim_interfaces) by extension 'ignore_ament_install'
+[1.036s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/auto_aim_interfaces) by extensions ['colcon_pkg']
+[1.036s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/auto_aim_interfaces) by extension 'colcon_pkg'
+[1.036s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/auto_aim_interfaces) by extensions ['colcon_meta']
+[1.036s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/auto_aim_interfaces) by extension 'colcon_meta'
+[1.036s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/auto_aim_interfaces) by extensions ['ros']
+[1.036s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/auto_aim_interfaces) by extension 'ros'
+[1.036s] DEBUG:colcon.colcon_core.package_identification:Package 'src/rm_auto_aim/auto_aim_interfaces' with type 'ros.ament_cmake' and name 'auto_aim_interfaces'
+[1.036s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/docs) by extensions ['ignore', 'ignore_ament_install']
+[1.036s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/docs) by extension 'ignore'
+[1.036s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/docs) by extension 'ignore_ament_install'
+[1.036s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/docs) by extensions ['colcon_pkg']
+[1.036s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/docs) by extension 'colcon_pkg'
+[1.036s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/docs) by extensions ['colcon_meta']
+[1.037s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/docs) by extension 'colcon_meta'
+[1.037s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/docs) by extensions ['ros']
+[1.037s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/docs) by extension 'ros'
+[1.037s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/docs) by extensions ['cmake', 'python']
+[1.037s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/docs) by extension 'cmake'
+[1.037s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/docs) by extension 'python'
+[1.037s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/docs) by extensions ['python_setup_py']
+[1.037s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/docs) by extension 'python_setup_py'
+[1.037s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/rm_auto_aim) by extensions ['ignore', 'ignore_ament_install']
+[1.037s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/rm_auto_aim) by extension 'ignore'
+[1.037s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/rm_auto_aim) by extension 'ignore_ament_install'
+[1.037s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/rm_auto_aim) by extensions ['colcon_pkg']
+[1.037s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/rm_auto_aim) by extension 'colcon_pkg'
+[1.037s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/rm_auto_aim) by extensions ['colcon_meta']
+[1.037s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/rm_auto_aim) by extension 'colcon_meta'
+[1.037s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/rm_auto_aim) by extensions ['ros']
+[1.037s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/rm_auto_aim) by extension 'ros'
+[1.038s] DEBUG:colcon.colcon_core.package_identification:Package 'src/rm_auto_aim/rm_auto_aim' with type 'ros.ament_cmake' and name 'rm_auto_aim'
+[1.038s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_gimbal_description) by extensions ['ignore', 'ignore_ament_install']
+[1.038s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_gimbal_description) by extension 'ignore'
+[1.038s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_gimbal_description) by extension 'ignore_ament_install'
+[1.038s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_gimbal_description) by extensions ['colcon_pkg']
+[1.038s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_gimbal_description) by extension 'colcon_pkg'
+[1.038s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_gimbal_description) by extensions ['colcon_meta']
+[1.038s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_gimbal_description) by extension 'colcon_meta'
+[1.038s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_gimbal_description) by extensions ['ros']
+[1.038s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_gimbal_description) by extension 'ros'
+[1.038s] DEBUG:colcon.colcon_core.package_identification:Package 'src/rm_gimbal_description' with type 'ros.ament_cmake' and name 'rm_gimbal_description'
+[1.038s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_serial_driver) by extensions ['ignore', 'ignore_ament_install']
+[1.038s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_serial_driver) by extension 'ignore'
+[1.038s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_serial_driver) by extension 'ignore_ament_install'
+[1.039s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_serial_driver) by extensions ['colcon_pkg']
+[1.039s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_serial_driver) by extension 'colcon_pkg'
+[1.039s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_serial_driver) by extensions ['colcon_meta']
+[1.039s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_serial_driver) by extension 'colcon_meta'
+[1.039s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_serial_driver) by extensions ['ros']
+[1.039s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_serial_driver) by extension 'ros'
+[1.039s] DEBUG:colcon.colcon_core.package_identification:Package 'src/rm_serial_driver' with type 'ros.ament_cmake' and name 'rm_serial_driver'
+[1.040s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_vision) by extensions ['ignore', 'ignore_ament_install']
+[1.040s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_vision) by extension 'ignore'
+[1.040s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_vision) by extension 'ignore_ament_install'
+[1.040s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_vision) by extensions ['colcon_pkg']
+[1.040s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_vision) by extension 'colcon_pkg'
+[1.040s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_vision) by extensions ['colcon_meta']
+[1.040s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_vision) by extension 'colcon_meta'
+[1.040s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_vision) by extensions ['ros']
+[1.040s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_vision) by extension 'ros'
+[1.040s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_vision) by extensions ['cmake', 'python']
+[1.040s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_vision) by extension 'cmake'
+[1.040s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_vision) by extension 'python'
+[1.040s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_vision) by extensions ['python_setup_py']
+[1.040s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_vision) by extension 'python_setup_py'
+[1.040s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_vision/docs) by extensions ['ignore', 'ignore_ament_install']
+[1.040s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_vision/docs) by extension 'ignore'
+[1.040s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_vision/docs) by extension 'ignore_ament_install'
+[1.040s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_vision/docs) by extensions ['colcon_pkg']
+[1.040s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_vision/docs) by extension 'colcon_pkg'
+[1.040s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_vision/docs) by extensions ['colcon_meta']
+[1.040s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_vision/docs) by extension 'colcon_meta'
+[1.040s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_vision/docs) by extensions ['ros']
+[1.040s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_vision/docs) by extension 'ros'
+[1.041s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_vision/docs) by extensions ['cmake', 'python']
+[1.041s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_vision/docs) by extension 'cmake'
+[1.041s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_vision/docs) by extension 'python'
+[1.041s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_vision/docs) by extensions ['python_setup_py']
+[1.041s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_vision/docs) by extension 'python_setup_py'
+[1.041s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_vision/rm_vision_bringup) by extensions ['ignore', 'ignore_ament_install']
+[1.041s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_vision/rm_vision_bringup) by extension 'ignore'
+[1.041s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_vision/rm_vision_bringup) by extension 'ignore_ament_install'
+[1.041s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_vision/rm_vision_bringup) by extensions ['colcon_pkg']
+[1.041s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_vision/rm_vision_bringup) by extension 'colcon_pkg'
+[1.041s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_vision/rm_vision_bringup) by extensions ['colcon_meta']
+[1.041s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_vision/rm_vision_bringup) by extension 'colcon_meta'
+[1.041s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_vision/rm_vision_bringup) by extensions ['ros']
+[1.041s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_vision/rm_vision_bringup) by extension 'ros'
+[1.041s] DEBUG:colcon.colcon_core.package_identification:Package 'src/rm_vision/rm_vision_bringup' with type 'ros.ament_cmake' and name 'rm_vision_bringup'
+[1.042s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_hik_camera) by extensions ['ignore', 'ignore_ament_install']
+[1.042s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_hik_camera) by extension 'ignore'
+[1.042s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_hik_camera) by extension 'ignore_ament_install'
+[1.042s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_hik_camera) by extensions ['colcon_pkg']
+[1.042s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_hik_camera) by extension 'colcon_pkg'
+[1.042s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_hik_camera) by extensions ['colcon_meta']
+[1.042s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_hik_camera) by extension 'colcon_meta'
+[1.042s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_hik_camera) by extensions ['ros']
+[1.042s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_hik_camera) by extension 'ros'
+[1.042s] DEBUG:colcon.colcon_core.package_identification:Package 'src/ros2_hik_camera' with type 'ros.ament_cmake' and name 'hik_camera'
+[1.043s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_mindvision_camera) by extensions ['ignore', 'ignore_ament_install']
+[1.043s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_mindvision_camera) by extension 'ignore'
+[1.043s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_mindvision_camera) by extension 'ignore_ament_install'
+[1.043s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_mindvision_camera) by extensions ['colcon_pkg']
+[1.043s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_mindvision_camera) by extension 'colcon_pkg'
+[1.043s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_mindvision_camera) by extensions ['colcon_meta']
+[1.043s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_mindvision_camera) by extension 'colcon_meta'
+[1.043s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_mindvision_camera) by extensions ['ros']
+[1.043s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_mindvision_camera) by extension 'ros'
+[1.043s] DEBUG:colcon.colcon_core.package_identification:Package 'src/ros2_mindvision_camera' with type 'ros.ament_cmake' and name 'mindvision_camera'
+[1.044s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[1.044s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[1.044s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[1.044s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[1.044s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[1.124s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[1.125s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[1.152s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 284 installed packages in /opt/ros/humble
+[1.152s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[1.215s] Level 5:colcon.colcon_core.verb:set package 'auto_aim_interfaces' build argument 'cmake_args' from command line to 'None'
+[1.215s] Level 5:colcon.colcon_core.verb:set package 'auto_aim_interfaces' build argument 'cmake_target' from command line to 'None'
+[1.215s] Level 5:colcon.colcon_core.verb:set package 'auto_aim_interfaces' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.215s] Level 5:colcon.colcon_core.verb:set package 'auto_aim_interfaces' build argument 'cmake_clean_cache' from command line to 'False'
+[1.215s] Level 5:colcon.colcon_core.verb:set package 'auto_aim_interfaces' build argument 'cmake_clean_first' from command line to 'False'
+[1.215s] Level 5:colcon.colcon_core.verb:set package 'auto_aim_interfaces' build argument 'cmake_force_configure' from command line to 'False'
+[1.215s] Level 5:colcon.colcon_core.verb:set package 'auto_aim_interfaces' build argument 'ament_cmake_args' from command line to 'None'
+[1.215s] Level 5:colcon.colcon_core.verb:set package 'auto_aim_interfaces' build argument 'catkin_cmake_args' from command line to 'None'
+[1.215s] Level 5:colcon.colcon_core.verb:set package 'auto_aim_interfaces' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.215s] DEBUG:colcon.colcon_core.verb:Building package 'auto_aim_interfaces' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/yukki/Downloads/ros_ws/build/auto_aim_interfaces', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces', 'merge_install': False, 'path': '/home/yukki/Downloads/ros_ws/src/rm_auto_aim/auto_aim_interfaces', 'symlink_install': True, 'test_result_base': None}
+[1.227s] Level 5:colcon.colcon_core.verb:set package 'hik_camera' build argument 'cmake_args' from command line to 'None'
+[1.227s] Level 5:colcon.colcon_core.verb:set package 'hik_camera' build argument 'cmake_target' from command line to 'None'
+[1.227s] Level 5:colcon.colcon_core.verb:set package 'hik_camera' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.227s] Level 5:colcon.colcon_core.verb:set package 'hik_camera' build argument 'cmake_clean_cache' from command line to 'False'
+[1.227s] Level 5:colcon.colcon_core.verb:set package 'hik_camera' build argument 'cmake_clean_first' from command line to 'False'
+[1.227s] Level 5:colcon.colcon_core.verb:set package 'hik_camera' build argument 'cmake_force_configure' from command line to 'False'
+[1.227s] Level 5:colcon.colcon_core.verb:set package 'hik_camera' build argument 'ament_cmake_args' from command line to 'None'
+[1.227s] Level 5:colcon.colcon_core.verb:set package 'hik_camera' build argument 'catkin_cmake_args' from command line to 'None'
+[1.227s] Level 5:colcon.colcon_core.verb:set package 'hik_camera' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.227s] DEBUG:colcon.colcon_core.verb:Building package 'hik_camera' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/yukki/Downloads/ros_ws/build/hik_camera', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/yukki/Downloads/ros_ws/install/hik_camera', 'merge_install': False, 'path': '/home/yukki/Downloads/ros_ws/src/ros2_hik_camera', 'symlink_install': True, 'test_result_base': None}
+[1.239s] Level 5:colcon.colcon_core.verb:set package 'mindvision_camera' build argument 'cmake_args' from command line to 'None'
+[1.239s] Level 5:colcon.colcon_core.verb:set package 'mindvision_camera' build argument 'cmake_target' from command line to 'None'
+[1.239s] Level 5:colcon.colcon_core.verb:set package 'mindvision_camera' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.239s] Level 5:colcon.colcon_core.verb:set package 'mindvision_camera' build argument 'cmake_clean_cache' from command line to 'False'
+[1.239s] Level 5:colcon.colcon_core.verb:set package 'mindvision_camera' build argument 'cmake_clean_first' from command line to 'False'
+[1.239s] Level 5:colcon.colcon_core.verb:set package 'mindvision_camera' build argument 'cmake_force_configure' from command line to 'False'
+[1.239s] Level 5:colcon.colcon_core.verb:set package 'mindvision_camera' build argument 'ament_cmake_args' from command line to 'None'
+[1.239s] Level 5:colcon.colcon_core.verb:set package 'mindvision_camera' build argument 'catkin_cmake_args' from command line to 'None'
+[1.239s] Level 5:colcon.colcon_core.verb:set package 'mindvision_camera' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.239s] DEBUG:colcon.colcon_core.verb:Building package 'mindvision_camera' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/yukki/Downloads/ros_ws/build/mindvision_camera', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/yukki/Downloads/ros_ws/install/mindvision_camera', 'merge_install': False, 'path': '/home/yukki/Downloads/ros_ws/src/ros2_mindvision_camera', 'symlink_install': True, 'test_result_base': None}
+[1.252s] Level 5:colcon.colcon_core.verb:set package 'rm_gimbal_description' build argument 'cmake_args' from command line to 'None'
+[1.252s] Level 5:colcon.colcon_core.verb:set package 'rm_gimbal_description' build argument 'cmake_target' from command line to 'None'
+[1.252s] Level 5:colcon.colcon_core.verb:set package 'rm_gimbal_description' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.252s] Level 5:colcon.colcon_core.verb:set package 'rm_gimbal_description' build argument 'cmake_clean_cache' from command line to 'False'
+[1.252s] Level 5:colcon.colcon_core.verb:set package 'rm_gimbal_description' build argument 'cmake_clean_first' from command line to 'False'
+[1.252s] Level 5:colcon.colcon_core.verb:set package 'rm_gimbal_description' build argument 'cmake_force_configure' from command line to 'False'
+[1.252s] Level 5:colcon.colcon_core.verb:set package 'rm_gimbal_description' build argument 'ament_cmake_args' from command line to 'None'
+[1.252s] Level 5:colcon.colcon_core.verb:set package 'rm_gimbal_description' build argument 'catkin_cmake_args' from command line to 'None'
+[1.252s] Level 5:colcon.colcon_core.verb:set package 'rm_gimbal_description' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.252s] DEBUG:colcon.colcon_core.verb:Building package 'rm_gimbal_description' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/yukki/Downloads/ros_ws/build/rm_gimbal_description', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/yukki/Downloads/ros_ws/install/rm_gimbal_description', 'merge_install': False, 'path': '/home/yukki/Downloads/ros_ws/src/rm_gimbal_description', 'symlink_install': True, 'test_result_base': None}
+[1.264s] Level 5:colcon.colcon_core.verb:set package 'armor_detector' build argument 'cmake_args' from command line to 'None'
+[1.264s] Level 5:colcon.colcon_core.verb:set package 'armor_detector' build argument 'cmake_target' from command line to 'None'
+[1.264s] Level 5:colcon.colcon_core.verb:set package 'armor_detector' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.264s] Level 5:colcon.colcon_core.verb:set package 'armor_detector' build argument 'cmake_clean_cache' from command line to 'False'
+[1.264s] Level 5:colcon.colcon_core.verb:set package 'armor_detector' build argument 'cmake_clean_first' from command line to 'False'
+[1.264s] Level 5:colcon.colcon_core.verb:set package 'armor_detector' build argument 'cmake_force_configure' from command line to 'False'
+[1.264s] Level 5:colcon.colcon_core.verb:set package 'armor_detector' build argument 'ament_cmake_args' from command line to 'None'
+[1.264s] Level 5:colcon.colcon_core.verb:set package 'armor_detector' build argument 'catkin_cmake_args' from command line to 'None'
+[1.264s] Level 5:colcon.colcon_core.verb:set package 'armor_detector' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.264s] DEBUG:colcon.colcon_core.verb:Building package 'armor_detector' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/yukki/Downloads/ros_ws/build/armor_detector', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/yukki/Downloads/ros_ws/install/armor_detector', 'merge_install': False, 'path': '/home/yukki/Downloads/ros_ws/src/rm_auto_aim/armor_detector', 'symlink_install': True, 'test_result_base': None}
+[1.276s] Level 5:colcon.colcon_core.verb:set package 'armor_tracker' build argument 'cmake_args' from command line to 'None'
+[1.276s] Level 5:colcon.colcon_core.verb:set package 'armor_tracker' build argument 'cmake_target' from command line to 'None'
+[1.277s] Level 5:colcon.colcon_core.verb:set package 'armor_tracker' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.277s] Level 5:colcon.colcon_core.verb:set package 'armor_tracker' build argument 'cmake_clean_cache' from command line to 'False'
+[1.277s] Level 5:colcon.colcon_core.verb:set package 'armor_tracker' build argument 'cmake_clean_first' from command line to 'False'
+[1.277s] Level 5:colcon.colcon_core.verb:set package 'armor_tracker' build argument 'cmake_force_configure' from command line to 'False'
+[1.277s] Level 5:colcon.colcon_core.verb:set package 'armor_tracker' build argument 'ament_cmake_args' from command line to 'None'
+[1.277s] Level 5:colcon.colcon_core.verb:set package 'armor_tracker' build argument 'catkin_cmake_args' from command line to 'None'
+[1.277s] Level 5:colcon.colcon_core.verb:set package 'armor_tracker' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.277s] DEBUG:colcon.colcon_core.verb:Building package 'armor_tracker' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/yukki/Downloads/ros_ws/build/armor_tracker', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/yukki/Downloads/ros_ws/install/armor_tracker', 'merge_install': False, 'path': '/home/yukki/Downloads/ros_ws/src/rm_auto_aim/armor_tracker', 'symlink_install': True, 'test_result_base': None}
+[1.289s] Level 5:colcon.colcon_core.verb:set package 'rm_serial_driver' build argument 'cmake_args' from command line to 'None'
+[1.289s] Level 5:colcon.colcon_core.verb:set package 'rm_serial_driver' build argument 'cmake_target' from command line to 'None'
+[1.289s] Level 5:colcon.colcon_core.verb:set package 'rm_serial_driver' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.289s] Level 5:colcon.colcon_core.verb:set package 'rm_serial_driver' build argument 'cmake_clean_cache' from command line to 'False'
+[1.289s] Level 5:colcon.colcon_core.verb:set package 'rm_serial_driver' build argument 'cmake_clean_first' from command line to 'False'
+[1.289s] Level 5:colcon.colcon_core.verb:set package 'rm_serial_driver' build argument 'cmake_force_configure' from command line to 'False'
+[1.289s] Level 5:colcon.colcon_core.verb:set package 'rm_serial_driver' build argument 'ament_cmake_args' from command line to 'None'
+[1.289s] Level 5:colcon.colcon_core.verb:set package 'rm_serial_driver' build argument 'catkin_cmake_args' from command line to 'None'
+[1.289s] Level 5:colcon.colcon_core.verb:set package 'rm_serial_driver' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.289s] DEBUG:colcon.colcon_core.verb:Building package 'rm_serial_driver' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/yukki/Downloads/ros_ws/build/rm_serial_driver', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/yukki/Downloads/ros_ws/install/rm_serial_driver', 'merge_install': False, 'path': '/home/yukki/Downloads/ros_ws/src/rm_serial_driver', 'symlink_install': True, 'test_result_base': None}
+[1.301s] Level 5:colcon.colcon_core.verb:set package 'rm_auto_aim' build argument 'cmake_args' from command line to 'None'
+[1.301s] Level 5:colcon.colcon_core.verb:set package 'rm_auto_aim' build argument 'cmake_target' from command line to 'None'
+[1.301s] Level 5:colcon.colcon_core.verb:set package 'rm_auto_aim' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.301s] Level 5:colcon.colcon_core.verb:set package 'rm_auto_aim' build argument 'cmake_clean_cache' from command line to 'False'
+[1.301s] Level 5:colcon.colcon_core.verb:set package 'rm_auto_aim' build argument 'cmake_clean_first' from command line to 'False'
+[1.301s] Level 5:colcon.colcon_core.verb:set package 'rm_auto_aim' build argument 'cmake_force_configure' from command line to 'False'
+[1.301s] Level 5:colcon.colcon_core.verb:set package 'rm_auto_aim' build argument 'ament_cmake_args' from command line to 'None'
+[1.301s] Level 5:colcon.colcon_core.verb:set package 'rm_auto_aim' build argument 'catkin_cmake_args' from command line to 'None'
+[1.301s] Level 5:colcon.colcon_core.verb:set package 'rm_auto_aim' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.301s] DEBUG:colcon.colcon_core.verb:Building package 'rm_auto_aim' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/yukki/Downloads/ros_ws/build/rm_auto_aim', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/yukki/Downloads/ros_ws/install/rm_auto_aim', 'merge_install': False, 'path': '/home/yukki/Downloads/ros_ws/src/rm_auto_aim/rm_auto_aim', 'symlink_install': True, 'test_result_base': None}
+[1.313s] Level 5:colcon.colcon_core.verb:set package 'rm_vision_bringup' build argument 'cmake_args' from command line to 'None'
+[1.313s] Level 5:colcon.colcon_core.verb:set package 'rm_vision_bringup' build argument 'cmake_target' from command line to 'None'
+[1.313s] Level 5:colcon.colcon_core.verb:set package 'rm_vision_bringup' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.313s] Level 5:colcon.colcon_core.verb:set package 'rm_vision_bringup' build argument 'cmake_clean_cache' from command line to 'False'
+[1.313s] Level 5:colcon.colcon_core.verb:set package 'rm_vision_bringup' build argument 'cmake_clean_first' from command line to 'False'
+[1.313s] Level 5:colcon.colcon_core.verb:set package 'rm_vision_bringup' build argument 'cmake_force_configure' from command line to 'False'
+[1.313s] Level 5:colcon.colcon_core.verb:set package 'rm_vision_bringup' build argument 'ament_cmake_args' from command line to 'None'
+[1.313s] Level 5:colcon.colcon_core.verb:set package 'rm_vision_bringup' build argument 'catkin_cmake_args' from command line to 'None'
+[1.313s] Level 5:colcon.colcon_core.verb:set package 'rm_vision_bringup' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.313s] DEBUG:colcon.colcon_core.verb:Building package 'rm_vision_bringup' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/yukki/Downloads/ros_ws/build/rm_vision_bringup', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/yukki/Downloads/ros_ws/install/rm_vision_bringup', 'merge_install': False, 'path': '/home/yukki/Downloads/ros_ws/src/rm_vision/rm_vision_bringup', 'symlink_install': True, 'test_result_base': None}
+[1.325s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[1.338s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[1.338s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/yukki/Downloads/ros_ws/src/rm_auto_aim/auto_aim_interfaces' with build type 'ament_cmake'
+[1.338s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/yukki/Downloads/ros_ws/src/rm_auto_aim/auto_aim_interfaces'
+[1.361s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[1.361s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.361s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.388s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/yukki/Downloads/ros_ws/src/ros2_hik_camera' with build type 'ament_cmake'
+[1.388s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/yukki/Downloads/ros_ws/src/ros2_hik_camera'
+[1.400s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.400s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.425s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/yukki/Downloads/ros_ws/src/ros2_mindvision_camera' with build type 'ament_cmake'
+[1.425s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/yukki/Downloads/ros_ws/src/ros2_mindvision_camera'
+[1.437s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.437s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.462s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/yukki/Downloads/ros_ws/src/rm_gimbal_description' with build type 'ament_cmake'
+[1.463s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/yukki/Downloads/ros_ws/src/rm_gimbal_description'
+[1.475s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.475s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.503s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/yukki/Downloads/ros_ws/build/auto_aim_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/yukki/Downloads/ros_ws/src/rm_auto_aim/auto_aim_interfaces -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces
+[1.515s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/yukki/Downloads/ros_ws/build/hik_camera': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/yukki/Downloads/ros_ws/src/ros2_hik_camera -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/yukki/Downloads/ros_ws/install/hik_camera
+[1.516s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/yukki/Downloads/ros_ws/build/mindvision_camera': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/yukki/Downloads/ros_ws/src/ros2_mindvision_camera -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/yukki/Downloads/ros_ws/install/mindvision_camera
+[1.519s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/yukki/Downloads/ros_ws/build/rm_gimbal_description': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/yukki/Downloads/ros_ws/src/rm_gimbal_description -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/yukki/Downloads/ros_ws/install/rm_gimbal_description
+[2.323s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/yukki/Downloads/ros_ws/build/rm_gimbal_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/yukki/Downloads/ros_ws/src/rm_gimbal_description -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/yukki/Downloads/ros_ws/install/rm_gimbal_description
+[2.325s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/yukki/Downloads/ros_ws/build/rm_gimbal_description': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/yukki/Downloads/ros_ws/build/rm_gimbal_description -- -j16 -l16
+[2.367s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/yukki/Downloads/ros_ws/build/rm_gimbal_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/yukki/Downloads/ros_ws/build/rm_gimbal_description -- -j16 -l16
+[2.400s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/yukki/Downloads/ros_ws/build/rm_gimbal_description': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/yukki/Downloads/ros_ws/build/rm_gimbal_description
+[2.570s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rm_gimbal_description)
+[2.570s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/yukki/Downloads/ros_ws/build/rm_gimbal_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/yukki/Downloads/ros_ws/build/rm_gimbal_description
+[2.594s] Level 1:colcon.colcon_core.environment:checking '/home/yukki/Downloads/ros_ws/install/rm_gimbal_description' for CMake module files
+[2.595s] Level 1:colcon.colcon_core.environment:checking '/home/yukki/Downloads/ros_ws/install/rm_gimbal_description' for CMake config files
+[2.595s] Level 1:colcon.colcon_core.shell:create_environment_hook('rm_gimbal_description', 'cmake_prefix_path')
+[2.607s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/yukki/Downloads/ros_ws/install/rm_gimbal_description/share/rm_gimbal_description/hook/cmake_prefix_path.ps1'
+[2.608s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/yukki/Downloads/ros_ws/install/rm_gimbal_description/share/rm_gimbal_description/hook/cmake_prefix_path.dsv'
+[2.609s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/yukki/Downloads/ros_ws/install/rm_gimbal_description/share/rm_gimbal_description/hook/cmake_prefix_path.sh'
+[2.609s] Level 1:colcon.colcon_core.environment:checking '/home/yukki/Downloads/ros_ws/install/rm_gimbal_description/bin'
+[2.609s] Level 1:colcon.colcon_core.environment:checking '/home/yukki/Downloads/ros_ws/install/rm_gimbal_description/lib/pkgconfig/rm_gimbal_description.pc'
+[2.610s] Level 1:colcon.colcon_core.environment:checking '/home/yukki/Downloads/ros_ws/install/rm_gimbal_description/lib/python3.10/site-packages'
+[2.610s] Level 1:colcon.colcon_core.environment:checking '/home/yukki/Downloads/ros_ws/install/rm_gimbal_description/bin'
+[2.622s] INFO:colcon.colcon_core.shell:Creating package script '/home/yukki/Downloads/ros_ws/install/rm_gimbal_description/share/rm_gimbal_description/package.ps1'
+[2.623s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/yukki/Downloads/ros_ws/install/rm_gimbal_description/share/rm_gimbal_description/package.dsv'
+[2.624s] INFO:colcon.colcon_core.shell:Creating package script '/home/yukki/Downloads/ros_ws/install/rm_gimbal_description/share/rm_gimbal_description/package.sh'
+[2.624s] INFO:colcon.colcon_core.shell:Creating package script '/home/yukki/Downloads/ros_ws/install/rm_gimbal_description/share/rm_gimbal_description/package.bash'
+[2.625s] INFO:colcon.colcon_core.shell:Creating package script '/home/yukki/Downloads/ros_ws/install/rm_gimbal_description/share/rm_gimbal_description/package.zsh'
+[2.626s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/yukki/Downloads/ros_ws/install/rm_gimbal_description/share/colcon-core/packages/rm_gimbal_description)
+[2.661s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rm_gimbal_description)
+[2.674s] Level 1:colcon.colcon_core.environment:checking '/home/yukki/Downloads/ros_ws/install/rm_gimbal_description' for CMake module files
+[2.674s] Level 1:colcon.colcon_core.environment:checking '/home/yukki/Downloads/ros_ws/install/rm_gimbal_description' for CMake config files
+[2.674s] Level 1:colcon.colcon_core.shell:create_environment_hook('rm_gimbal_description', 'cmake_prefix_path')
+[2.687s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/yukki/Downloads/ros_ws/install/rm_gimbal_description/share/rm_gimbal_description/hook/cmake_prefix_path.ps1'
+[2.687s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/yukki/Downloads/ros_ws/install/rm_gimbal_description/share/rm_gimbal_description/hook/cmake_prefix_path.dsv'
+[2.688s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/yukki/Downloads/ros_ws/install/rm_gimbal_description/share/rm_gimbal_description/hook/cmake_prefix_path.sh'
+[2.688s] Level 1:colcon.colcon_core.environment:checking '/home/yukki/Downloads/ros_ws/install/rm_gimbal_description/bin'
+[2.688s] Level 1:colcon.colcon_core.environment:checking '/home/yukki/Downloads/ros_ws/install/rm_gimbal_description/lib/pkgconfig/rm_gimbal_description.pc'
+[2.688s] Level 1:colcon.colcon_core.environment:checking '/home/yukki/Downloads/ros_ws/install/rm_gimbal_description/lib/python3.10/site-packages'
+[2.688s] Level 1:colcon.colcon_core.environment:checking '/home/yukki/Downloads/ros_ws/install/rm_gimbal_description/bin'
+[2.702s] INFO:colcon.colcon_core.shell:Creating package script '/home/yukki/Downloads/ros_ws/install/rm_gimbal_description/share/rm_gimbal_description/package.ps1'
+[2.703s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/yukki/Downloads/ros_ws/install/rm_gimbal_description/share/rm_gimbal_description/package.dsv'
+[2.703s] INFO:colcon.colcon_core.shell:Creating package script '/home/yukki/Downloads/ros_ws/install/rm_gimbal_description/share/rm_gimbal_description/package.sh'
+[2.703s] INFO:colcon.colcon_core.shell:Creating package script '/home/yukki/Downloads/ros_ws/install/rm_gimbal_description/share/rm_gimbal_description/package.bash'
+[2.704s] INFO:colcon.colcon_core.shell:Creating package script '/home/yukki/Downloads/ros_ws/install/rm_gimbal_description/share/rm_gimbal_description/package.zsh'
+[2.704s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/yukki/Downloads/ros_ws/install/rm_gimbal_description/share/colcon-core/packages/rm_gimbal_description)
+[3.194s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/yukki/Downloads/ros_ws/build/mindvision_camera' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/yukki/Downloads/ros_ws/src/ros2_mindvision_camera -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/yukki/Downloads/ros_ws/install/mindvision_camera
+[3.194s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/yukki/Downloads/ros_ws/build/mindvision_camera': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/yukki/Downloads/ros_ws/build/mindvision_camera -- -j16 -l16
+[3.195s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/yukki/Downloads/ros_ws/build/hik_camera' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/yukki/Downloads/ros_ws/src/ros2_hik_camera -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/yukki/Downloads/ros_ws/install/hik_camera
+[3.196s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/yukki/Downloads/ros_ws/build/hik_camera': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/yukki/Downloads/ros_ws/build/hik_camera -- -j16 -l16
+[3.432s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/yukki/Downloads/ros_ws/build/auto_aim_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/yukki/Downloads/ros_ws/src/rm_auto_aim/auto_aim_interfaces -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces
+[3.433s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/yukki/Downloads/ros_ws/build/auto_aim_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/yukki/Downloads/ros_ws/build/auto_aim_interfaces -- -j16 -l16
+[8.307s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/yukki/Downloads/ros_ws/build/mindvision_camera' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/yukki/Downloads/ros_ws/build/mindvision_camera -- -j16 -l16
+[8.339s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/yukki/Downloads/ros_ws/build/mindvision_camera': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/yukki/Downloads/ros_ws/build/mindvision_camera
+[8.556s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/yukki/Downloads/ros_ws/build/hik_camera' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/yukki/Downloads/ros_ws/build/hik_camera -- -j16 -l16
+[8.587s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/yukki/Downloads/ros_ws/build/hik_camera': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/yukki/Downloads/ros_ws/build/hik_camera
+[8.605s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(mindvision_camera)
+[8.605s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/yukki/Downloads/ros_ws/build/mindvision_camera' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/yukki/Downloads/ros_ws/build/mindvision_camera
+[8.618s] Level 1:colcon.colcon_core.environment:checking '/home/yukki/Downloads/ros_ws/install/mindvision_camera' for CMake module files
+[8.619s] Level 1:colcon.colcon_core.environment:checking '/home/yukki/Downloads/ros_ws/install/mindvision_camera' for CMake config files
+[8.619s] Level 1:colcon.colcon_core.shell:create_environment_hook('mindvision_camera', 'cmake_prefix_path')
+[8.632s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/yukki/Downloads/ros_ws/install/mindvision_camera/share/mindvision_camera/hook/cmake_prefix_path.ps1'
+[8.632s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/yukki/Downloads/ros_ws/install/mindvision_camera/share/mindvision_camera/hook/cmake_prefix_path.dsv'
+[8.632s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/yukki/Downloads/ros_ws/install/mindvision_camera/share/mindvision_camera/hook/cmake_prefix_path.sh'
+[8.633s] Level 1:colcon.colcon_core.environment:checking '/home/yukki/Downloads/ros_ws/install/mindvision_camera/lib'
+[8.633s] Level 1:colcon.colcon_core.shell:create_environment_hook('mindvision_camera', 'ld_library_path_lib')
+[8.647s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/yukki/Downloads/ros_ws/install/mindvision_camera/share/mindvision_camera/hook/ld_library_path_lib.ps1'
+[8.647s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/yukki/Downloads/ros_ws/install/mindvision_camera/share/mindvision_camera/hook/ld_library_path_lib.dsv'
+[8.647s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/yukki/Downloads/ros_ws/install/mindvision_camera/share/mindvision_camera/hook/ld_library_path_lib.sh'
+[8.648s] Level 1:colcon.colcon_core.environment:checking '/home/yukki/Downloads/ros_ws/install/mindvision_camera/bin'
+[8.648s] Level 1:colcon.colcon_core.environment:checking '/home/yukki/Downloads/ros_ws/install/mindvision_camera/lib/pkgconfig/mindvision_camera.pc'
+[8.648s] Level 1:colcon.colcon_core.environment:checking '/home/yukki/Downloads/ros_ws/install/mindvision_camera/lib/python3.10/site-packages'
+[8.648s] Level 1:colcon.colcon_core.environment:checking '/home/yukki/Downloads/ros_ws/install/mindvision_camera/bin'
+[8.661s] INFO:colcon.colcon_core.shell:Creating package script '/home/yukki/Downloads/ros_ws/install/mindvision_camera/share/mindvision_camera/package.ps1'
+[8.661s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/yukki/Downloads/ros_ws/install/mindvision_camera/share/mindvision_camera/package.dsv'
+[8.662s] INFO:colcon.colcon_core.shell:Creating package script '/home/yukki/Downloads/ros_ws/install/mindvision_camera/share/mindvision_camera/package.sh'
+[8.662s] INFO:colcon.colcon_core.shell:Creating package script '/home/yukki/Downloads/ros_ws/install/mindvision_camera/share/mindvision_camera/package.bash'
+[8.662s] INFO:colcon.colcon_core.shell:Creating package script '/home/yukki/Downloads/ros_ws/install/mindvision_camera/share/mindvision_camera/package.zsh'
+[8.663s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/yukki/Downloads/ros_ws/install/mindvision_camera/share/colcon-core/packages/mindvision_camera)
+[8.705s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(mindvision_camera)
+[8.718s] Level 1:colcon.colcon_core.environment:checking '/home/yukki/Downloads/ros_ws/install/mindvision_camera' for CMake module files
+[8.719s] Level 1:colcon.colcon_core.environment:checking '/home/yukki/Downloads/ros_ws/install/mindvision_camera' for CMake config files
+[8.719s] Level 1:colcon.colcon_core.shell:create_environment_hook('mindvision_camera', 'cmake_prefix_path')
+[8.732s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/yukki/Downloads/ros_ws/install/mindvision_camera/share/mindvision_camera/hook/cmake_prefix_path.ps1'
+[8.733s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/yukki/Downloads/ros_ws/install/mindvision_camera/share/mindvision_camera/hook/cmake_prefix_path.dsv'
+[8.733s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/yukki/Downloads/ros_ws/install/mindvision_camera/share/mindvision_camera/hook/cmake_prefix_path.sh'
+[8.733s] Level 1:colcon.colcon_core.environment:checking '/home/yukki/Downloads/ros_ws/install/mindvision_camera/lib'
+[8.733s] Level 1:colcon.colcon_core.shell:create_environment_hook('mindvision_camera', 'ld_library_path_lib')
+[8.747s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/yukki/Downloads/ros_ws/install/mindvision_camera/share/mindvision_camera/hook/ld_library_path_lib.ps1'
+[8.748s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/yukki/Downloads/ros_ws/install/mindvision_camera/share/mindvision_camera/hook/ld_library_path_lib.dsv'
+[8.748s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/yukki/Downloads/ros_ws/install/mindvision_camera/share/mindvision_camera/hook/ld_library_path_lib.sh'
+[8.748s] Level 1:colcon.colcon_core.environment:checking '/home/yukki/Downloads/ros_ws/install/mindvision_camera/bin'
+[8.748s] Level 1:colcon.colcon_core.environment:checking '/home/yukki/Downloads/ros_ws/install/mindvision_camera/lib/pkgconfig/mindvision_camera.pc'
+[8.749s] Level 1:colcon.colcon_core.environment:checking '/home/yukki/Downloads/ros_ws/install/mindvision_camera/lib/python3.10/site-packages'
+[8.749s] Level 1:colcon.colcon_core.environment:checking '/home/yukki/Downloads/ros_ws/install/mindvision_camera/bin'
+[8.762s] INFO:colcon.colcon_core.shell:Creating package script '/home/yukki/Downloads/ros_ws/install/mindvision_camera/share/mindvision_camera/package.ps1'
+[8.763s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/yukki/Downloads/ros_ws/install/mindvision_camera/share/mindvision_camera/package.dsv'
+[8.763s] INFO:colcon.colcon_core.shell:Creating package script '/home/yukki/Downloads/ros_ws/install/mindvision_camera/share/mindvision_camera/package.sh'
+[8.764s] INFO:colcon.colcon_core.shell:Creating package script '/home/yukki/Downloads/ros_ws/install/mindvision_camera/share/mindvision_camera/package.bash'
+[8.764s] INFO:colcon.colcon_core.shell:Creating package script '/home/yukki/Downloads/ros_ws/install/mindvision_camera/share/mindvision_camera/package.zsh'
+[8.764s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/yukki/Downloads/ros_ws/install/mindvision_camera/share/colcon-core/packages/mindvision_camera)
+[8.895s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(hik_camera)
+[8.895s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/yukki/Downloads/ros_ws/build/hik_camera' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/yukki/Downloads/ros_ws/build/hik_camera
+[8.908s] Level 1:colcon.colcon_core.environment:checking '/home/yukki/Downloads/ros_ws/install/hik_camera' for CMake module files
+[8.909s] Level 1:colcon.colcon_core.environment:checking '/home/yukki/Downloads/ros_ws/install/hik_camera' for CMake config files
+[8.909s] Level 1:colcon.colcon_core.shell:create_environment_hook('hik_camera', 'cmake_prefix_path')
+[8.924s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/yukki/Downloads/ros_ws/install/hik_camera/share/hik_camera/hook/cmake_prefix_path.ps1'
+[8.925s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/yukki/Downloads/ros_ws/install/hik_camera/share/hik_camera/hook/cmake_prefix_path.dsv'
+[8.925s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/yukki/Downloads/ros_ws/install/hik_camera/share/hik_camera/hook/cmake_prefix_path.sh'
+[8.926s] Level 1:colcon.colcon_core.environment:checking '/home/yukki/Downloads/ros_ws/install/hik_camera/lib'
+[8.926s] Level 1:colcon.colcon_core.shell:create_environment_hook('hik_camera', 'ld_library_path_lib')
+[8.939s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/yukki/Downloads/ros_ws/install/hik_camera/share/hik_camera/hook/ld_library_path_lib.ps1'
+[8.939s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/yukki/Downloads/ros_ws/install/hik_camera/share/hik_camera/hook/ld_library_path_lib.dsv'
+[8.939s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/yukki/Downloads/ros_ws/install/hik_camera/share/hik_camera/hook/ld_library_path_lib.sh'
+[8.940s] Level 1:colcon.colcon_core.environment:checking '/home/yukki/Downloads/ros_ws/install/hik_camera/bin'
+[8.940s] Level 1:colcon.colcon_core.environment:checking '/home/yukki/Downloads/ros_ws/install/hik_camera/lib/pkgconfig/hik_camera.pc'
+[8.940s] Level 1:colcon.colcon_core.environment:checking '/home/yukki/Downloads/ros_ws/install/hik_camera/lib/python3.10/site-packages'
+[8.940s] Level 1:colcon.colcon_core.environment:checking '/home/yukki/Downloads/ros_ws/install/hik_camera/bin'
+[8.954s] INFO:colcon.colcon_core.shell:Creating package script '/home/yukki/Downloads/ros_ws/install/hik_camera/share/hik_camera/package.ps1'
+[8.954s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/yukki/Downloads/ros_ws/install/hik_camera/share/hik_camera/package.dsv'
+[8.955s] INFO:colcon.colcon_core.shell:Creating package script '/home/yukki/Downloads/ros_ws/install/hik_camera/share/hik_camera/package.sh'
+[8.955s] INFO:colcon.colcon_core.shell:Creating package script '/home/yukki/Downloads/ros_ws/install/hik_camera/share/hik_camera/package.bash'
+[8.955s] INFO:colcon.colcon_core.shell:Creating package script '/home/yukki/Downloads/ros_ws/install/hik_camera/share/hik_camera/package.zsh'
+[8.955s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/yukki/Downloads/ros_ws/install/hik_camera/share/colcon-core/packages/hik_camera)
+[8.998s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(hik_camera)
+[9.039s] Level 1:colcon.colcon_core.environment:checking '/home/yukki/Downloads/ros_ws/install/hik_camera' for CMake module files
+[9.039s] Level 1:colcon.colcon_core.environment:checking '/home/yukki/Downloads/ros_ws/install/hik_camera' for CMake config files
+[9.039s] Level 1:colcon.colcon_core.shell:create_environment_hook('hik_camera', 'cmake_prefix_path')
+[9.052s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/yukki/Downloads/ros_ws/install/hik_camera/share/hik_camera/hook/cmake_prefix_path.ps1'
+[9.053s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/yukki/Downloads/ros_ws/install/hik_camera/share/hik_camera/hook/cmake_prefix_path.dsv'
+[9.053s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/yukki/Downloads/ros_ws/install/hik_camera/share/hik_camera/hook/cmake_prefix_path.sh'
+[9.054s] Level 1:colcon.colcon_core.environment:checking '/home/yukki/Downloads/ros_ws/install/hik_camera/lib'
+[9.054s] Level 1:colcon.colcon_core.shell:create_environment_hook('hik_camera', 'ld_library_path_lib')
+[9.079s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/yukki/Downloads/ros_ws/install/hik_camera/share/hik_camera/hook/ld_library_path_lib.ps1'
+[9.079s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/yukki/Downloads/ros_ws/install/hik_camera/share/hik_camera/hook/ld_library_path_lib.dsv'
+[9.080s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/yukki/Downloads/ros_ws/install/hik_camera/share/hik_camera/hook/ld_library_path_lib.sh'
+[9.080s] Level 1:colcon.colcon_core.environment:checking '/home/yukki/Downloads/ros_ws/install/hik_camera/bin'
+[9.080s] Level 1:colcon.colcon_core.environment:checking '/home/yukki/Downloads/ros_ws/install/hik_camera/lib/pkgconfig/hik_camera.pc'
+[9.081s] Level 1:colcon.colcon_core.environment:checking '/home/yukki/Downloads/ros_ws/install/hik_camera/lib/python3.10/site-packages'
+[9.081s] Level 1:colcon.colcon_core.environment:checking '/home/yukki/Downloads/ros_ws/install/hik_camera/bin'
+[9.105s] INFO:colcon.colcon_core.shell:Creating package script '/home/yukki/Downloads/ros_ws/install/hik_camera/share/hik_camera/package.ps1'
+[9.106s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/yukki/Downloads/ros_ws/install/hik_camera/share/hik_camera/package.dsv'
+[9.107s] INFO:colcon.colcon_core.shell:Creating package script '/home/yukki/Downloads/ros_ws/install/hik_camera/share/hik_camera/package.sh'
+[9.107s] INFO:colcon.colcon_core.shell:Creating package script '/home/yukki/Downloads/ros_ws/install/hik_camera/share/hik_camera/package.bash'
+[9.108s] INFO:colcon.colcon_core.shell:Creating package script '/home/yukki/Downloads/ros_ws/install/hik_camera/share/hik_camera/package.zsh'
+[9.109s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/yukki/Downloads/ros_ws/install/hik_camera/share/colcon-core/packages/hik_camera)
+[9.456s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/yukki/Downloads/ros_ws/build/auto_aim_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/yukki/Downloads/ros_ws/build/auto_aim_interfaces -- -j16 -l16
+[9.753s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/yukki/Downloads/ros_ws/build/auto_aim_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/yukki/Downloads/ros_ws/build/auto_aim_interfaces
+[12.191s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(auto_aim_interfaces)
+[12.191s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/yukki/Downloads/ros_ws/build/auto_aim_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/yukki/Downloads/ros_ws/build/auto_aim_interfaces
+[12.203s] Level 1:colcon.colcon_core.environment:checking '/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces' for CMake module files
+[12.204s] Level 1:colcon.colcon_core.environment:checking '/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces' for CMake config files
+[12.204s] Level 1:colcon.colcon_core.shell:create_environment_hook('auto_aim_interfaces', 'cmake_prefix_path')
+[12.216s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces/share/auto_aim_interfaces/hook/cmake_prefix_path.ps1'
+[12.216s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces/share/auto_aim_interfaces/hook/cmake_prefix_path.dsv'
+[12.217s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces/share/auto_aim_interfaces/hook/cmake_prefix_path.sh'
+[12.217s] Level 1:colcon.colcon_core.environment:checking '/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces/lib'
+[12.217s] Level 1:colcon.colcon_core.shell:create_environment_hook('auto_aim_interfaces', 'ld_library_path_lib')
+[12.229s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces/share/auto_aim_interfaces/hook/ld_library_path_lib.ps1'
+[12.230s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces/share/auto_aim_interfaces/hook/ld_library_path_lib.dsv'
+[12.230s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces/share/auto_aim_interfaces/hook/ld_library_path_lib.sh'
+[12.230s] Level 1:colcon.colcon_core.environment:checking '/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces/bin'
+[12.230s] Level 1:colcon.colcon_core.environment:checking '/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces/lib/pkgconfig/auto_aim_interfaces.pc'
+[12.230s] Level 1:colcon.colcon_core.environment:checking '/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces/lib/python3.10/site-packages'
+[12.230s] Level 1:colcon.colcon_core.environment:checking '/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces/bin'
+[12.243s] INFO:colcon.colcon_core.shell:Creating package script '/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces/share/auto_aim_interfaces/package.ps1'
+[12.243s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces/share/auto_aim_interfaces/package.dsv'
+[12.243s] INFO:colcon.colcon_core.shell:Creating package script '/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces/share/auto_aim_interfaces/package.sh'
+[12.244s] INFO:colcon.colcon_core.shell:Creating package script '/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces/share/auto_aim_interfaces/package.bash'
+[12.244s] INFO:colcon.colcon_core.shell:Creating package script '/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces/share/auto_aim_interfaces/package.zsh'
+[12.244s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces/share/colcon-core/packages/auto_aim_interfaces)
+[12.553s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(auto_aim_interfaces)
+[12.566s] Level 1:colcon.colcon_core.environment:checking '/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces' for CMake module files
+[12.566s] Level 1:colcon.colcon_core.environment:checking '/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces' for CMake config files
+[12.567s] Level 1:colcon.colcon_core.shell:create_environment_hook('auto_aim_interfaces', 'cmake_prefix_path')
+[12.579s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces/share/auto_aim_interfaces/hook/cmake_prefix_path.ps1'
+[12.579s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces/share/auto_aim_interfaces/hook/cmake_prefix_path.dsv'
+[12.579s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces/share/auto_aim_interfaces/hook/cmake_prefix_path.sh'
+[12.580s] Level 1:colcon.colcon_core.environment:checking '/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces/lib'
+[12.580s] Level 1:colcon.colcon_core.shell:create_environment_hook('auto_aim_interfaces', 'ld_library_path_lib')
+[12.592s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces/share/auto_aim_interfaces/hook/ld_library_path_lib.ps1'
+[12.593s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces/share/auto_aim_interfaces/hook/ld_library_path_lib.dsv'
+[12.593s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces/share/auto_aim_interfaces/hook/ld_library_path_lib.sh'
+[12.593s] Level 1:colcon.colcon_core.environment:checking '/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces/bin'
+[12.594s] Level 1:colcon.colcon_core.environment:checking '/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces/lib/pkgconfig/auto_aim_interfaces.pc'
+[12.594s] Level 1:colcon.colcon_core.environment:checking '/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces/lib/python3.10/site-packages'
+[12.594s] Level 1:colcon.colcon_core.environment:checking '/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces/bin'
+[12.607s] INFO:colcon.colcon_core.shell:Creating package script '/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces/share/auto_aim_interfaces/package.ps1'
+[12.607s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces/share/auto_aim_interfaces/package.dsv'
+[12.607s] INFO:colcon.colcon_core.shell:Creating package script '/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces/share/auto_aim_interfaces/package.sh'
+[12.608s] INFO:colcon.colcon_core.shell:Creating package script '/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces/share/auto_aim_interfaces/package.bash'
+[12.608s] INFO:colcon.colcon_core.shell:Creating package script '/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces/share/auto_aim_interfaces/package.zsh'
+[12.608s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces/share/colcon-core/packages/auto_aim_interfaces)
+[12.609s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/yukki/Downloads/ros_ws/src/rm_auto_aim/armor_detector' with build type 'ament_cmake'
+[12.609s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/yukki/Downloads/ros_ws/src/rm_auto_aim/armor_detector'
+[12.622s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[12.622s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[12.649s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/yukki/Downloads/ros_ws/src/rm_auto_aim/armor_tracker' with build type 'ament_cmake'
+[12.649s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/yukki/Downloads/ros_ws/src/rm_auto_aim/armor_tracker'
+[12.663s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[12.663s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[12.690s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/yukki/Downloads/ros_ws/src/rm_serial_driver' with build type 'ament_cmake'
+[12.690s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/yukki/Downloads/ros_ws/src/rm_serial_driver'
+[12.703s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[12.703s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[12.734s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/yukki/Downloads/ros_ws/build/armor_detector': AMENT_PREFIX_PATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32 PYTHONPATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/yukki/Downloads/ros_ws/src/rm_auto_aim/armor_detector -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/yukki/Downloads/ros_ws/install/armor_detector
+[12.736s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/yukki/Downloads/ros_ws/build/armor_tracker': AMENT_PREFIX_PATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32 PYTHONPATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/yukki/Downloads/ros_ws/src/rm_auto_aim/armor_tracker -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/yukki/Downloads/ros_ws/install/armor_tracker
+[12.737s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/yukki/Downloads/ros_ws/build/rm_serial_driver': AMENT_PREFIX_PATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32 PYTHONPATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/yukki/Downloads/ros_ws/src/rm_serial_driver -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/yukki/Downloads/ros_ws/install/rm_serial_driver
+[14.695s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/yukki/Downloads/ros_ws/build/armor_detector' returned '0': AMENT_PREFIX_PATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32 PYTHONPATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/yukki/Downloads/ros_ws/src/rm_auto_aim/armor_detector -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/yukki/Downloads/ros_ws/install/armor_detector
+[14.697s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/yukki/Downloads/ros_ws/build/armor_detector': AMENT_PREFIX_PATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32 PYTHONPATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/yukki/Downloads/ros_ws/build/armor_detector -- -j16 -l16
+[14.817s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/yukki/Downloads/ros_ws/build/rm_serial_driver' returned '0': AMENT_PREFIX_PATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32 PYTHONPATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/yukki/Downloads/ros_ws/src/rm_serial_driver -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/yukki/Downloads/ros_ws/install/rm_serial_driver
+[14.819s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/yukki/Downloads/ros_ws/build/rm_serial_driver': AMENT_PREFIX_PATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32 PYTHONPATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/yukki/Downloads/ros_ws/build/rm_serial_driver -- -j16 -l16
+[15.590s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/yukki/Downloads/ros_ws/build/armor_tracker' returned '0': AMENT_PREFIX_PATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32 PYTHONPATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/yukki/Downloads/ros_ws/src/rm_auto_aim/armor_tracker -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/yukki/Downloads/ros_ws/install/armor_tracker
+[15.592s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/yukki/Downloads/ros_ws/build/armor_tracker': AMENT_PREFIX_PATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32 PYTHONPATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/yukki/Downloads/ros_ws/build/armor_tracker -- -j16 -l16
+[31.609s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/yukki/Downloads/ros_ws/build/rm_serial_driver' returned '0': AMENT_PREFIX_PATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32 PYTHONPATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/yukki/Downloads/ros_ws/build/rm_serial_driver -- -j16 -l16
+[31.644s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/yukki/Downloads/ros_ws/build/rm_serial_driver': AMENT_PREFIX_PATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32 PYTHONPATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/yukki/Downloads/ros_ws/build/rm_serial_driver
+[31.929s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rm_serial_driver)
+[31.930s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/yukki/Downloads/ros_ws/build/rm_serial_driver' returned '0': AMENT_PREFIX_PATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32 PYTHONPATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/yukki/Downloads/ros_ws/build/rm_serial_driver
+[31.999s] Level 1:colcon.colcon_core.environment:checking '/home/yukki/Downloads/ros_ws/install/rm_serial_driver' for CMake module files
+[32.000s] Level 1:colcon.colcon_core.environment:checking '/home/yukki/Downloads/ros_ws/install/rm_serial_driver' for CMake config files
+[32.000s] Level 1:colcon.colcon_core.shell:create_environment_hook('rm_serial_driver', 'cmake_prefix_path')
+[32.025s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/yukki/Downloads/ros_ws/install/rm_serial_driver/share/rm_serial_driver/hook/cmake_prefix_path.ps1'
+[32.025s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/yukki/Downloads/ros_ws/install/rm_serial_driver/share/rm_serial_driver/hook/cmake_prefix_path.dsv'
+[32.026s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/yukki/Downloads/ros_ws/install/rm_serial_driver/share/rm_serial_driver/hook/cmake_prefix_path.sh'
+[32.026s] Level 1:colcon.colcon_core.environment:checking '/home/yukki/Downloads/ros_ws/install/rm_serial_driver/lib'
+[32.026s] Level 1:colcon.colcon_core.shell:create_environment_hook('rm_serial_driver', 'ld_library_path_lib')
+[32.050s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/yukki/Downloads/ros_ws/install/rm_serial_driver/share/rm_serial_driver/hook/ld_library_path_lib.ps1'
+[32.050s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/yukki/Downloads/ros_ws/install/rm_serial_driver/share/rm_serial_driver/hook/ld_library_path_lib.dsv'
+[32.050s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/yukki/Downloads/ros_ws/install/rm_serial_driver/share/rm_serial_driver/hook/ld_library_path_lib.sh'
+[32.050s] Level 1:colcon.colcon_core.environment:checking '/home/yukki/Downloads/ros_ws/install/rm_serial_driver/bin'
+[32.050s] Level 1:colcon.colcon_core.environment:checking '/home/yukki/Downloads/ros_ws/install/rm_serial_driver/lib/pkgconfig/rm_serial_driver.pc'
+[32.051s] Level 1:colcon.colcon_core.environment:checking '/home/yukki/Downloads/ros_ws/install/rm_serial_driver/lib/python3.10/site-packages'
+[32.051s] Level 1:colcon.colcon_core.environment:checking '/home/yukki/Downloads/ros_ws/install/rm_serial_driver/bin'
+[32.063s] INFO:colcon.colcon_core.shell:Creating package script '/home/yukki/Downloads/ros_ws/install/rm_serial_driver/share/rm_serial_driver/package.ps1'
+[32.064s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/yukki/Downloads/ros_ws/install/rm_serial_driver/share/rm_serial_driver/package.dsv'
+[32.064s] INFO:colcon.colcon_core.shell:Creating package script '/home/yukki/Downloads/ros_ws/install/rm_serial_driver/share/rm_serial_driver/package.sh'
+[32.064s] INFO:colcon.colcon_core.shell:Creating package script '/home/yukki/Downloads/ros_ws/install/rm_serial_driver/share/rm_serial_driver/package.bash'
+[32.064s] INFO:colcon.colcon_core.shell:Creating package script '/home/yukki/Downloads/ros_ws/install/rm_serial_driver/share/rm_serial_driver/package.zsh'
+[32.065s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/yukki/Downloads/ros_ws/install/rm_serial_driver/share/colcon-core/packages/rm_serial_driver)
+[32.116s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rm_serial_driver)
+[32.136s] Level 1:colcon.colcon_core.environment:checking '/home/yukki/Downloads/ros_ws/install/rm_serial_driver' for CMake module files
+[32.137s] Level 1:colcon.colcon_core.environment:checking '/home/yukki/Downloads/ros_ws/install/rm_serial_driver' for CMake config files
+[32.137s] Level 1:colcon.colcon_core.shell:create_environment_hook('rm_serial_driver', 'cmake_prefix_path')
+[32.157s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/yukki/Downloads/ros_ws/install/rm_serial_driver/share/rm_serial_driver/hook/cmake_prefix_path.ps1'
+[32.158s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/yukki/Downloads/ros_ws/install/rm_serial_driver/share/rm_serial_driver/hook/cmake_prefix_path.dsv'
+[32.158s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/yukki/Downloads/ros_ws/install/rm_serial_driver/share/rm_serial_driver/hook/cmake_prefix_path.sh'
+[32.159s] Level 1:colcon.colcon_core.environment:checking '/home/yukki/Downloads/ros_ws/install/rm_serial_driver/lib'
+[32.159s] Level 1:colcon.colcon_core.shell:create_environment_hook('rm_serial_driver', 'ld_library_path_lib')
+[32.178s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/yukki/Downloads/ros_ws/install/rm_serial_driver/share/rm_serial_driver/hook/ld_library_path_lib.ps1'
+[32.179s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/yukki/Downloads/ros_ws/install/rm_serial_driver/share/rm_serial_driver/hook/ld_library_path_lib.dsv'
+[32.179s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/yukki/Downloads/ros_ws/install/rm_serial_driver/share/rm_serial_driver/hook/ld_library_path_lib.sh'
+[32.180s] Level 1:colcon.colcon_core.environment:checking '/home/yukki/Downloads/ros_ws/install/rm_serial_driver/bin'
+[32.180s] Level 1:colcon.colcon_core.environment:checking '/home/yukki/Downloads/ros_ws/install/rm_serial_driver/lib/pkgconfig/rm_serial_driver.pc'
+[32.180s] Level 1:colcon.colcon_core.environment:checking '/home/yukki/Downloads/ros_ws/install/rm_serial_driver/lib/python3.10/site-packages'
+[32.180s] Level 1:colcon.colcon_core.environment:checking '/home/yukki/Downloads/ros_ws/install/rm_serial_driver/bin'
+[32.195s] INFO:colcon.colcon_core.shell:Creating package script '/home/yukki/Downloads/ros_ws/install/rm_serial_driver/share/rm_serial_driver/package.ps1'
+[32.196s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/yukki/Downloads/ros_ws/install/rm_serial_driver/share/rm_serial_driver/package.dsv'
+[32.196s] INFO:colcon.colcon_core.shell:Creating package script '/home/yukki/Downloads/ros_ws/install/rm_serial_driver/share/rm_serial_driver/package.sh'
+[32.197s] INFO:colcon.colcon_core.shell:Creating package script '/home/yukki/Downloads/ros_ws/install/rm_serial_driver/share/rm_serial_driver/package.bash'
+[32.197s] INFO:colcon.colcon_core.shell:Creating package script '/home/yukki/Downloads/ros_ws/install/rm_serial_driver/share/rm_serial_driver/package.zsh'
+[32.197s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/yukki/Downloads/ros_ws/install/rm_serial_driver/share/colcon-core/packages/rm_serial_driver)
+[35.656s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/yukki/Downloads/ros_ws/build/armor_tracker' returned '0': AMENT_PREFIX_PATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32 PYTHONPATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/yukki/Downloads/ros_ws/build/armor_tracker -- -j16 -l16
+[35.699s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/yukki/Downloads/ros_ws/build/armor_tracker': AMENT_PREFIX_PATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32 PYTHONPATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/yukki/Downloads/ros_ws/build/armor_tracker
+[35.981s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(armor_tracker)
+[35.982s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/yukki/Downloads/ros_ws/build/armor_tracker' returned '0': AMENT_PREFIX_PATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32 PYTHONPATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/yukki/Downloads/ros_ws/build/armor_tracker
+[35.995s] Level 1:colcon.colcon_core.environment:checking '/home/yukki/Downloads/ros_ws/install/armor_tracker' for CMake module files
+[35.995s] Level 1:colcon.colcon_core.environment:checking '/home/yukki/Downloads/ros_ws/install/armor_tracker' for CMake config files
+[35.996s] Level 1:colcon.colcon_core.shell:create_environment_hook('armor_tracker', 'cmake_prefix_path')
+[36.009s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/yukki/Downloads/ros_ws/install/armor_tracker/share/armor_tracker/hook/cmake_prefix_path.ps1'
+[36.009s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/yukki/Downloads/ros_ws/install/armor_tracker/share/armor_tracker/hook/cmake_prefix_path.dsv'
+[36.009s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/yukki/Downloads/ros_ws/install/armor_tracker/share/armor_tracker/hook/cmake_prefix_path.sh'
+[36.010s] Level 1:colcon.colcon_core.environment:checking '/home/yukki/Downloads/ros_ws/install/armor_tracker/lib'
+[36.010s] Level 1:colcon.colcon_core.shell:create_environment_hook('armor_tracker', 'ld_library_path_lib')
+[36.023s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/yukki/Downloads/ros_ws/install/armor_tracker/share/armor_tracker/hook/ld_library_path_lib.ps1'
+[36.023s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/yukki/Downloads/ros_ws/install/armor_tracker/share/armor_tracker/hook/ld_library_path_lib.dsv'
+[36.024s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/yukki/Downloads/ros_ws/install/armor_tracker/share/armor_tracker/hook/ld_library_path_lib.sh'
+[36.024s] Level 1:colcon.colcon_core.environment:checking '/home/yukki/Downloads/ros_ws/install/armor_tracker/bin'
+[36.024s] Level 1:colcon.colcon_core.environment:checking '/home/yukki/Downloads/ros_ws/install/armor_tracker/lib/pkgconfig/armor_tracker.pc'
+[36.024s] Level 1:colcon.colcon_core.environment:checking '/home/yukki/Downloads/ros_ws/install/armor_tracker/lib/python3.10/site-packages'
+[36.024s] Level 1:colcon.colcon_core.environment:checking '/home/yukki/Downloads/ros_ws/install/armor_tracker/bin'
+[36.037s] INFO:colcon.colcon_core.shell:Creating package script '/home/yukki/Downloads/ros_ws/install/armor_tracker/share/armor_tracker/package.ps1'
+[36.038s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/yukki/Downloads/ros_ws/install/armor_tracker/share/armor_tracker/package.dsv'
+[36.038s] INFO:colcon.colcon_core.shell:Creating package script '/home/yukki/Downloads/ros_ws/install/armor_tracker/share/armor_tracker/package.sh'
+[36.038s] INFO:colcon.colcon_core.shell:Creating package script '/home/yukki/Downloads/ros_ws/install/armor_tracker/share/armor_tracker/package.bash'
+[36.038s] INFO:colcon.colcon_core.shell:Creating package script '/home/yukki/Downloads/ros_ws/install/armor_tracker/share/armor_tracker/package.zsh'
+[36.039s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/yukki/Downloads/ros_ws/install/armor_tracker/share/colcon-core/packages/armor_tracker)
+[36.101s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(armor_tracker)
+[36.124s] Level 1:colcon.colcon_core.environment:checking '/home/yukki/Downloads/ros_ws/install/armor_tracker' for CMake module files
+[36.125s] Level 1:colcon.colcon_core.environment:checking '/home/yukki/Downloads/ros_ws/install/armor_tracker' for CMake config files
+[36.126s] Level 1:colcon.colcon_core.shell:create_environment_hook('armor_tracker', 'cmake_prefix_path')
+[36.140s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/yukki/Downloads/ros_ws/install/armor_tracker/share/armor_tracker/hook/cmake_prefix_path.ps1'
+[36.140s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/yukki/Downloads/ros_ws/install/armor_tracker/share/armor_tracker/hook/cmake_prefix_path.dsv'
+[36.141s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/yukki/Downloads/ros_ws/install/armor_tracker/share/armor_tracker/hook/cmake_prefix_path.sh'
+[36.141s] Level 1:colcon.colcon_core.environment:checking '/home/yukki/Downloads/ros_ws/install/armor_tracker/lib'
+[36.141s] Level 1:colcon.colcon_core.shell:create_environment_hook('armor_tracker', 'ld_library_path_lib')
+[36.154s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/yukki/Downloads/ros_ws/install/armor_tracker/share/armor_tracker/hook/ld_library_path_lib.ps1'
+[36.155s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/yukki/Downloads/ros_ws/install/armor_tracker/share/armor_tracker/hook/ld_library_path_lib.dsv'
+[36.155s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/yukki/Downloads/ros_ws/install/armor_tracker/share/armor_tracker/hook/ld_library_path_lib.sh'
+[36.155s] Level 1:colcon.colcon_core.environment:checking '/home/yukki/Downloads/ros_ws/install/armor_tracker/bin'
+[36.156s] Level 1:colcon.colcon_core.environment:checking '/home/yukki/Downloads/ros_ws/install/armor_tracker/lib/pkgconfig/armor_tracker.pc'
+[36.156s] Level 1:colcon.colcon_core.environment:checking '/home/yukki/Downloads/ros_ws/install/armor_tracker/lib/python3.10/site-packages'
+[36.156s] Level 1:colcon.colcon_core.environment:checking '/home/yukki/Downloads/ros_ws/install/armor_tracker/bin'
+[36.169s] INFO:colcon.colcon_core.shell:Creating package script '/home/yukki/Downloads/ros_ws/install/armor_tracker/share/armor_tracker/package.ps1'
+[36.170s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/yukki/Downloads/ros_ws/install/armor_tracker/share/armor_tracker/package.dsv'
+[36.170s] INFO:colcon.colcon_core.shell:Creating package script '/home/yukki/Downloads/ros_ws/install/armor_tracker/share/armor_tracker/package.sh'
+[36.171s] INFO:colcon.colcon_core.shell:Creating package script '/home/yukki/Downloads/ros_ws/install/armor_tracker/share/armor_tracker/package.bash'
+[36.171s] INFO:colcon.colcon_core.shell:Creating package script '/home/yukki/Downloads/ros_ws/install/armor_tracker/share/armor_tracker/package.zsh'
+[36.171s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/yukki/Downloads/ros_ws/install/armor_tracker/share/colcon-core/packages/armor_tracker)
+[39.307s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/yukki/Downloads/ros_ws/build/armor_detector' returned '0': AMENT_PREFIX_PATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32 PYTHONPATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/yukki/Downloads/ros_ws/build/armor_detector -- -j16 -l16
+[39.354s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/yukki/Downloads/ros_ws/build/armor_detector': AMENT_PREFIX_PATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32 PYTHONPATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/yukki/Downloads/ros_ws/build/armor_detector
+[39.627s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(armor_detector)
+[39.628s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/yukki/Downloads/ros_ws/build/armor_detector' returned '0': AMENT_PREFIX_PATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32 PYTHONPATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/yukki/Downloads/ros_ws/build/armor_detector
+[39.641s] Level 1:colcon.colcon_core.environment:checking '/home/yukki/Downloads/ros_ws/install/armor_detector' for CMake module files
+[39.641s] Level 1:colcon.colcon_core.environment:checking '/home/yukki/Downloads/ros_ws/install/armor_detector' for CMake config files
+[39.641s] Level 1:colcon.colcon_core.shell:create_environment_hook('armor_detector', 'cmake_prefix_path')
+[39.654s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/yukki/Downloads/ros_ws/install/armor_detector/share/armor_detector/hook/cmake_prefix_path.ps1'
+[39.654s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/yukki/Downloads/ros_ws/install/armor_detector/share/armor_detector/hook/cmake_prefix_path.dsv'
+[39.654s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/yukki/Downloads/ros_ws/install/armor_detector/share/armor_detector/hook/cmake_prefix_path.sh'
+[39.654s] Level 1:colcon.colcon_core.environment:checking '/home/yukki/Downloads/ros_ws/install/armor_detector/lib'
+[39.654s] Level 1:colcon.colcon_core.shell:create_environment_hook('armor_detector', 'ld_library_path_lib')
+[39.666s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/yukki/Downloads/ros_ws/install/armor_detector/share/armor_detector/hook/ld_library_path_lib.ps1'
+[39.667s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/yukki/Downloads/ros_ws/install/armor_detector/share/armor_detector/hook/ld_library_path_lib.dsv'
+[39.667s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/yukki/Downloads/ros_ws/install/armor_detector/share/armor_detector/hook/ld_library_path_lib.sh'
+[39.667s] Level 1:colcon.colcon_core.environment:checking '/home/yukki/Downloads/ros_ws/install/armor_detector/bin'
+[39.667s] Level 1:colcon.colcon_core.environment:checking '/home/yukki/Downloads/ros_ws/install/armor_detector/lib/pkgconfig/armor_detector.pc'
+[39.667s] Level 1:colcon.colcon_core.environment:checking '/home/yukki/Downloads/ros_ws/install/armor_detector/lib/python3.10/site-packages'
+[39.668s] Level 1:colcon.colcon_core.environment:checking '/home/yukki/Downloads/ros_ws/install/armor_detector/bin'
+[39.680s] INFO:colcon.colcon_core.shell:Creating package script '/home/yukki/Downloads/ros_ws/install/armor_detector/share/armor_detector/package.ps1'
+[39.681s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/yukki/Downloads/ros_ws/install/armor_detector/share/armor_detector/package.dsv'
+[39.681s] INFO:colcon.colcon_core.shell:Creating package script '/home/yukki/Downloads/ros_ws/install/armor_detector/share/armor_detector/package.sh'
+[39.681s] INFO:colcon.colcon_core.shell:Creating package script '/home/yukki/Downloads/ros_ws/install/armor_detector/share/armor_detector/package.bash'
+[39.682s] INFO:colcon.colcon_core.shell:Creating package script '/home/yukki/Downloads/ros_ws/install/armor_detector/share/armor_detector/package.zsh'
+[39.682s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/yukki/Downloads/ros_ws/install/armor_detector/share/colcon-core/packages/armor_detector)
+[39.743s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(armor_detector)
+[39.756s] Level 1:colcon.colcon_core.environment:checking '/home/yukki/Downloads/ros_ws/install/armor_detector' for CMake module files
+[39.756s] Level 1:colcon.colcon_core.environment:checking '/home/yukki/Downloads/ros_ws/install/armor_detector' for CMake config files
+[39.756s] Level 1:colcon.colcon_core.shell:create_environment_hook('armor_detector', 'cmake_prefix_path')
+[39.768s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/yukki/Downloads/ros_ws/install/armor_detector/share/armor_detector/hook/cmake_prefix_path.ps1'
+[39.769s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/yukki/Downloads/ros_ws/install/armor_detector/share/armor_detector/hook/cmake_prefix_path.dsv'
+[39.769s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/yukki/Downloads/ros_ws/install/armor_detector/share/armor_detector/hook/cmake_prefix_path.sh'
+[39.769s] Level 1:colcon.colcon_core.environment:checking '/home/yukki/Downloads/ros_ws/install/armor_detector/lib'
+[39.770s] Level 1:colcon.colcon_core.shell:create_environment_hook('armor_detector', 'ld_library_path_lib')
+[39.781s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/yukki/Downloads/ros_ws/install/armor_detector/share/armor_detector/hook/ld_library_path_lib.ps1'
+[39.782s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/yukki/Downloads/ros_ws/install/armor_detector/share/armor_detector/hook/ld_library_path_lib.dsv'
+[39.782s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/yukki/Downloads/ros_ws/install/armor_detector/share/armor_detector/hook/ld_library_path_lib.sh'
+[39.782s] Level 1:colcon.colcon_core.environment:checking '/home/yukki/Downloads/ros_ws/install/armor_detector/bin'
+[39.782s] Level 1:colcon.colcon_core.environment:checking '/home/yukki/Downloads/ros_ws/install/armor_detector/lib/pkgconfig/armor_detector.pc'
+[39.782s] Level 1:colcon.colcon_core.environment:checking '/home/yukki/Downloads/ros_ws/install/armor_detector/lib/python3.10/site-packages'
+[39.783s] Level 1:colcon.colcon_core.environment:checking '/home/yukki/Downloads/ros_ws/install/armor_detector/bin'
+[39.795s] INFO:colcon.colcon_core.shell:Creating package script '/home/yukki/Downloads/ros_ws/install/armor_detector/share/armor_detector/package.ps1'
+[39.796s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/yukki/Downloads/ros_ws/install/armor_detector/share/armor_detector/package.dsv'
+[39.796s] INFO:colcon.colcon_core.shell:Creating package script '/home/yukki/Downloads/ros_ws/install/armor_detector/share/armor_detector/package.sh'
+[39.796s] INFO:colcon.colcon_core.shell:Creating package script '/home/yukki/Downloads/ros_ws/install/armor_detector/share/armor_detector/package.bash'
+[39.797s] INFO:colcon.colcon_core.shell:Creating package script '/home/yukki/Downloads/ros_ws/install/armor_detector/share/armor_detector/package.zsh'
+[39.797s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/yukki/Downloads/ros_ws/install/armor_detector/share/colcon-core/packages/armor_detector)
+[39.797s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/yukki/Downloads/ros_ws/src/rm_auto_aim/rm_auto_aim' with build type 'ament_cmake'
+[39.797s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/yukki/Downloads/ros_ws/src/rm_auto_aim/rm_auto_aim'
+[39.810s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[39.810s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[39.848s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/yukki/Downloads/ros_ws/build/rm_auto_aim': AMENT_PREFIX_PATH=/home/yukki/Downloads/ros_ws/install/armor_tracker:/home/yukki/Downloads/ros_ws/install/armor_detector:/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/yukki/Downloads/ros_ws/install/armor_tracker:/home/yukki/Downloads/ros_ws/install/armor_detector:/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/yukki/Downloads/ros_ws/install/armor_tracker/lib:/home/yukki/Downloads/ros_ws/install/armor_detector/lib:/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32 PYTHONPATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/yukki/Downloads/ros_ws/src/rm_auto_aim/rm_auto_aim -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/yukki/Downloads/ros_ws/install/rm_auto_aim
+[40.585s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/yukki/Downloads/ros_ws/build/rm_auto_aim' returned '0': AMENT_PREFIX_PATH=/home/yukki/Downloads/ros_ws/install/armor_tracker:/home/yukki/Downloads/ros_ws/install/armor_detector:/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/yukki/Downloads/ros_ws/install/armor_tracker:/home/yukki/Downloads/ros_ws/install/armor_detector:/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/yukki/Downloads/ros_ws/install/armor_tracker/lib:/home/yukki/Downloads/ros_ws/install/armor_detector/lib:/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32 PYTHONPATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/yukki/Downloads/ros_ws/src/rm_auto_aim/rm_auto_aim -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/yukki/Downloads/ros_ws/install/rm_auto_aim
+[40.586s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/yukki/Downloads/ros_ws/build/rm_auto_aim': AMENT_PREFIX_PATH=/home/yukki/Downloads/ros_ws/install/armor_tracker:/home/yukki/Downloads/ros_ws/install/armor_detector:/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/yukki/Downloads/ros_ws/install/armor_tracker:/home/yukki/Downloads/ros_ws/install/armor_detector:/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/yukki/Downloads/ros_ws/install/armor_tracker/lib:/home/yukki/Downloads/ros_ws/install/armor_detector/lib:/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32 PYTHONPATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/yukki/Downloads/ros_ws/build/rm_auto_aim -- -j16 -l16
+[40.624s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/yukki/Downloads/ros_ws/build/rm_auto_aim' returned '0': AMENT_PREFIX_PATH=/home/yukki/Downloads/ros_ws/install/armor_tracker:/home/yukki/Downloads/ros_ws/install/armor_detector:/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/yukki/Downloads/ros_ws/install/armor_tracker:/home/yukki/Downloads/ros_ws/install/armor_detector:/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/yukki/Downloads/ros_ws/install/armor_tracker/lib:/home/yukki/Downloads/ros_ws/install/armor_detector/lib:/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32 PYTHONPATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/yukki/Downloads/ros_ws/build/rm_auto_aim -- -j16 -l16
+[40.649s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/yukki/Downloads/ros_ws/build/rm_auto_aim': AMENT_PREFIX_PATH=/home/yukki/Downloads/ros_ws/install/armor_tracker:/home/yukki/Downloads/ros_ws/install/armor_detector:/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/yukki/Downloads/ros_ws/install/armor_tracker:/home/yukki/Downloads/ros_ws/install/armor_detector:/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/yukki/Downloads/ros_ws/install/armor_tracker/lib:/home/yukki/Downloads/ros_ws/install/armor_detector/lib:/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32 PYTHONPATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/yukki/Downloads/ros_ws/build/rm_auto_aim
+[40.795s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rm_auto_aim)
+[40.795s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/yukki/Downloads/ros_ws/build/rm_auto_aim' returned '0': AMENT_PREFIX_PATH=/home/yukki/Downloads/ros_ws/install/armor_tracker:/home/yukki/Downloads/ros_ws/install/armor_detector:/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/yukki/Downloads/ros_ws/install/armor_tracker:/home/yukki/Downloads/ros_ws/install/armor_detector:/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/yukki/Downloads/ros_ws/install/armor_tracker/lib:/home/yukki/Downloads/ros_ws/install/armor_detector/lib:/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32 PYTHONPATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/yukki/Downloads/ros_ws/build/rm_auto_aim
+[40.808s] Level 1:colcon.colcon_core.environment:checking '/home/yukki/Downloads/ros_ws/install/rm_auto_aim' for CMake module files
+[40.808s] Level 1:colcon.colcon_core.environment:checking '/home/yukki/Downloads/ros_ws/install/rm_auto_aim' for CMake config files
+[40.809s] Level 1:colcon.colcon_core.shell:create_environment_hook('rm_auto_aim', 'cmake_prefix_path')
+[40.821s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/yukki/Downloads/ros_ws/install/rm_auto_aim/share/rm_auto_aim/hook/cmake_prefix_path.ps1'
+[40.821s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/yukki/Downloads/ros_ws/install/rm_auto_aim/share/rm_auto_aim/hook/cmake_prefix_path.dsv'
+[40.822s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/yukki/Downloads/ros_ws/install/rm_auto_aim/share/rm_auto_aim/hook/cmake_prefix_path.sh'
+[40.822s] Level 1:colcon.colcon_core.environment:checking '/home/yukki/Downloads/ros_ws/install/rm_auto_aim/bin'
+[40.822s] Level 1:colcon.colcon_core.environment:checking '/home/yukki/Downloads/ros_ws/install/rm_auto_aim/lib/pkgconfig/rm_auto_aim.pc'
+[40.822s] Level 1:colcon.colcon_core.environment:checking '/home/yukki/Downloads/ros_ws/install/rm_auto_aim/lib/python3.10/site-packages'
+[40.822s] Level 1:colcon.colcon_core.environment:checking '/home/yukki/Downloads/ros_ws/install/rm_auto_aim/bin'
+[40.835s] INFO:colcon.colcon_core.shell:Creating package script '/home/yukki/Downloads/ros_ws/install/rm_auto_aim/share/rm_auto_aim/package.ps1'
+[40.836s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/yukki/Downloads/ros_ws/install/rm_auto_aim/share/rm_auto_aim/package.dsv'
+[40.836s] INFO:colcon.colcon_core.shell:Creating package script '/home/yukki/Downloads/ros_ws/install/rm_auto_aim/share/rm_auto_aim/package.sh'
+[40.836s] INFO:colcon.colcon_core.shell:Creating package script '/home/yukki/Downloads/ros_ws/install/rm_auto_aim/share/rm_auto_aim/package.bash'
+[40.837s] INFO:colcon.colcon_core.shell:Creating package script '/home/yukki/Downloads/ros_ws/install/rm_auto_aim/share/rm_auto_aim/package.zsh'
+[40.837s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/yukki/Downloads/ros_ws/install/rm_auto_aim/share/colcon-core/packages/rm_auto_aim)
+[40.872s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rm_auto_aim)
+[40.885s] Level 1:colcon.colcon_core.environment:checking '/home/yukki/Downloads/ros_ws/install/rm_auto_aim' for CMake module files
+[40.885s] Level 1:colcon.colcon_core.environment:checking '/home/yukki/Downloads/ros_ws/install/rm_auto_aim' for CMake config files
+[40.886s] Level 1:colcon.colcon_core.shell:create_environment_hook('rm_auto_aim', 'cmake_prefix_path')
+[40.898s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/yukki/Downloads/ros_ws/install/rm_auto_aim/share/rm_auto_aim/hook/cmake_prefix_path.ps1'
+[40.898s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/yukki/Downloads/ros_ws/install/rm_auto_aim/share/rm_auto_aim/hook/cmake_prefix_path.dsv'
+[40.898s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/yukki/Downloads/ros_ws/install/rm_auto_aim/share/rm_auto_aim/hook/cmake_prefix_path.sh'
+[40.899s] Level 1:colcon.colcon_core.environment:checking '/home/yukki/Downloads/ros_ws/install/rm_auto_aim/bin'
+[40.899s] Level 1:colcon.colcon_core.environment:checking '/home/yukki/Downloads/ros_ws/install/rm_auto_aim/lib/pkgconfig/rm_auto_aim.pc'
+[40.899s] Level 1:colcon.colcon_core.environment:checking '/home/yukki/Downloads/ros_ws/install/rm_auto_aim/lib/python3.10/site-packages'
+[40.899s] Level 1:colcon.colcon_core.environment:checking '/home/yukki/Downloads/ros_ws/install/rm_auto_aim/bin'
+[40.912s] INFO:colcon.colcon_core.shell:Creating package script '/home/yukki/Downloads/ros_ws/install/rm_auto_aim/share/rm_auto_aim/package.ps1'
+[40.912s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/yukki/Downloads/ros_ws/install/rm_auto_aim/share/rm_auto_aim/package.dsv'
+[40.913s] INFO:colcon.colcon_core.shell:Creating package script '/home/yukki/Downloads/ros_ws/install/rm_auto_aim/share/rm_auto_aim/package.sh'
+[40.913s] INFO:colcon.colcon_core.shell:Creating package script '/home/yukki/Downloads/ros_ws/install/rm_auto_aim/share/rm_auto_aim/package.bash'
+[40.913s] INFO:colcon.colcon_core.shell:Creating package script '/home/yukki/Downloads/ros_ws/install/rm_auto_aim/share/rm_auto_aim/package.zsh'
+[40.913s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/yukki/Downloads/ros_ws/install/rm_auto_aim/share/colcon-core/packages/rm_auto_aim)
+[40.914s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/yukki/Downloads/ros_ws/src/rm_vision/rm_vision_bringup' with build type 'ament_cmake'
+[40.914s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/yukki/Downloads/ros_ws/src/rm_vision/rm_vision_bringup'
+[40.926s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[40.926s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[40.966s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/yukki/Downloads/ros_ws/build/rm_vision_bringup': AMENT_PREFIX_PATH=/home/yukki/Downloads/ros_ws/install/rm_auto_aim:/home/yukki/Downloads/ros_ws/install/rm_serial_driver:/home/yukki/Downloads/ros_ws/install/armor_tracker:/home/yukki/Downloads/ros_ws/install/armor_detector:/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/yukki/Downloads/ros_ws/install/rm_auto_aim:/home/yukki/Downloads/ros_ws/install/rm_serial_driver:/home/yukki/Downloads/ros_ws/install/armor_tracker:/home/yukki/Downloads/ros_ws/install/armor_detector:/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/yukki/Downloads/ros_ws/install/rm_serial_driver/lib:/home/yukki/Downloads/ros_ws/install/armor_tracker/lib:/home/yukki/Downloads/ros_ws/install/armor_detector/lib:/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32 PYTHONPATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/yukki/Downloads/ros_ws/src/rm_vision/rm_vision_bringup -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/yukki/Downloads/ros_ws/install/rm_vision_bringup
+[41.657s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/yukki/Downloads/ros_ws/build/rm_vision_bringup' returned '0': AMENT_PREFIX_PATH=/home/yukki/Downloads/ros_ws/install/rm_auto_aim:/home/yukki/Downloads/ros_ws/install/rm_serial_driver:/home/yukki/Downloads/ros_ws/install/armor_tracker:/home/yukki/Downloads/ros_ws/install/armor_detector:/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/yukki/Downloads/ros_ws/install/rm_auto_aim:/home/yukki/Downloads/ros_ws/install/rm_serial_driver:/home/yukki/Downloads/ros_ws/install/armor_tracker:/home/yukki/Downloads/ros_ws/install/armor_detector:/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/yukki/Downloads/ros_ws/install/rm_serial_driver/lib:/home/yukki/Downloads/ros_ws/install/armor_tracker/lib:/home/yukki/Downloads/ros_ws/install/armor_detector/lib:/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32 PYTHONPATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/yukki/Downloads/ros_ws/src/rm_vision/rm_vision_bringup -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/yukki/Downloads/ros_ws/install/rm_vision_bringup
+[41.658s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/yukki/Downloads/ros_ws/build/rm_vision_bringup': AMENT_PREFIX_PATH=/home/yukki/Downloads/ros_ws/install/rm_auto_aim:/home/yukki/Downloads/ros_ws/install/rm_serial_driver:/home/yukki/Downloads/ros_ws/install/armor_tracker:/home/yukki/Downloads/ros_ws/install/armor_detector:/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/yukki/Downloads/ros_ws/install/rm_auto_aim:/home/yukki/Downloads/ros_ws/install/rm_serial_driver:/home/yukki/Downloads/ros_ws/install/armor_tracker:/home/yukki/Downloads/ros_ws/install/armor_detector:/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/yukki/Downloads/ros_ws/install/rm_serial_driver/lib:/home/yukki/Downloads/ros_ws/install/armor_tracker/lib:/home/yukki/Downloads/ros_ws/install/armor_detector/lib:/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32 PYTHONPATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/yukki/Downloads/ros_ws/build/rm_vision_bringup -- -j16 -l16
+[41.698s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/yukki/Downloads/ros_ws/build/rm_vision_bringup' returned '0': AMENT_PREFIX_PATH=/home/yukki/Downloads/ros_ws/install/rm_auto_aim:/home/yukki/Downloads/ros_ws/install/rm_serial_driver:/home/yukki/Downloads/ros_ws/install/armor_tracker:/home/yukki/Downloads/ros_ws/install/armor_detector:/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/yukki/Downloads/ros_ws/install/rm_auto_aim:/home/yukki/Downloads/ros_ws/install/rm_serial_driver:/home/yukki/Downloads/ros_ws/install/armor_tracker:/home/yukki/Downloads/ros_ws/install/armor_detector:/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/yukki/Downloads/ros_ws/install/rm_serial_driver/lib:/home/yukki/Downloads/ros_ws/install/armor_tracker/lib:/home/yukki/Downloads/ros_ws/install/armor_detector/lib:/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32 PYTHONPATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/yukki/Downloads/ros_ws/build/rm_vision_bringup -- -j16 -l16
+[41.721s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/yukki/Downloads/ros_ws/build/rm_vision_bringup': AMENT_PREFIX_PATH=/home/yukki/Downloads/ros_ws/install/rm_auto_aim:/home/yukki/Downloads/ros_ws/install/rm_serial_driver:/home/yukki/Downloads/ros_ws/install/armor_tracker:/home/yukki/Downloads/ros_ws/install/armor_detector:/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/yukki/Downloads/ros_ws/install/rm_auto_aim:/home/yukki/Downloads/ros_ws/install/rm_serial_driver:/home/yukki/Downloads/ros_ws/install/armor_tracker:/home/yukki/Downloads/ros_ws/install/armor_detector:/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/yukki/Downloads/ros_ws/install/rm_serial_driver/lib:/home/yukki/Downloads/ros_ws/install/armor_tracker/lib:/home/yukki/Downloads/ros_ws/install/armor_detector/lib:/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32 PYTHONPATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/yukki/Downloads/ros_ws/build/rm_vision_bringup
+[41.925s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rm_vision_bringup)
+[41.926s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/yukki/Downloads/ros_ws/build/rm_vision_bringup' returned '0': AMENT_PREFIX_PATH=/home/yukki/Downloads/ros_ws/install/rm_auto_aim:/home/yukki/Downloads/ros_ws/install/rm_serial_driver:/home/yukki/Downloads/ros_ws/install/armor_tracker:/home/yukki/Downloads/ros_ws/install/armor_detector:/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/yukki/Downloads/ros_ws/install/rm_auto_aim:/home/yukki/Downloads/ros_ws/install/rm_serial_driver:/home/yukki/Downloads/ros_ws/install/armor_tracker:/home/yukki/Downloads/ros_ws/install/armor_detector:/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/yukki/Downloads/ros_ws/install/rm_serial_driver/lib:/home/yukki/Downloads/ros_ws/install/armor_tracker/lib:/home/yukki/Downloads/ros_ws/install/armor_detector/lib:/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32 PYTHONPATH=/home/yukki/Downloads/ros_ws/install/auto_aim_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/yukki/Downloads/ros_ws/build/rm_vision_bringup
+[41.938s] Level 1:colcon.colcon_core.environment:checking '/home/yukki/Downloads/ros_ws/install/rm_vision_bringup' for CMake module files
+[41.938s] Level 1:colcon.colcon_core.environment:checking '/home/yukki/Downloads/ros_ws/install/rm_vision_bringup' for CMake config files
+[41.938s] Level 1:colcon.colcon_core.shell:create_environment_hook('rm_vision_bringup', 'cmake_prefix_path')
+[41.951s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/yukki/Downloads/ros_ws/install/rm_vision_bringup/share/rm_vision_bringup/hook/cmake_prefix_path.ps1'
+[41.952s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/yukki/Downloads/ros_ws/install/rm_vision_bringup/share/rm_vision_bringup/hook/cmake_prefix_path.dsv'
+[41.952s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/yukki/Downloads/ros_ws/install/rm_vision_bringup/share/rm_vision_bringup/hook/cmake_prefix_path.sh'
+[41.952s] Level 1:colcon.colcon_core.environment:checking '/home/yukki/Downloads/ros_ws/install/rm_vision_bringup/bin'
+[41.952s] Level 1:colcon.colcon_core.environment:checking '/home/yukki/Downloads/ros_ws/install/rm_vision_bringup/lib/pkgconfig/rm_vision_bringup.pc'
+[41.952s] Level 1:colcon.colcon_core.environment:checking '/home/yukki/Downloads/ros_ws/install/rm_vision_bringup/lib/python3.10/site-packages'
+[41.953s] Level 1:colcon.colcon_core.environment:checking '/home/yukki/Downloads/ros_ws/install/rm_vision_bringup/bin'
+[41.965s] INFO:colcon.colcon_core.shell:Creating package script '/home/yukki/Downloads/ros_ws/install/rm_vision_bringup/share/rm_vision_bringup/package.ps1'
+[41.966s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/yukki/Downloads/ros_ws/install/rm_vision_bringup/share/rm_vision_bringup/package.dsv'
+[41.966s] INFO:colcon.colcon_core.shell:Creating package script '/home/yukki/Downloads/ros_ws/install/rm_vision_bringup/share/rm_vision_bringup/package.sh'
+[41.966s] INFO:colcon.colcon_core.shell:Creating package script '/home/yukki/Downloads/ros_ws/install/rm_vision_bringup/share/rm_vision_bringup/package.bash'
+[41.967s] INFO:colcon.colcon_core.shell:Creating package script '/home/yukki/Downloads/ros_ws/install/rm_vision_bringup/share/rm_vision_bringup/package.zsh'
+[41.967s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/yukki/Downloads/ros_ws/install/rm_vision_bringup/share/colcon-core/packages/rm_vision_bringup)
+[42.002s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rm_vision_bringup)
+[42.014s] Level 1:colcon.colcon_core.environment:checking '/home/yukki/Downloads/ros_ws/install/rm_vision_bringup' for CMake module files
+[42.015s] Level 1:colcon.colcon_core.environment:checking '/home/yukki/Downloads/ros_ws/install/rm_vision_bringup' for CMake config files
+[42.015s] Level 1:colcon.colcon_core.shell:create_environment_hook('rm_vision_bringup', 'cmake_prefix_path')
+[42.027s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/yukki/Downloads/ros_ws/install/rm_vision_bringup/share/rm_vision_bringup/hook/cmake_prefix_path.ps1'
+[42.028s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/yukki/Downloads/ros_ws/install/rm_vision_bringup/share/rm_vision_bringup/hook/cmake_prefix_path.dsv'
+[42.028s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/yukki/Downloads/ros_ws/install/rm_vision_bringup/share/rm_vision_bringup/hook/cmake_prefix_path.sh'
+[42.028s] Level 1:colcon.colcon_core.environment:checking '/home/yukki/Downloads/ros_ws/install/rm_vision_bringup/bin'
+[42.028s] Level 1:colcon.colcon_core.environment:checking '/home/yukki/Downloads/ros_ws/install/rm_vision_bringup/lib/pkgconfig/rm_vision_bringup.pc'
+[42.028s] Level 1:colcon.colcon_core.environment:checking '/home/yukki/Downloads/ros_ws/install/rm_vision_bringup/lib/python3.10/site-packages'
+[42.029s] Level 1:colcon.colcon_core.environment:checking '/home/yukki/Downloads/ros_ws/install/rm_vision_bringup/bin'
+[42.041s] INFO:colcon.colcon_core.shell:Creating package script '/home/yukki/Downloads/ros_ws/install/rm_vision_bringup/share/rm_vision_bringup/package.ps1'
+[42.042s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/yukki/Downloads/ros_ws/install/rm_vision_bringup/share/rm_vision_bringup/package.dsv'
+[42.042s] INFO:colcon.colcon_core.shell:Creating package script '/home/yukki/Downloads/ros_ws/install/rm_vision_bringup/share/rm_vision_bringup/package.sh'
+[42.043s] INFO:colcon.colcon_core.shell:Creating package script '/home/yukki/Downloads/ros_ws/install/rm_vision_bringup/share/rm_vision_bringup/package.bash'
+[42.043s] INFO:colcon.colcon_core.shell:Creating package script '/home/yukki/Downloads/ros_ws/install/rm_vision_bringup/share/rm_vision_bringup/package.zsh'
+[42.043s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/yukki/Downloads/ros_ws/install/rm_vision_bringup/share/colcon-core/packages/rm_vision_bringup)
+[42.044s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[42.044s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[42.044s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[42.044s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[42.063s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[42.063s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[42.063s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[42.078s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[42.091s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/yukki/Downloads/ros_ws/install/local_setup.ps1'
+[42.092s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/yukki/Downloads/ros_ws/install/_local_setup_util_ps1.py'
+[42.093s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/yukki/Downloads/ros_ws/install/setup.ps1'
+[42.106s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/yukki/Downloads/ros_ws/install/local_setup.sh'
+[42.106s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/yukki/Downloads/ros_ws/install/_local_setup_util_sh.py'
+[42.107s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/yukki/Downloads/ros_ws/install/setup.sh'
+[42.120s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/yukki/Downloads/ros_ws/install/local_setup.bash'
+[42.120s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/yukki/Downloads/ros_ws/install/setup.bash'
+[42.133s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/yukki/Downloads/ros_ws/install/local_setup.zsh'
+[42.134s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/yukki/Downloads/ros_ws/install/setup.zsh'
